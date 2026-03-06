@@ -76,27 +76,27 @@ const Components = {
       mobileToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
     }
     document.querySelectorAll('.lang-option').forEach(btn => {
-      btn.addEventListener('click', async () => {
+      btn.addEventListener('click', () => {
         const lang = btn.dataset.lang;
-        await i18n.setLanguage(lang);
-        Components.renderHeader();
-        Components.renderFooter();
-        const sidebar = document.getElementById('sidebar-content');
-        if (sidebar) Components.renderSidebar();
-        if (typeof renderSeoSection === 'function') renderSeoSection();
-        i18n.applyTranslations();
+        const supportedCodes = i18n.supportedLangs.map(l => l.code);
 
-        const searchInput = document.getElementById('search-tools');
-        if (searchInput) {
-          searchInput.value = '';
+        // Strip any existing language prefix from the current path.
+        // e.g. "/es/json-formatter/" → "/json-formatter/"
+        //      "/json-formatter/"         → "/json-formatter/"
+        //      "/fr/"                      → "/"
+        let basePath = window.location.pathname;
+        const prefixMatch = basePath.match(/^\/([a-z]{2})(\/|$)/);
+        if (prefixMatch && supportedCodes.includes(prefixMatch[1]) && prefixMatch[1] !== 'en') {
+          basePath = basePath.substring(3) || '/';
         }
 
-        const allCategoryBtn = document.querySelector('#category-filters [data-category="all"]');
-        if (allCategoryBtn) {
-          allCategoryBtn.click();
-        } else if (typeof renderToolsGrid === 'function') {
-          renderToolsGrid();
-        }
+        // Build the target URL: English uses the bare path, others get /{lang}/…
+        const targetPath = lang === 'en' ? basePath : `/${lang}${basePath}`;
+
+        // Persist the preference so the target page's i18n.init() honours it.
+        localStorage.setItem('manyutils-lang', lang);
+
+        window.location.href = targetPath;
       });
     });
   },

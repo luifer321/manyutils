@@ -94,7 +94,7 @@ function loadLocale(lang) {
 
 /**
  * Build a block of <link rel="alternate"> hreflang tags for a given canonical
- * English path (e.g. "/tools/json-formatter/" or "/").
+ * English path (e.g. "/json-formatter/" or "/").
  */
 function hreflangBlock(enPath) {
   const lines = [
@@ -177,7 +177,7 @@ function renderSeoSection(locale, localeKey) {
  * Also pre-renders the SEO section for the English locale.
  */
 function processEnglishToolPage(html, toolId, enLocale) {
-  const enPath       = `/tools/${toolId}/`;
+  const enPath       = `/${toolId}/`;
   const localeKey    = toLocaleKey(toolId);
   const seoHtml      = renderSeoSection(enLocale, localeKey);
 
@@ -219,7 +219,7 @@ function transformToolPage(html, lang, locale, toolId) {
 
   const toolName  = toolData.name;
   const toolDesc  = toolData.description;
-  const enPath    = `/tools/${toolId}/`;
+  const enPath    = `/${toolId}/`;
   const langPath  = `/${lang}${enPath}`;
   const canonUrl  = `${BASE_URL}${langPath}`;
   const pageTitle = `${toolName} — ${TITLE_FREE[lang]} | ManyUtils`;
@@ -445,7 +445,7 @@ function generateSitemap() {
   // English tool pages
   for (const id of TOOL_IDS) {
     addUrl(
-      `${BASE_URL}/tools/${id}/`,
+      `${BASE_URL}/${id}/`,
       POPULAR_TOOL_IDS.has(id) ? '0.9' : '0.8',
       'monthly',
     );
@@ -455,7 +455,7 @@ function generateSitemap() {
   for (const lang of EXTRA_LANGS) {
     for (const id of TOOL_IDS) {
       addUrl(
-        `${BASE_URL}/${lang}/tools/${id}/`,
+        `${BASE_URL}/${lang}/${id}/`,
         POPULAR_TOOL_IDS.has(id) ? '0.8' : '0.7',
         'monthly',
       );
@@ -479,6 +479,7 @@ fs.mkdirSync(OUT, { recursive: true });
 copyDir(path.join(ROOT, 'assets'),  path.join(OUT, 'assets'));
 copyDir(path.join(ROOT, 'locales'), path.join(OUT, 'locales'));
 copyFile(path.join(ROOT, 'robots.txt'), path.join(OUT, 'robots.txt'));
+copyFile(path.join(ROOT, '_redirects'), path.join(OUT, '_redirects'));
 ['privacy.html', 'terms.html'].forEach(f =>
   copyFile(path.join(ROOT, f), path.join(OUT, f)),
 );
@@ -498,12 +499,12 @@ writeFile(
 
 // ── English tool pages ────────────────────────────────────────────────────────
 for (const toolId of TOOL_IDS) {
-  const srcFile = path.join(ROOT, 'tools', toolId, 'index.html');
+  const srcFile = path.join(ROOT, toolId, 'index.html');
   if (!fs.existsSync(srcFile)) continue;
 
   const html = fs.readFileSync(srcFile, 'utf8');
   writeFile(
-    path.join(OUT, 'tools', toolId, 'index.html'),
+    path.join(OUT, toolId, 'index.html'),
     processEnglishToolPage(html, toolId, locales.en),
   );
 }
@@ -520,12 +521,12 @@ for (const lang of EXTRA_LANGS) {
 
   // Language tool pages
   for (const toolId of TOOL_IDS) {
-    const srcFile = path.join(ROOT, 'tools', toolId, 'index.html');
+    const srcFile = path.join(ROOT, toolId, 'index.html');
     if (!fs.existsSync(srcFile)) continue;
 
     const html = fs.readFileSync(srcFile, 'utf8');
     writeFile(
-      path.join(OUT, lang, 'tools', toolId, 'index.html'),
+      path.join(OUT, lang, toolId, 'index.html'),
       transformToolPage(html, lang, locale, toolId),
     );
   }

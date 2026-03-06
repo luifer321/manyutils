@@ -1,0 +1,19 @@
+# 301 redirects from old /tools/ URLs to new shorter URLs
+/tools/qr-code-generator/          /qr-code-generator/          301
+/tools/json-formatter/              /json-formatter/              301
+/tools/password-generator/          /password-generator/          301
+/tools/uuid-generator/              /uuid-generator/              301
+/tools/image-pixelator/            /image-pixelator/            301
+/tools/image-compressor/            /image-compressor/            301
+/tools/css-gradient-generator/      /css-gradient-generator/      301
+/tools/color-palette-generator/    /color-palette-generator/    301
+/tools/base64-encoder-decoder/      /base64-encoder-decoder/      301
+/tools/currency-converter/          /currency-converter/          301
+/tools/word-character-counter/      /word-character-counter/      301
+/tools/days-between-dates/          /days-between-dates/          301
+
+# Old language-prefixed /tools/ URLs
+/fr/tools/*  /fr/:splat  301
+/es/tools/*  /es/:splat  301
+/de/tools/*  /de/:splat  301
+/pt/tools/*  /pt/:splat  301
