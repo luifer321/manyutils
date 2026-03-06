@@ -10,9 +10,27 @@ const i18n = {
   ],
 
   async init() {
-    const saved = localStorage.getItem('manyutils-lang');
+    const saved      = localStorage.getItem('manyutils-lang');
+    // The build script sets <html lang="xx"> statically for localised pages.
+    // When there is no explicit user preference we honour that declaration so
+    // Googlebot (and first-time visitors) always see content in the page's
+    // own language rather than falling back to the browser locale.
+    const htmlLang   = document.documentElement.lang;
     const browserLang = navigator.language.split('-')[0];
-    const lang = saved || (this.supportedLangs.find(l => l.code === browserLang) ? browserLang : 'en');
+
+    let lang;
+    if (saved && this.supportedLangs.find(l => l.code === saved)) {
+      // Explicit user preference always wins.
+      lang = saved;
+    } else if (htmlLang && htmlLang !== 'en' && this.supportedLangs.find(l => l.code === htmlLang)) {
+      // Non-English page declared a supported language — use it.
+      lang = htmlLang;
+    } else if (this.supportedLangs.find(l => l.code === browserLang)) {
+      lang = browserLang;
+    } else {
+      lang = 'en';
+    }
+
     await this.setLanguage(lang);
   },
 

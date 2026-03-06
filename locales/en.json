@@ -89,7 +89,7 @@
       "name": "QR Code Generator",
       "description": "Generate QR codes from text, URLs, or any data instantly.",
       "seo": {
-        "intro": "A QR (Quick Response) code is a two-dimensional barcode that stores information in a machine-readable format. Originally invented for the automotive industry, QR codes are now used everywhere — from restaurant menus to payment apps — because any smartphone can scan them in an instant.",
+        "intro": "This free QR code generator online lets you create custom QR codes from any text, URL, email, or phone number — instantly, in your browser, with no signup required. A QR (Quick Response) code is a two-dimensional barcode readable by any smartphone camera. Originally invented for automotive manufacturing, QR codes are now used everywhere: restaurant menus, business cards, payment apps, marketing campaigns, and more.",
         "steps": [
           "Type or paste the text, URL, phone number, or any data you want to encode.",
           "Choose your preferred QR code size: small (128px), medium (256px), or large (512px).",
@@ -112,6 +112,10 @@
           {
             "q": "Are these QR codes free to use commercially?",
             "a": "Absolutely. All QR codes generated here are completely free with no attribution required, for both personal and commercial use."
+          },
+          {
+            "q": "How do I create a QR code for a website URL?",
+            "a": "Simply paste your full URL (e.g. https://example.com) into the input field, choose a size, and click Generate. The QR code will encode your URL so anyone who scans it is taken directly to your website."
           }
         ]
       },
@@ -133,7 +137,7 @@
       "name": "JSON Formatter",
       "description": "Format, validate, and beautify your JSON data with proper indentation.",
       "seo": {
-        "intro": "JSON (JavaScript Object Notation) is the most widely used format for exchanging data between servers and web applications. This tool instantly formats, minifies, or validates any JSON string, making it easy to read and debug.",
+        "intro": "This free JSON formatter online instantly beautifies, minifies, and validates any JSON string — right in your browser, with no installation or signup required. JSON (JavaScript Object Notation) is the most widely used format for exchanging data between servers and web applications. Poorly formatted or minified JSON is difficult to read and debug; this tool adds clean indentation and line breaks to make the structure immediately clear.",
         "steps": [
           "Paste your raw or minified JSON into the input textarea.",
           "Select your preferred indentation: 2 spaces, 4 spaces, or tabs.",
@@ -156,6 +160,10 @@
           {
             "q": "Can this tool handle large JSON files?",
             "a": "Yes, for reasonably sized JSON. Very large files (several MB) may be slow because the processing happens in the browser. For huge files, consider a desktop tool."
+          },
+          {
+            "q": "What is the difference between JSON beautify and JSON format?",
+            "a": "They mean the same thing: both terms refer to adding indentation and line breaks to make compact or minified JSON human-readable. 'Beautify', 'format', and 'pretty-print' are used interchangeably."
           }
         ]
       },
@@ -176,7 +184,7 @@
       "name": "Password Generator",
       "description": "Create strong, secure random passwords with customizable options.",
       "seo": {
-        "intro": "A strong password is your first line of defense against unauthorized access. This tool uses your browser's cryptographically secure random number generator to create passwords that are practically impossible to brute-force.",
+        "intro": "This strong password generator creates cryptographically secure, random passwords instantly — entirely in your browser, with nothing stored or transmitted. A strong password is your first line of defense against unauthorized account access. Use this free password generator to create unique passwords for every account: customize the length (8–128 characters), choose character sets (uppercase, lowercase, numbers, symbols), and generate up to 10 passwords at once.",
         "steps": [
           "Drag the length slider to set the number of characters (8–128). Longer is always stronger.",
           "Check or uncheck character sets: uppercase, lowercase, numbers, and symbols.",
@@ -199,6 +207,10 @@
           {
             "q": "How often should I change my passwords?",
             "a": "Security experts now recommend changing passwords only when there's a reason to suspect a breach, rather than on a fixed schedule. The most important thing is using a unique password for every site."
+          },
+          {
+            "q": "What is the most secure password length?",
+            "a": "For most accounts, 16 characters is considered very strong. For high-value accounts (banking, email, admin panels), use 20+ characters. This generator supports lengths up to 128 characters."
           }
         ]
       },
@@ -218,7 +230,7 @@
       "name": "UUID Generator",
       "description": "Generate unique UUIDs (v4) for your applications instantly.",
       "seo": {
-        "intro": "A UUID (Universally Unique Identifier) is a 128-bit label used to uniquely identify objects in software. Version 4 UUIDs are randomly generated, making collisions virtually impossible — perfect for database primary keys, session tokens, and unique resource IDs.",
+        "intro": "Generate UUID v4 online instantly with this free tool — no signup, no installation required. A UUID (Universally Unique Identifier) is a 128-bit label used to uniquely identify objects in software systems. Version 4 UUIDs are randomly generated, making collisions virtually impossible. They are perfect for database primary keys, session tokens, unique resource IDs in APIs, file names, and distributed system identifiers. Use the bulk generator to produce up to 100 UUIDs at once.",
         "steps": [
           "A single UUID v4 is generated automatically when the page loads.",
           "Click Generate to create a new random UUID, or use the bulk generator to produce up to 100 at once.",
@@ -241,6 +253,10 @@
           {
             "q": "What is the difference between UUID v1, v4, and v7?",
             "a": "v1 is time-based (may expose the machine's MAC address), v4 is fully random, and v7 (newer) combines a timestamp with randomness for sortability. v4 is the most widely used for general purposes."
+          },
+          {
+            "q": "Can I generate multiple UUIDs at once?",
+            "a": "Yes. Enter a count between 1 and 100 in the bulk generator and click Bulk Generate. All UUIDs are displayed in a scrollable list and can be copied to your clipboard with a single click."
           }
         ]
       },
@@ -423,7 +439,7 @@
       "name": "Base64 Encoder / Decoder",
       "description": "Encode text to Base64 or decode Base64 strings back to text.",
       "seo": {
-        "intro": "Base64 is an encoding scheme that converts binary or text data into a string of ASCII characters. It's widely used to embed images in HTML/CSS, transmit data in JSON payloads, encode email attachments, and store binary data in text-based systems.",
+        "intro": "Encode text to Base64 online or decode Base64 strings back to plain text — instantly, for free, with no signup required. Base64 is an encoding scheme that converts binary or text data into a portable string of ASCII characters. It is widely used to embed images inline in HTML and CSS (data URIs), transmit binary data in JSON payloads, encode email attachments (MIME), pass data safely in URLs, and store binary data in text-based systems like databases and configuration files.",
         "steps": [
           "Choose a mode: Encode (text → Base64) or Decode (Base64 → text).",
           "Type or paste your input text into the left area.",
@@ -446,6 +462,10 @@
           {
             "q": "What is URL-safe Base64?",
             "a": "Standard Base64 uses + and / which have special meanings in URLs. URL-safe Base64 replaces these with - and _ so the encoded string can be safely used in URLs and filenames."
+          },
+          {
+            "q": "How do I encode an image to Base64?",
+            "a": "To encode a binary file (like an image) to Base64, you would need to read the file as binary data first. This tool handles text-to-Base64 encoding. For binary files, use a file-upload Base64 tool or a command like: base64 -i image.png on macOS/Linux."
           }
         ]
       },

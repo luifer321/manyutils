@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Prevent crawling of build artifacts and config files
+Disallow: /node_modules/
+Disallow: /scripts/
+Disallow: /locales/
+
 Sitemap: https://manyutils.com/sitemap.xml

@@ -1,3 +1,39 @@
+function _injectJsonLd(id, data) {
+  const existing = document.getElementById(id);
+  if (existing) existing.remove();
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.id = id;
+  script.textContent = JSON.stringify(data);
+  document.head.appendChild(script);
+}
+
+function _injectFaqSchema(faqItems) {
+  if (!faqItems || faqItems.length === 0) return;
+  _injectJsonLd('mu-faq-schema', {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a }
+    }))
+  });
+}
+
+function _injectBreadcrumbSchema(toolName) {
+  const canonical = document.querySelector('link[rel="canonical"]');
+  const url = canonical ? canonical.href : window.location.href;
+  _injectJsonLd('mu-breadcrumb-schema', {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://manyutils.com/' },
+      { '@type': 'ListItem', position: 2, name: toolName, item: url }
+    ]
+  });
+}
+
 function renderSeoSection() {
   const container = document.getElementById('seo-content');
   if (!container) return;
@@ -57,6 +93,8 @@ function renderSeoSection() {
 
   container.innerHTML = html;
   Components.initFaqAccordion();
+  _injectFaqSchema(faqItems);
+  _injectBreadcrumbSchema(toolName);
 }
 
 // Called by components.js after a language switch
