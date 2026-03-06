@@ -1,9 +1,15 @@
 const http = require('http');
-const fs = require('fs');
+const fs   = require('fs');
 const path = require('path');
 
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 8080;
 const MAX_ATTEMPTS = 10;
+
+// Optional first argument selects the root directory to serve.
+// e.g.  node server.js dist   →  serves ./dist/
+const SERVE_DIR = process.argv[2]
+  ? path.resolve(process.argv[2])
+  : __dirname;
 
 const MIME = {
   '.html': 'text/html',
@@ -44,7 +50,7 @@ function serveFile(res, filePath) {
 
 const server = http.createServer((req, res) => {
   let urlPath = req.url === '/' ? '/index.html' : req.url.split('?')[0];
-  let filePath = path.join(__dirname, urlPath);
+  let filePath = path.join(SERVE_DIR, urlPath);
 
   fs.stat(filePath, (err, stat) => {
     if (err) {
@@ -75,6 +81,7 @@ function tryListen() {
   }
   server.listen(attemptPort, () => {
     console.log(`ManyUtils running at http://localhost:${attemptPort}`);
+    console.log(`Serving: ${SERVE_DIR}`);
   });
 }
 
