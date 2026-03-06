@@ -1,0 +1,589 @@
+{
+  "common": {
+    "home": "Startseite",
+    "tools": "Werkzeuge",
+    "about": "Über uns",
+    "search_placeholder": "Werkzeuge suchen...",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "clear": "Löschen",
+    "generate": "Generieren",
+    "download": "Herunterladen",
+    "reset": "Zurücksetzen",
+    "result": "Ergebnis",
+    "input": "Eingabe",
+    "output": "Ausgabe",
+    "settings": "Einstellungen",
+    "related_tools": "Verwandte Werkzeuge",
+    "ad_space": "Werbung",
+    "footer_rights": "Alle Rechte vorbehalten.",
+    "footer_tagline": "Kostenlose Online-Tools, die direkt in Ihrem Browser funktionieren. Keine Anmeldung erforderlich.",
+    "privacy_policy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "legal": "Rechtliches",
+    "hero_title_1": "Kostenlose Online",
+    "hero_title_2": "Entwickler-Werkzeuge",
+    "hero_subtitle": "Einfache, schnelle und datenschutzfreundliche Werkzeuge, die direkt in Ihrem Browser funktionieren. Keine Anmeldung erforderlich.",
+    "popular_tools": "Beliebte Werkzeuge",
+    "all_tools": "Alle Werkzeuge",
+    "categories": "Kategorien",
+    "no_results": "Keine Werkzeuge gefunden.",
+    "what_is": "Was ist",
+    "how_to_use": "Verwendung",
+    "faq": "Häufig gestellte Fragen",
+    "encode": "Kodieren",
+    "decode": "Dekodieren",
+    "upload": "Hochladen",
+    "processing": "Verarbeitung...",
+    "from": "Von",
+    "to": "Nach",
+    "convert": "Konvertieren",
+    "calculate": "Berechnen",
+    "length": "Länge",
+    "options": "Optionen",
+    "count": "Anzahl",
+    "today": "Heute",
+    "quality": "Qualität",
+    "amount": "Betrag",
+    "optional": "Optional",
+    "copy_all": "Alle Kopieren",
+    "copy_output": "Ausgabe Kopieren",
+    "swap": "Tauschen",
+    "start_date": "Startdatum",
+    "end_date": "Enddatum",
+    "popular_pairs": "Beliebte Paare",
+    "your_text": "Ihr Text",
+    "bulk_generate": "Massengeneration",
+    "generated": "Generiert",
+    "shuffle": "Mischen",
+    "presets": "Voreinstellungen",
+    "add_stop": "+ Stop Hinzufügen",
+    "gradient_type": "Verlaufstyp",
+    "color_stops": "Farbstopps",
+    "angle": "Winkel",
+    "base_color": "Grundfarbe",
+    "harmony_type": "Harmonietyp",
+    "css_variables": "CSS-Variablen",
+    "output_format": "Ausgabeformat",
+    "max_width": "Max. Breite (px)",
+    "max_height": "Max. Höhe (px)",
+    "pixel_size": "Pixelgröße",
+    "indent": "Einrückung",
+    "password_length": "Passwortlänge",
+    "compress": "Komprimieren",
+    "copy_css": "CSS Kopieren",
+    "copy_css_vars": "CSS-Variablen Kopieren",
+    "random_gradient": "Zufälliger Verlauf",
+    "format_beautify": "Formatieren / Verschönern",
+    "minify": "Minimieren",
+    "validate": "Validieren"
+  },
+  "categories": {
+    "generators": "Generatoren",
+    "text_data": "Text & Daten",
+    "image_tools": "Bildwerkzeuge",
+    "calculators": "Rechner"
+  },
+  "tools": {
+    "qr_code_generator": {
+      "name": "QR-Code-Generator",
+      "description": "Generieren Sie QR-Codes aus Text, URLs oder beliebigen Daten sofort.",
+      "seo": {
+        "intro": "Ein QR-Code speichert Informationen in einem maschinenlesbaren Format und wird überall eingesetzt – von Speisekarten bis hin zu Zahlungs-Apps. Mit diesem Tool erstellen Sie in Sekunden einen eigenen QR-Code.",
+        "steps": [
+          "Geben Sie den zu kodierenden Text oder die URL ein.",
+          "Wählen Sie die gewünschte Größe (128, 256 oder 512 px).",
+          "Legen Sie optional benutzerdefinierte Farben fest.",
+          "Klicken Sie auf Generieren und laden Sie den QR-Code herunter oder kopieren Sie ihn."
+        ],
+        "faq": [
+          {
+            "q": "Welche Daten kann ein QR-Code speichern?",
+            "a": "URLs, Freitext, E-Mail-Adressen, Telefonnummern, WLAN-Zugangsdaten, vCards – bis zu ca. 4.296 Zeichen."
+          },
+          {
+            "q": "Gibt es eine Größenbeschränkung für den Inhalt?",
+            "a": "Ja, etwa 3 KB. Für lange Inhalte empfiehlt sich eine Kurz-URL, damit der Code gut scannbar bleibt."
+          },
+          {
+            "q": "Beeinflussen Farben die Lesbarkeit des Codes?",
+            "a": "Ja. Ein hoher Kontrast zwischen Muster und Hintergrund ist entscheidend für eine zuverlässige Erkennung."
+          },
+          {
+            "q": "Ist das Tool kostenlos, auch für kommerzielle Nutzung?",
+            "a": "Ja, es ist vollständig kostenlos und ohne Einschränkungen nutzbar – auch für kommerzielle Zwecke."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "Text oder URL",
+        "placeholder_input": "Text, URL, E-Mail, Telefonnummer eingeben...",
+        "label_size": "Größe",
+        "size_small": "Klein (128×128)",
+        "size_medium": "Mittel (256×256)",
+        "size_large": "Groß (512×512)",
+        "label_fg_color": "Vordergrundfarbe",
+        "label_bg_color": "Hintergrundfarbe",
+        "btn_generate": "QR-Code Generieren",
+        "btn_download": "PNG Herunterladen",
+        "btn_copy": "In Zwischenablage Kopieren"
+      }
+    },
+    "json_formatter": {
+      "name": "JSON-Formatierer",
+      "description": "Formatieren, validieren und verschönern Sie Ihre JSON-Daten mit korrekter Einrückung.",
+      "seo": {
+        "intro": "JSON ist das am weitesten verbreitete Datenaustauschformat in der Webentwicklung. Dieses Tool ermöglicht das Formatieren, Minifizieren oder Validieren beliebiger JSON-Zeichenketten in Sekundenschnelle.",
+        "steps": [
+          "Fügen Sie Ihren rohen JSON-Code in das Eingabefeld ein.",
+          "Wählen Sie den Einrückungsstil: 2 Leerzeichen, 4 Leerzeichen oder Tabulatoren.",
+          "Klicken Sie auf Formatieren zum Verschönern oder auf Minifizieren zum Komprimieren.",
+          "Prüfen Sie das Ergebnis und kopieren Sie es mit einem Klick."
+        ],
+        "faq": [
+          {
+            "q": "Was bewirkt das Formatieren von JSON?",
+            "a": "Es fügt Zeilenumbrüche und Einrückungen hinzu, um den JSON-Code für Menschen lesbar zu machen, ohne die Daten selbst zu verändern."
+          },
+          {
+            "q": "Warum JSON minifizieren?",
+            "a": "Die Minifizierung entfernt überflüssige Leerzeichen, was die Dateigröße reduziert und die Übertragung im Netzwerk oder die Speichernutzung verbessert."
+          },
+          {
+            "q": "Wie funktioniert die Validierung?",
+            "a": "Das Tool nutzt den nativen JSON-Parser des Browsers, der die genaue Position eines Syntaxfehlers meldet."
+          },
+          {
+            "q": "Können auch große Dateien verarbeitet werden?",
+            "a": "Ja, für angemessene Größen. Sehr große Dateien können zu einer leichten Verlangsamung der Oberfläche führen."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "JSON-Eingabe",
+        "placeholder": "JSON hier einfügen, z.B. {\"name\":\"Hans\",\"alter\":30}",
+        "label_indent": "Einrückung",
+        "indent_2": "2 Leerzeichen",
+        "indent_4": "4 Leerzeichen",
+        "indent_tab": "Tabulator",
+        "btn_format": "Formatieren / Verschönern",
+        "btn_minify": "Minimieren",
+        "btn_validate": "Validieren",
+        "btn_copy": "Kopieren"
+      }
+    },
+    "password_generator": {
+      "name": "Passwort-Generator",
+      "description": "Erstellen Sie starke, sichere Zufallspasswörter mit anpassbaren Optionen.",
+      "seo": {
+        "intro": "Dieses Tool nutzt den kryptografisch sicheren Zufallszahlengenerator des Browsers, um Passwörter zu erstellen, die praktisch unknackbar sind.",
+        "steps": [
+          "Legen Sie die gewünschte Länge fest (8 bis 128 Zeichen).",
+          "Aktivieren oder deaktivieren Sie Zeichensätze: Großbuchstaben, Kleinbuchstaben, Ziffern, Sonderzeichen.",
+          "Wählen Sie die Anzahl der zu generierenden Passwörter (1, 5 oder 10).",
+          "Klicken Sie auf Generieren und kopieren Sie das Ergebnis."
+        ],
+        "faq": [
+          {
+            "q": "Was macht ein Passwort wirklich sicher?",
+            "a": "Mindestens 16 Zeichen, eine Mischung verschiedener Zeichentypen, zufällige Generierung und keine Wörter aus dem Wörterbuch."
+          },
+          {
+            "q": "Ist dieses Tool sicher?",
+            "a": "Ja. Die Passwörter werden vollständig in Ihrem Browser über die Web Crypto API generiert. Keine Daten werden an einen Server gesendet."
+          },
+          {
+            "q": "Sollte man einen Passwort-Manager verwenden?",
+            "a": "Ja, das wird dringend empfohlen, um komplexe und einzigartige Passwörter für jeden Dienst sicher zu verwalten."
+          },
+          {
+            "q": "Wie oft sollte man Passwörter ändern?",
+            "a": "Nur wenn ein Datenleck vermutet wird. Ein starkes Passwort muss nicht nach einem festen Zeitplan geändert werden."
+          }
+        ]
+      },
+      "ui": {
+        "opt_uppercase": "Großbuchstaben (A-Z)",
+        "opt_lowercase": "Kleinbuchstaben (a-z)",
+        "opt_numbers": "Zahlen (0-9)",
+        "opt_symbols": "Symbole (!@#$...)",
+        "count_1": "1 Passwort",
+        "count_5": "5 Passwörter",
+        "count_10": "10 Passwörter",
+        "btn_generate": "Passwort Generieren",
+        "label_generated": "Generierte Passwörter"
+      }
+    },
+    "uuid_generator": {
+      "name": "UUID-Generator",
+      "description": "Generieren Sie einzigartige UUIDs (v4) für Ihre Anwendungen sofort.",
+      "seo": {
+        "intro": "Eine UUID ist eine 128-Bit-Kennung zur eindeutigen Identifikation von Objekten oder Ressourcen. V4-UUIDs werden zufällig generiert, wodurch Kollisionen praktisch ausgeschlossen sind.",
+        "steps": [
+          "Beim Laden der Seite wird automatisch eine UUID generiert.",
+          "Klicken Sie auf Generieren für eine neue UUID oder nutzen Sie den Massen-Generator (bis zu 100 UUIDs).",
+          "Aktivieren oder deaktivieren Sie Großschreibung und Bindestriche nach Bedarf.",
+          "Klicken Sie auf eine UUID, um sie in die Zwischenablage zu kopieren."
+        ],
+        "faq": [
+          {
+            "q": "Was ist eine UUID v4?",
+            "a": "Eine UUID v4 enthält 122 zufällige Bits, was 2¹²² mögliche Werte ergibt. Die Kollisionswahrscheinlichkeit ist so gering, dass sie in der Praxis als null gilt."
+          },
+          {
+            "q": "Wann sollte man UUIDs verwenden?",
+            "a": "Als Primärschlüssel in Datenbanken, Ressourcen-IDs in APIs, Sitzungstoken, eindeutige Dateinamen und überall dort, wo ein universeller Bezeichner benötigt wird."
+          },
+          {
+            "q": "Sind UUIDs wirklich einzigartig?",
+            "a": "Die Kollisionswahrscheinlichkeit liegt bei etwa 1 zu 5,3×10³⁶. In der Praxis werden UUIDs in allen Systemen als einzigartig behandelt."
+          },
+          {
+            "q": "Was ist der Unterschied zwischen v1, v4 und v7?",
+            "a": "v1 basiert auf Zeitstempel und MAC-Adresse, v4 ist vollständig zufällig, und v7 kombiniert Zeitstempel und Zufälligkeit für chronologische Sortierbarkeit."
+          }
+        ]
+      },
+      "ui": {
+        "opt_uppercase": "Großbuchstaben",
+        "opt_hyphens": "Bindestriche Einschließen",
+        "btn_bulk": "Massengeneration",
+        "label_generated": "Generierte UUIDs"
+      }
+    },
+    "image_pixelator": {
+      "name": "Bild-Pixelierer",
+      "description": "Wenden Sie einen Pixel-Art-Effekt auf jedes Bild mit einstellbarer Blockgröße an.",
+      "seo": {
+        "intro": "Der Pixelierer unterteilt ein Bild in gleichfarbige Blöcke (Durchschnitt der Pixelfarben jedes Bereichs) und erzeugt so einen Retro-Mosaik-Effekt – ideal für Datenschutz oder digitale Kunst.",
+        "steps": [
+          "Klicken Sie auf den Ablagebereich oder ziehen Sie Ihr Bild hinein.",
+          "Verschieben Sie den Regler, um die Blockgröße einzustellen (2 bis 50 px).",
+          "Die Vorschau wird in Echtzeit aktualisiert.",
+          "Klicken Sie auf Herunterladen, um das Ergebnis als PNG zu speichern."
+        ],
+        "faq": [
+          {
+            "q": "Welche Bildformate werden unterstützt?",
+            "a": "Eingabe: JPEG, PNG, WebP und GIF. Die heruntergeladene Datei ist immer im PNG-Format."
+          },
+          {
+            "q": "Kann man damit Gesichter anonymisieren?",
+            "a": "Ja. Blöcke von 20 bis 50 px reichen in der Regel aus, um Gesichter oder Nummernschilder unkenntlich zu machen."
+          },
+          {
+            "q": "Wird das Bild auf einen Server hochgeladen?",
+            "a": "Nein. Die gesamte Verarbeitung erfolgt direkt in Ihrem Browser. Ihr Bild verlässt niemals Ihr Gerät."
+          },
+          {
+            "q": "Entspricht die heruntergeladene Datei genau der Vorschau?",
+            "a": "Ja, die exportierte Datei wird aus demselben Canvas wie die angezeigte Vorschau erstellt."
+          }
+        ]
+      },
+      "ui": {
+        "label_pixel_size": "Pixelgröße",
+        "drop_zone": "Bild hier ablegen oder klicken zum Hochladen",
+        "btn_download": "Pixeliertes Herunterladen",
+        "btn_reset": "Zurücksetzen"
+      }
+    },
+    "image_compressor": {
+      "name": "Bildkompressor",
+      "description": "Komprimieren und reduzieren Sie die Bilddateigröße bei gleichbleibender Qualität.",
+      "seo": {
+        "intro": "Dieses Tool komprimiert Bilder direkt im Browser und reduziert die Dateigröße um bis zu 80 %, während die visuelle Qualität erhalten bleibt – ganz ohne Server-Upload.",
+        "steps": [
+          "Klicken Sie auf den Ablagebereich oder ziehen Sie Ihr Bild hinein.",
+          "Stellen Sie die Qualitätsstufe ein (1 bis 100 %, 70–85 % empfohlen).",
+          "Legen Sie optional eine maximale Breite oder Höhe fest.",
+          "Wählen Sie das Ausgabeformat (JPEG, PNG oder WebP), komprimieren Sie das Bild und laden Sie es herunter."
+        ],
+        "faq": [
+          {
+            "q": "Welches Format bietet die beste Komprimierung?",
+            "a": "WebP bietet das beste Verhältnis aus Qualität und Dateigröße, gefolgt von JPEG. Verwenden Sie PNG für Transparenz oder verlustfreie Qualität."
+          },
+          {
+            "q": "Welche Qualitätsstufe ist empfehlenswert?",
+            "a": "75–85 % für Web-Bilder, 50–70 % für Vorschaubilder und Thumbnails."
+          },
+          {
+            "q": "Verändert die Komprimierung die Bildgröße?",
+            "a": "Nein, es sei denn, Sie legen in den erweiterten Einstellungen maximale Abmessungen fest."
+          },
+          {
+            "q": "Sind meine Bilder vertraulich?",
+            "a": "Ja. Die Verarbeitung erfolgt vollständig über die Canvas-API des Browsers. Es werden keine Dateien an einen Server übertragen."
+          }
+        ]
+      },
+      "ui": {
+        "label_quality": "Qualität",
+        "label_format": "Ausgabeformat",
+        "fmt_jpeg": "JPEG",
+        "fmt_png": "PNG",
+        "fmt_webp": "WebP",
+        "label_max_width": "Max. Breite (px)",
+        "label_max_height": "Max. Höhe (px)",
+        "placeholder_optional": "Optional",
+        "btn_compress": "Bild Komprimieren",
+        "btn_download": "Herunterladen",
+        "drop_zone": "Bild hier ablegen oder klicken zum Hochladen"
+      }
+    },
+    "css_gradient_generator": {
+      "name": "CSS-Gradient-Generator",
+      "description": "Entwerfen Sie schöne CSS-Verläufe mit einem visuellen Editor und kopieren Sie den Code.",
+      "seo": {
+        "intro": "CSS-Verläufe erzeugen fließende Farbübergänge ohne Bilder. Dieser visuelle Editor unterstützt lineare, radiale und konische Verläufe mit anpassbaren Farbstopps und Winkeln.",
+        "steps": [
+          "Wählen Sie den Verlaufstyp: linear, radial oder konisch.",
+          "Passen Sie den Winkel an (bei linearen Verläufen).",
+          "Legen Sie Farbstopps mit Farben und Positionen fest.",
+          "Klicken Sie auf CSS kopieren, um den fertigen Code zu übernehmen."
+        ],
+        "faq": [
+          {
+            "q": "Was ist ein CSS-Verlauf?",
+            "a": "Ein fließender Farbübergang, der per CSS mit den Funktionen linear-gradient(), radial-gradient() oder conic-gradient() ohne Bilder erzeugt wird."
+          },
+          {
+            "q": "Wie viele Farbstopps kann man verwenden?",
+            "a": "In diesem Tool bis zu 5, aber CSS selbst legt keine feste Obergrenze fest."
+          },
+          {
+            "q": "Was ist der Unterschied zwischen linearem und radialem Verlauf?",
+            "a": "Ein linearer Verlauf folgt einer geraden Linie in einem bestimmten Winkel. Ein radialer Verlauf strahlt kreisförmig von einem Mittelpunkt nach außen."
+          },
+          {
+            "q": "Werden diese Verläufe von allen Browsern unterstützt?",
+            "a": "Ja, alle modernen Browser unterstützen sie vollständig, ohne dass herstellerspezifische Präfixe erforderlich sind."
+          }
+        ]
+      },
+      "ui": {
+        "label_type": "Verlaufstyp",
+        "type_linear": "Linear",
+        "type_radial": "Radial",
+        "type_conic": "Konisch",
+        "label_angle": "Winkel",
+        "label_stops": "Farbstopps",
+        "btn_add_stop": "+ Stop Hinzufügen",
+        "label_output": "Generiertes CSS",
+        "btn_copy_css": "CSS Kopieren",
+        "btn_random": "Zufälliger Verlauf",
+        "label_presets": "Voreinstellungen"
+      }
+    },
+    "color_palette_generator": {
+      "name": "Farbpaletten-Generator",
+      "description": "Generieren Sie harmonische Farbpaletten für Ihre Designprojekte.",
+      "seo": {
+        "intro": "Erstellt harmonische 5-Farb-Paletten auf Basis der Farbtheorie: komplementär, analog, triadisch, tetradisch und monochromatisch.",
+        "steps": [
+          "Wählen Sie eine Grundfarbe oder geben Sie einen Hex-Farbcode ein.",
+          "Wählen Sie den gewünschten Harmonietyp.",
+          "Klicken Sie auf eine Farbe der Palette, um ihren Hex-Code zu kopieren.",
+          "Klicken Sie auf CSS-Variablen kopieren, um alle 5 Farben als benutzerdefinierte CSS-Eigenschaften zu erhalten."
+        ],
+        "faq": [
+          {
+            "q": "Was ist Farbharmonie?",
+            "a": "Optisch ansprechende Farbkombinationen, die auf den Beziehungen der Farben im Farbkreis basieren – ein Grundprinzip der Farbtheorie."
+          },
+          {
+            "q": "Was ist der Unterschied zwischen analoger und triadischer Palette?",
+            "a": "Analoge Farben liegen nebeneinander im Farbkreis (harmonisch und ruhig), triadische Farben sind um 120° versetzt (lebendig und dynamisch)."
+          },
+          {
+            "q": "Was ist eine monochromatische Palette?",
+            "a": "Eine Palette, die einen einzigen Farbton in verschiedenen Helligkeits- und Sättigungsstufen verwendet – für ein elegantes und einheitliches Erscheinungsbild."
+          },
+          {
+            "q": "Darf man diese Farben kommerziell verwenden?",
+            "a": "Ja, Farben können urheberrechtlich nicht geschützt werden. Sie können sie frei in allen Projekten einsetzen."
+          }
+        ]
+      },
+      "ui": {
+        "label_base_color": "Grundfarbe",
+        "label_harmony": "Harmonietyp",
+        "harmony_complementary": "Komplementär",
+        "harmony_analogous": "Analog",
+        "harmony_triadic": "Triadisch",
+        "harmony_tetradic": "Tetradisch",
+        "harmony_monochromatic": "Monochrom",
+        "label_css_vars": "CSS-Variablen",
+        "btn_copy_vars": "CSS-Variablen Kopieren",
+        "btn_shuffle": "Mischen"
+      }
+    },
+    "base64_encoder_decoder": {
+      "name": "Base64-Kodierer / Dekodierer",
+      "description": "Kodieren Sie Text zu Base64 oder dekodieren Sie Base64-Zeichenfolgen zurück zu Text.",
+      "seo": {
+        "intro": "Base64 wandelt binäre oder textuelle Daten in ASCII-Zeichenketten um. Es wird verwendet, um Bilder in HTML einzubetten, Daten in JSON zu übertragen oder E-Mail-Anhänge zu kodieren.",
+        "steps": [
+          "Wählen Sie den Modus Kodieren oder Dekodieren.",
+          "Fügen Sie Ihren Text in das Eingabefeld ein.",
+          "Die Ausgabe wird automatisch aktualisiert.",
+          "Kopieren Sie das Ergebnis oder verwenden Sie Tauschen, um Ein- und Ausgabe umzukehren."
+        ],
+        "faq": [
+          {
+            "q": "Was ist Base64?",
+            "a": "Eine Kodierung, die Daten in eine 64-Zeichen-ASCII-Zeichenkette umwandelt – etwa 33 % größer, aber mit allen textbasierten Protokollen kompatibel."
+          },
+          {
+            "q": "Ist Base64 eine Verschlüsselung?",
+            "a": "Nein. Es ist eine Kodierung, keine Verschlüsselung. Jeder kann eine Base64-Zeichenkette ohne Schlüssel dekodieren. Verwenden Sie es nicht zum Schutz sensibler Daten."
+          },
+          {
+            "q": "Warum stehen am Ende manchmal = Zeichen?",
+            "a": "Base64 kodiert Daten in 3-Byte-Blöcken. Das = ist ein Auffüllzeichen, damit die Ausgabe ein Vielfaches von 4 Zeichen ergibt."
+          },
+          {
+            "q": "Was ist URL-sicheres Base64?",
+            "a": "Eine Variante, die + durch - und / durch _ ersetzt, um Konflikte in URLs zu vermeiden, wo diese Zeichen eine besondere Bedeutung haben."
+          }
+        ]
+      },
+      "ui": {
+        "placeholder_encode": "Text zum Kodieren eingeben…",
+        "placeholder_decode": "Base64 zum Dekodieren eingeben…",
+        "title_swap": "Eingabe und Ausgabe tauschen",
+        "btn_copy_output": "Ausgabe Kopieren"
+      }
+    },
+    "currency_converter": {
+      "name": "Währungsrechner",
+      "description": "Konvertieren Sie zwischen Weltwährungen mit den neuesten Wechselkursen.",
+      "seo": {
+        "intro": "Unterstützt 32 wichtige Weltwährungen mit Echtzeit-Wechselkursen, sofern verfügbar. Alle Umrechnungen erfolgen sofort im Browser.",
+        "steps": [
+          "Geben Sie den umzurechnenden Betrag ein.",
+          "Wählen Sie Ausgangswährung und Zielwährung.",
+          "Das Ergebnis wird automatisch aktualisiert.",
+          "Nutzen Sie die Tauschen-Schaltfläche oder die Schnellpaare für gängige Umrechnungen."
+        ],
+        "faq": [
+          {
+            "q": "Wie genau sind die angezeigten Kurse?",
+            "a": "Das Tool fragt zunächst eine Echtzeit-API ab und fällt bei Nichtverfügbarkeit auf periodisch aktualisierte Ersatzkurse zurück."
+          },
+          {
+            "q": "Warum wird das Ergebnis als ungefähr angegeben?",
+            "a": "Die Ersatzkurse können leicht veraltet sein. Für echte Finanztransaktionen wenden Sie sich bitte an Ihre Bank."
+          },
+          {
+            "q": "Welche Währungen sind verfügbar?",
+            "a": "32 Hauptwährungen: USD, EUR, GBP, JPY, CAD, AUD, CHF, CNY, INR, BRL und viele weitere."
+          },
+          {
+            "q": "Kann ich dieses Tool für echte Transaktionen nutzen?",
+            "a": "Das Tool dient nur zu Informationszwecken. Für Überweisungen oder Devisengeschäfte verwenden Sie bitte die offiziellen Kurse Ihrer Bank."
+          }
+        ]
+      },
+      "ui": {
+        "label_popular_pairs": "Beliebte Paare",
+        "label_amount": "Betrag",
+        "placeholder_search": "Suchen…",
+        "title_swap": "Währungen tauschen",
+        "disclaimer": "Wechselkurse können ungefähr sein."
+      }
+    },
+    "word_character_counter": {
+      "name": "Wort- und Zeichenzähler",
+      "description": "Zählen Sie Wörter, Zeichen, Sätze und Absätze in Ihrem Text.",
+      "seo": {
+        "intro": "Zeigt in Echtzeit Wörter, Zeichen, Sätze, Absätze sowie Schätzungen für Lese- und Sprechzeit an – aktualisiert sich während Sie tippen.",
+        "steps": [
+          "Tippen oder fügen Sie Ihren Text in das Eingabefeld ein.",
+          "Die Statistiken werden live aktualisiert, kein Knopfdruck erforderlich.",
+          "Prüfen Sie: Zeichen mit/ohne Leerzeichen, Wörter, Sätze, Absätze, durchschnittliche Wortlänge.",
+          "Sehen Sie die geschätzte Lese- und Sprechzeit."
+        ],
+        "faq": [
+          {
+            "q": "Wie wird die Lesezeit berechnet?",
+            "a": "Auf Basis von 200 Wörtern pro Minute – der durchschnittlichen Lesegeschwindigkeit eines Erwachsenen beim stillen Lesen."
+          },
+          {
+            "q": "Wie wird die Sprechzeit geschätzt?",
+            "a": "Auf Basis von 150 Wörtern pro Minute – einem angenehmen Tempo für Präsentationen oder Vorträge."
+          },
+          {
+            "q": "Wie werden Sätze gezählt?",
+            "a": "Der Text wird an den Satzzeichen . ! ? aufgeteilt. Diese Heuristik kann bei ungewöhnlicher Zeichensetzung ungenau sein."
+          },
+          {
+            "q": "Was zählt als Wort?",
+            "a": "Jede durch Leerzeichen begrenzte Zeichenfolge, einschließlich Zahlen und Wörter mit Bindestrich."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "Ihr Text",
+        "placeholder": "Tippen Sie oder fügen Sie Ihren Text hier ein…",
+        "stat_chars": "Zeichen",
+        "stat_chars_no_space": "Zeichen (ohne Leerzeichen)",
+        "stat_words": "Wörter",
+        "stat_sentences": "Sätze",
+        "stat_paragraphs": "Absätze",
+        "stat_avg_word": "Durchschn. Wortlänge",
+        "stat_reading_time": "Lesezeit",
+        "stat_speaking_time": "Sprechzeit"
+      }
+    },
+    "days_between_dates": {
+      "name": "Tage Zwischen Daten",
+      "description": "Berechnen Sie die Anzahl der Tage, Wochen und Monate zwischen zwei Daten.",
+      "seo": {
+        "intro": "Berechnet die Gesamtzahl der Tage, Wochen, Werktage und Stunden zwischen zwei beliebigen Daten – nützlich für Fristen, Jubiläen oder Projektplanung.",
+        "steps": [
+          "Legen Sie das Startdatum fest (Standardwert: heute).",
+          "Legen Sie das Enddatum fest (Standardwert: +30 Tage).",
+          "Prüfen Sie die Aufschlüsselung: Gesamttage, Wochen, Monate, Werktage, Stunden.",
+          "Nutzen Sie die Schaltflächen Tauschen oder Heute als Schnellzugriff."
+        ],
+        "faq": [
+          {
+            "q": "Wie werden Werktage berechnet?",
+            "a": "Samstage und Sonntage werden ausgeschlossen. Feiertage werden nicht berücksichtigt, da sie je nach Land unterschiedlich sind."
+          },
+          {
+            "q": "Was passiert, wenn das Enddatum vor dem Startdatum liegt?",
+            "a": "Das Ergebnis ist negativ. Verwenden Sie die Tauschen-Schaltfläche, um die Daten umzukehren."
+          },
+          {
+            "q": "Ist die Monatsberechnung genau?",
+            "a": "Sie ist näherungsweise: Die Gesamttage werden durch 30,44 geteilt, da Monate unterschiedlich lang sind."
+          },
+          {
+            "q": "Können auch vergangene oder zukünftige Daten verwendet werden?",
+            "a": "Ja, jede Kombination aus vergangenen, aktuellen oder zukünftigen Daten ist möglich. Ein Statusindikator zeigt an, ob der Zeitraum in der Vergangenheit oder Zukunft liegt."
+          }
+        ]
+      },
+      "ui": {
+        "label_start": "Startdatum",
+        "label_end": "Enddatum",
+        "title_swap": "Daten tauschen",
+        "stat_days": "Gesamttage",
+        "stat_weeks": "Wochen & Tage",
+        "weeks_days_format": "{weeks} Wochen {days} Tage",
+        "weeks_days_format_short": "{weeks} Wo {days} T",
+        "stat_months": "Monate",
+        "stat_business": "Werktage",
+        "stat_weekends": "Wochenendtage",
+        "stat_hours": "Stunden",
+        "status_same_date": "Gleiches Datum",
+        "status_end_before_start": "Das Enddatum liegt vor dem Startdatum (vor {days} Tagen)",
+        "status_both_past": "Beide Daten liegen in der Vergangenheit",
+        "status_end_in_future": "Das Enddatum liegt {days} Tage in der Zukunft"
+      }
+    }
+  }
+}

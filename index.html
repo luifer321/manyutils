@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ManyUtils - Free Online Tools for Developers & Designers</title>
+  <meta name="description" content="A collection of free online tools including QR code generator, JSON formatter, password generator, image compressor, and more. No signup required.">
+  <meta name="keywords" content="online tools, free tools, QR code generator, JSON formatter, password generator, image compressor, developer tools">
+  <meta property="og:title" content="ManyUtils - Free Online Tools">
+  <meta property="og:description" content="Simple, fast, and privacy-friendly tools that work right in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://manyutils.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://manyutils.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+        <span data-i18n="common.hero_title_1">Free Online</span>
+        <span class="block bg-gradient-to-r from-primary-400 to-violet-400 bg-clip-text text-transparent" data-i18n="common.hero_title_2">Developer Tools</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10" data-i18n="common.hero_subtitle">Simple, fast, and privacy-friendly tools that work right in your browser. No signup required.</p>
+      <div class="max-w-xl mx-auto relative">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        <input
+          id="search-tools"
+          type="text"
+          data-i18n-placeholder="common.search_placeholder"
+          placeholder="Search tools..."
+          class="w-full pl-12 pr-4 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:bg-white/15 text-base"
+        >
+      </div>
+    </div>
+  </section>
+
+  <div id="top-ad-banner"></div>
+
+  <!-- Tools Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="tools">
+    <!-- Categories -->
+    <div class="flex flex-wrap gap-2 mb-8" id="category-filters">
+      <button data-category="all" class="category-btn active px-4 py-2 rounded-xl text-sm font-medium bg-primary-500 text-white">
+        <span data-i18n="common.all_tools">All Tools</span>
+      </button>
+    </div>
+
+    <!-- Tools Grid -->
+    <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    </div>
+
+    <!-- No Results -->
+    <div id="no-results" class="hidden text-center py-16">
+      <svg class="w-16 h-16 mx-auto text-slate-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+      <p class="text-slate-500 text-lg" data-i18n="common.no_results">No tools found.</p>
+    </div>
+  </section>
+
+  <div id="bottom-ad-banner"></div>
+
+  <footer id="footer"></footer>
+
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script>
+    let activeCategory = 'all';
+
+    function renderCategoryFilters() {
+      const container = document.getElementById('category-filters');
+      const allBtn = container.querySelector('[data-category="all"]');
+      let html = allBtn.outerHTML;
+      CATEGORIES.forEach(cat => {
+        const label = i18n.t('categories.' + cat.i18nKey) || cat.id.replace(/_/g, ' ');
+        html += `<button data-category="${cat.id}" class="category-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-primary-300 hover:text-primary-600">${label}</button>`;
+      });
+      container.innerHTML = html;
+      container.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.dataset.category;
+          container.querySelectorAll('.category-btn').forEach(b => {
+            b.className = b === btn
+              ? 'category-btn px-4 py-2 rounded-xl text-sm font-medium bg-primary-500 text-white'
+              : 'category-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:border-primary-300 hover:text-primary-600';
+          });
+          renderToolsGrid();
+        });
+      });
+    }
+
+    function renderToolsGrid() {
+      const query = (document.getElementById('search-tools')?.value || '').toLowerCase().trim();
+      let tools = TOOLS;
+      if (activeCategory !== 'all') {
+        tools = tools.filter(t => t.category === activeCategory);
+      }
+      if (query) {
+        tools = tools.filter(t => {
+          const name = (i18n.t('tools.' + t.i18nKey + '.name') || t.id).toLowerCase();
+          const desc = (i18n.t('tools.' + t.i18nKey + '.description') || '').toLowerCase();
+          return name.includes(query) || desc.includes(query) || t.id.includes(query);
+        });
+      }
+      const grid = document.getElementById('tools-grid');
+      const noResults = document.getElementById('no-results');
+      if (tools.length === 0) {
+        grid.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+      noResults.classList.add('hidden');
+      grid.innerHTML = tools.map(t => {
+        const name = i18n.t('tools.' + t.i18nKey + '.name') || t.id.replace(/-/g, ' ');
+        const desc = i18n.t('tools.' + t.i18nKey + '.description') || '';
+        return `
+          <a href="${t.path}" class="tool-grid-card bg-white rounded-2xl border border-slate-200 p-5 hover:border-primary-200 block">
+            <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-4">
+              ${t.icon}
+            </div>
+            <h3 class="font-semibold text-slate-900 mb-1.5">${name}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">${desc}</p>
+          </a>
+        `;
+      }).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        renderCategoryFilters();
+        renderToolsGrid();
+        document.getElementById('search-tools')?.addEventListener('input', Utils.debounce(renderToolsGrid, 200));
+      }, 100);
+    });
+  </script>
+</body>
+</html>

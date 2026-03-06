@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="qr-code-generator">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator - Free Online Tool | ManyUtils</title>
+  <meta name="description" content="Generate QR codes from text, URLs, or any data instantly. Free online QR code generator with download options.">
+  <link rel="canonical" href="https://manyutils.com/tools/qr-code-generator/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <div id="top-ad-banner"></div>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.qr_code_generator.name">QR Code Generator</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.qr_code_generator.description">Generate QR codes from text, URLs, or any data instantly.</p>
+          <div id="tool-container">
+            <div class="space-y-5">
+              <div>
+                <label for="qr-input" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="tools.qr_code_generator.ui.label_input">Text or URL</label>
+                <textarea id="qr-input" rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none resize-none" placeholder="Enter text, URL, email, phone number..." data-i18n-placeholder="tools.qr_code_generator.ui.placeholder_input">https://manyutils.com</textarea>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label for="qr-size" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="tools.qr_code_generator.ui.label_size">Size</label>
+                  <select id="qr-size" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+                    <option value="128" data-i18n="tools.qr_code_generator.ui.size_small">Small (128×128)</option>
+                    <option value="256" selected data-i18n="tools.qr_code_generator.ui.size_medium">Medium (256×256)</option>
+                    <option value="512" data-i18n="tools.qr_code_generator.ui.size_large">Large (512×512)</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="qr-fg-color" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="tools.qr_code_generator.ui.label_fg_color">Foreground Color</label>
+                  <div class="flex items-center gap-3">
+                    <input type="color" id="qr-fg-color" value="#000000" class="w-10 h-10 rounded-lg border border-slate-200 cursor-pointer p-0.5">
+                    <span id="qr-fg-label" class="text-sm text-slate-500 font-mono">#000000</span>
+                  </div>
+                </div>
+                <div>
+                  <label for="qr-bg-color" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="tools.qr_code_generator.ui.label_bg_color">Background Color</label>
+                  <div class="flex items-center gap-3">
+                    <input type="color" id="qr-bg-color" value="#ffffff" class="w-10 h-10 rounded-lg border border-slate-200 cursor-pointer p-0.5">
+                    <span id="qr-bg-label" class="text-sm text-slate-500 font-mono">#ffffff</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <button id="qr-generate-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white transition-colors" data-i18n="tools.qr_code_generator.ui.btn_generate">
+                  Generate QR Code
+                </button>
+                <button id="qr-download-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors hidden" data-i18n="tools.qr_code_generator.ui.btn_download">
+                  Download PNG
+                </button>
+                <button id="qr-copy-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors hidden" data-i18n="tools.qr_code_generator.ui.btn_copy">
+                  Copy to Clipboard
+                </button>
+              </div>
+
+              <div id="qr-preview" class="flex justify-center p-6 bg-slate-50 rounded-xl border border-slate-100 hidden">
+                <div id="qr-output"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                  <div id="seo-content"></div>
+        </div>
+      </div>
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+    </div>
+  </main>
+  <div id="bottom-ad-banner"></div>
+  <footer id="footer"></footer>
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/tools/qr-code-generator.js"></script>
+</body>
+</html>

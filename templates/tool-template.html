@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="TOOL_ID_HERE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOOL_NAME_HERE - Free Online Tool | ManyUtils</title>
+  <meta name="description" content="TOOL_DESCRIPTION_HERE">
+  <link rel="canonical" href="https://manyutils.com/tools/TOOL_ID_HERE/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Add any external libraries here -->
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <div id="top-ad-banner"></div>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+
+      <!-- Main Content Column -->
+      <div class="lg:col-span-8">
+
+        <!-- Tool Card -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.I18N_KEY_HERE.name">TOOL_NAME_HERE</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.I18N_KEY_HERE.description">TOOL_DESCRIPTION_HERE</p>
+
+          <div id="tool-container">
+            <!--
+              BUILD YOUR TOOL UI HERE
+
+              Design system reference:
+              - Input:    w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none
+              - Label:    block text-sm font-medium text-slate-700 mb-1.5
+              - Primary button:    px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white
+              - Secondary button:  px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700
+              - Drop zone:         class="drop-zone" data-accept="image/*"
+              - Code output:       class="code-block"
+            -->
+          </div>
+        </div>
+
+        <!-- SEO Content Section -->
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h2 class="text-xl font-bold text-slate-900 mb-4">What is TOOL_NAME_HERE?</h2>
+          <p class="text-slate-600 mb-4">Explain what this tool does and why it's useful.</p>
+
+          <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">How to Use TOOL_NAME_HERE</h2>
+          <ol class="list-decimal list-inside text-slate-600 space-y-2 mb-6">
+            <li>Step one description.</li>
+            <li>Step two description.</li>
+            <li>Step three description.</li>
+          </ol>
+
+          <h2 class="text-xl font-bold text-slate-900 mt-8 mb-4">Frequently Asked Questions</h2>
+          <div class="space-y-3">
+            <div class="faq-item active border border-slate-200 rounded-xl overflow-hidden">
+              <button class="faq-question w-full flex items-center justify-between p-4 text-left font-medium text-slate-900 hover:bg-slate-50">
+                <span>Your question here?</span>
+                <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+              </button>
+              <div class="faq-answer px-4 text-slate-600">
+                <p>Your answer here.</p>
+              </div>
+            </div>
+            <!-- Add more FAQ items following the same pattern -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+
+    </div>
+  </main>
+
+  <div id="bottom-ad-banner"></div>
+  <footer id="footer"></footer>
+
+  <!-- Shared scripts (order matters) -->
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+
+  <!-- Tool-specific script -->
+  <script src="/assets/js/tools/TOOL_ID_HERE.js"></script>
+</body>
+</html>

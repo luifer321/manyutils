@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="base64-encoder-decoder">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 Encoder/Decoder - Free Online Tool | ManyUtils</title>
+  <meta name="description" content="Encode text to Base64 or decode Base64 to text instantly. Supports UTF-8 characters with real-time conversion and error handling.">
+  <link rel="canonical" href="https://manyutils.com/tools/base64-encoder-decoder/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <div id="top-ad-banner"></div>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.base64_encoder_decoder.name">Base64 Encoder/Decoder</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.base64_encoder_decoder.description">Encode text to Base64 or decode Base64 strings back to text.</p>
+          <div id="tool-container">
+
+            <div class="flex rounded-xl border border-slate-200 overflow-hidden mb-6">
+              <button id="mode-encode" class="flex-1 px-5 py-2.5 font-medium text-sm transition-colors bg-primary-500 text-white" data-i18n="common.encode">Encode</button>
+              <button id="mode-decode" class="flex-1 px-5 py-2.5 font-medium text-sm transition-colors bg-slate-100 text-slate-700 hover:bg-slate-200" data-i18n="common.decode">Decode</button>
+            </div>
+
+            <div class="mb-2">
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="b64-input" class="block text-sm font-medium text-slate-700" data-i18n="common.input">Input</label>
+                <span id="input-count" class="text-xs text-slate-400">0 characters</span>
+              </div>
+              <textarea id="b64-input" rows="6" placeholder="Enter text to encode…" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none resize-y font-mono text-sm" data-i18n-placeholder="tools.base64_encoder_decoder.ui.placeholder_encode"></textarea>
+            </div>
+
+            <div class="flex justify-center my-3">
+              <button id="swap-btn" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-500 transition-colors" title="Swap input and output" data-i18n-title="tools.base64_encoder_decoder.ui.title_swap">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+              </button>
+            </div>
+
+            <div class="mb-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <label for="b64-output" class="block text-sm font-medium text-slate-700" data-i18n="common.output">Output</label>
+                <span id="output-count" class="text-xs text-slate-400">0 characters</span>
+              </div>
+              <textarea id="b64-output" rows="6" readonly class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 outline-none resize-y font-mono text-sm"></textarea>
+            </div>
+
+            <div id="error-msg" class="hidden mb-4 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm"></div>
+
+            <div class="flex flex-wrap gap-3">
+              <button id="action-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white transition-colors" data-i18n="common.encode">Encode</button>
+              <button id="copy-output-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="tools.base64_encoder_decoder.ui.btn_copy_output">Copy Output</button>
+              <button id="clear-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.clear">Clear</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                  <div id="seo-content"></div>
+        </div>
+      </div>
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+    </div>
+  </main>
+  <div id="bottom-ad-banner"></div>
+  <footer id="footer"></footer>
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/tools/base64-encoder-decoder.js"></script>
+</body>
+</html>

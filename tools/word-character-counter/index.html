@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="word-character-counter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word &amp; Character Counter - Free Online Tool | ManyUtils</title>
+  <meta name="description" content="Count words, characters, sentences, and paragraphs in real time. Get reading and speaking time estimates instantly.">
+  <link rel="canonical" href="https://manyutils.com/tools/word-character-counter/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <div id="top-ad-banner"></div>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.word_character_counter.name">Word &amp; Character Counter</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.word_character_counter.description">Count words, characters, sentences, and paragraphs in real time.</p>
+          <div id="tool-container">
+            <div class="space-y-6">
+
+              <!-- Textarea -->
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <label for="wc-input" class="block text-sm font-medium text-slate-700" data-i18n="tools.word_character_counter.ui.label_input">Your Text</label>
+                  <div class="flex gap-2">
+                    <button id="wc-copy-btn" class="px-3 py-1.5 rounded-lg font-medium text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.copy">Copy</button>
+                    <button id="wc-clear-btn" class="px-3 py-1.5 rounded-lg font-medium text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.clear">Clear</button>
+                  </div>
+                </div>
+                <textarea id="wc-input" rows="10" placeholder="Start typing or paste your text here…" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none resize-y text-sm" data-i18n-placeholder="tools.word_character_counter.ui.placeholder"></textarea>
+              </div>
+
+              <!-- Stats grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
+                  <div id="wc-chars" class="text-2xl font-bold text-slate-900">0</div>
+                  <div class="text-xs text-slate-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_chars">Characters</div>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
+                  <div id="wc-chars-no-spaces" class="text-2xl font-bold text-slate-900">0</div>
+                  <div class="text-xs text-slate-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_chars_no_space">Characters (no spaces)</div>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
+                  <div id="wc-words" class="text-2xl font-bold text-slate-900">0</div>
+                  <div class="text-xs text-slate-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_words">Words</div>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
+                  <div id="wc-sentences" class="text-2xl font-bold text-slate-900">0</div>
+                  <div class="text-xs text-slate-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_sentences">Sentences</div>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
+                  <div id="wc-paragraphs" class="text-2xl font-bold text-slate-900">0</div>
+                  <div class="text-xs text-slate-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_paragraphs">Paragraphs</div>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
+                  <div id="wc-avg-word" class="text-2xl font-bold text-slate-900">0</div>
+                  <div class="text-xs text-slate-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_avg_word">Avg Word Length</div>
+                </div>
+              </div>
+
+              <!-- Time estimates -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-primary-50 border border-primary-100 rounded-xl p-4 text-center">
+                  <div id="wc-read-time" class="text-2xl font-bold text-primary-700">0 min</div>
+                  <div class="text-xs text-primary-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_reading_time">Reading Time</div>
+                </div>
+                <div class="bg-primary-50 border border-primary-100 rounded-xl p-4 text-center">
+                  <div id="wc-speak-time" class="text-2xl font-bold text-primary-700">0 min</div>
+                  <div class="text-xs text-primary-500 mt-1" data-i18n="tools.word_character_counter.ui.stat_speaking_time">Speaking Time</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                  <div id="seo-content"></div>
+        </div>
+      </div>
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+    </div>
+  </main>
+  <div id="bottom-ad-banner"></div>
+  <footer id="footer"></footer>
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/tools/word-character-counter.js"></script>
+</body>
+</html>

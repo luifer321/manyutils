@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="json-formatter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Formatter & Validator - Free Online Tool | ManyUtils</title>
+  <meta name="description" content="Format, beautify, minify, and validate JSON data online. Free JSON formatter with syntax highlighting and error detection.">
+  <link rel="canonical" href="https://manyutils.com/tools/json-formatter/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <div id="top-ad-banner"></div>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.json_formatter.name">JSON Formatter & Validator</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.json_formatter.description">Format, beautify, minify, and validate your JSON data instantly.</p>
+          <div id="tool-container">
+            <div class="space-y-5">
+              <div>
+                <label for="json-input" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="tools.json_formatter.ui.label_input">Input JSON</label>
+                <textarea id="json-input" rows="10" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none font-mono text-sm resize-y" placeholder='Paste your JSON here, e.g. {"name": "John", "age": 30}' data-i18n-placeholder="tools.json_formatter.ui.placeholder"></textarea>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-3">
+                <div>
+                  <label for="json-indent" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="tools.json_formatter.ui.label_indent">Indent</label>
+                  <select id="json-indent" class="px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                    <option value="2" selected data-i18n="tools.json_formatter.ui.indent_2">2 Spaces</option>
+                    <option value="4" data-i18n="tools.json_formatter.ui.indent_4">4 Spaces</option>
+                    <option value="tab" data-i18n="tools.json_formatter.ui.indent_tab">Tab</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <button id="json-format-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white transition-colors" data-i18n="tools.json_formatter.ui.btn_format">
+                  Format / Beautify
+                </button>
+                <button id="json-minify-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="tools.json_formatter.ui.btn_minify">
+                  Minify
+                </button>
+                <button id="json-validate-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="tools.json_formatter.ui.btn_validate">
+                  Validate
+                </button>
+                <button id="json-clear-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.clear">
+                  Clear
+                </button>
+              </div>
+
+              <div id="json-status" class="hidden">
+                <div id="json-status-content" class="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium"></div>
+              </div>
+
+              <div id="json-output-wrapper" class="hidden">
+                <div class="flex items-center justify-between mb-1.5">
+                  <label class="block text-sm font-medium text-slate-700" data-i18n="common.output">Output</label>
+                  <button id="json-copy-btn" class="px-3 py-1.5 rounded-lg font-medium text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.copy">
+                    Copy
+                  </button>
+                </div>
+                <div id="json-output" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 font-mono text-sm overflow-x-auto whitespace-pre max-h-96 overflow-y-auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                  <div id="seo-content"></div>
+        </div>
+      </div>
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+    </div>
+  </main>
+  <div id="bottom-ad-banner"></div>
+  <footer id="footer"></footer>
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/tools/json-formatter.js"></script>
+</body>
+</html>

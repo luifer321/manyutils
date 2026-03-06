@@ -1,0 +1,589 @@
+{
+  "common": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About",
+    "search_placeholder": "Search tools...",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "clear": "Clear",
+    "generate": "Generate",
+    "download": "Download",
+    "reset": "Reset",
+    "result": "Result",
+    "input": "Input",
+    "output": "Output",
+    "settings": "Settings",
+    "related_tools": "Related Tools",
+    "ad_space": "Advertisement",
+    "footer_rights": "All rights reserved.",
+    "footer_tagline": "Free online tools that work right in your browser. No signup required.",
+    "privacy_policy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "legal": "Legal",
+    "hero_title_1": "Free Online",
+    "hero_title_2": "Developer Tools",
+    "hero_subtitle": "Simple, fast, and privacy-friendly tools that work right in your browser. No signup required.",
+    "popular_tools": "Popular Tools",
+    "all_tools": "All Tools",
+    "categories": "Categories",
+    "no_results": "No tools found.",
+    "what_is": "What is",
+    "how_to_use": "How to Use",
+    "faq": "Frequently Asked Questions",
+    "encode": "Encode",
+    "decode": "Decode",
+    "upload": "Upload",
+    "processing": "Processing...",
+    "from": "From",
+    "to": "To",
+    "convert": "Convert",
+    "calculate": "Calculate",
+    "length": "Length",
+    "options": "Options",
+    "count": "Count",
+    "today": "Today",
+    "quality": "Quality",
+    "amount": "Amount",
+    "optional": "Optional",
+    "copy_all": "Copy All",
+    "copy_output": "Copy Output",
+    "swap": "Swap",
+    "start_date": "Start Date",
+    "end_date": "End Date",
+    "popular_pairs": "Popular Pairs",
+    "your_text": "Your Text",
+    "bulk_generate": "Bulk Generate",
+    "generated": "Generated",
+    "shuffle": "Shuffle",
+    "presets": "Presets",
+    "add_stop": "+ Add Stop",
+    "gradient_type": "Gradient Type",
+    "color_stops": "Color Stops",
+    "angle": "Angle",
+    "base_color": "Base Color",
+    "harmony_type": "Harmony Type",
+    "css_variables": "CSS Variables",
+    "output_format": "Output Format",
+    "max_width": "Max Width (px)",
+    "max_height": "Max Height (px)",
+    "pixel_size": "Pixel Size",
+    "indent": "Indent",
+    "password_length": "Password Length",
+    "compress": "Compress",
+    "copy_css": "Copy CSS",
+    "copy_css_vars": "Copy CSS Variables",
+    "random_gradient": "Random Gradient",
+    "format_beautify": "Format / Beautify",
+    "minify": "Minify",
+    "validate": "Validate"
+  },
+  "categories": {
+    "generators": "Generators",
+    "text_data": "Text & Data",
+    "image_tools": "Image Tools",
+    "calculators": "Calculators"
+  },
+  "tools": {
+    "qr_code_generator": {
+      "name": "QR Code Generator",
+      "description": "Generate QR codes from text, URLs, or any data instantly.",
+      "seo": {
+        "intro": "A QR (Quick Response) code is a two-dimensional barcode that stores information in a machine-readable format. Originally invented for the automotive industry, QR codes are now used everywhere — from restaurant menus to payment apps — because any smartphone can scan them in an instant.",
+        "steps": [
+          "Type or paste the text, URL, phone number, or any data you want to encode.",
+          "Choose your preferred QR code size: small (128px), medium (256px), or large (512px).",
+          "Optionally pick custom foreground and background colors to match your brand.",
+          "Click Generate, then download the QR code as a PNG or copy it to your clipboard."
+        ],
+        "faq": [
+          {
+            "q": "What types of data can a QR code store?",
+            "a": "QR codes can store URLs, plain text, email addresses, phone numbers, SMS messages, Wi-Fi credentials, vCard contact info, and more. The maximum capacity is roughly 4,296 alphanumeric characters."
+          },
+          {
+            "q": "Is there a size limit for QR code data?",
+            "a": "A single QR code can hold up to about 3 KB of data. For longer content, encode a short URL pointing to the full page rather than embedding the text directly."
+          },
+          {
+            "q": "Will custom colors affect scannability?",
+            "a": "Yes — always ensure strong contrast between the foreground and background. Light foreground colors or similar foreground/background pairs can make the code unreadable by scanners."
+          },
+          {
+            "q": "Are these QR codes free to use commercially?",
+            "a": "Absolutely. All QR codes generated here are completely free with no attribution required, for both personal and commercial use."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "Text or URL",
+        "placeholder_input": "Enter text, URL, email, phone number...",
+        "label_size": "Size",
+        "size_small": "Small (128×128)",
+        "size_medium": "Medium (256×256)",
+        "size_large": "Large (512×512)",
+        "label_fg_color": "Foreground Color",
+        "label_bg_color": "Background Color",
+        "btn_generate": "Generate QR Code",
+        "btn_download": "Download PNG",
+        "btn_copy": "Copy to Clipboard"
+      }
+    },
+    "json_formatter": {
+      "name": "JSON Formatter",
+      "description": "Format, validate, and beautify your JSON data with proper indentation.",
+      "seo": {
+        "intro": "JSON (JavaScript Object Notation) is the most widely used format for exchanging data between servers and web applications. This tool instantly formats, minifies, or validates any JSON string, making it easy to read and debug.",
+        "steps": [
+          "Paste your raw or minified JSON into the input textarea.",
+          "Select your preferred indentation: 2 spaces, 4 spaces, or tabs.",
+          "Click Format / Beautify to pretty-print with proper indentation, or Minify to compress it to a single line.",
+          "Use the Validate button to check for syntax errors, then copy the result to your clipboard."
+        ],
+        "faq": [
+          {
+            "q": "What does formatting JSON do?",
+            "a": "Formatting adds consistent indentation and line breaks to make the data structure human-readable. It does not change the data values — only the visual presentation."
+          },
+          {
+            "q": "Why would I minify JSON?",
+            "a": "Minifying removes all whitespace, producing the smallest possible file size. This is useful when transmitting JSON over a network or storing it in APIs, databases, or localStorage where size matters."
+          },
+          {
+            "q": "How does JSON validation work?",
+            "a": "The validator parses your input using the browser's built-in JSON parser. If parsing fails, it reports the exact error and the position in the string where the problem was found."
+          },
+          {
+            "q": "Can this tool handle large JSON files?",
+            "a": "Yes, for reasonably sized JSON. Very large files (several MB) may be slow because the processing happens in the browser. For huge files, consider a desktop tool."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "Input JSON",
+        "placeholder": "Paste your JSON here, e.g. {\"name\":\"John\",\"age\":30}",
+        "label_indent": "Indent",
+        "indent_2": "2 Spaces",
+        "indent_4": "4 Spaces",
+        "indent_tab": "Tab",
+        "btn_format": "Format / Beautify",
+        "btn_minify": "Minify",
+        "btn_validate": "Validate",
+        "btn_copy": "Copy"
+      }
+    },
+    "password_generator": {
+      "name": "Password Generator",
+      "description": "Create strong, secure random passwords with customizable options.",
+      "seo": {
+        "intro": "A strong password is your first line of defense against unauthorized access. This tool uses your browser's cryptographically secure random number generator to create passwords that are practically impossible to brute-force.",
+        "steps": [
+          "Drag the length slider to set the number of characters (8–128). Longer is always stronger.",
+          "Check or uncheck character sets: uppercase, lowercase, numbers, and symbols.",
+          "Choose how many passwords to generate at once (1, 5, or 10).",
+          "Click Generate or let the tool auto-generate, then copy your password with one click."
+        ],
+        "faq": [
+          {
+            "q": "What makes a password strong?",
+            "a": "A strong password is long (16+ characters), random, and uses a mix of uppercase, lowercase, numbers, and symbols. Avoid dictionary words, names, or predictable patterns."
+          },
+          {
+            "q": "Is this tool safe to use?",
+            "a": "Yes. Passwords are generated entirely in your browser using the Web Crypto API (crypto.getRandomValues). Nothing is sent to a server or stored anywhere."
+          },
+          {
+            "q": "Should I use a password manager?",
+            "a": "Yes — a password manager lets you use a unique, complex password for every account without having to memorize them. Generate a strong password here and save it in your manager."
+          },
+          {
+            "q": "How often should I change my passwords?",
+            "a": "Security experts now recommend changing passwords only when there's a reason to suspect a breach, rather than on a fixed schedule. The most important thing is using a unique password for every site."
+          }
+        ]
+      },
+      "ui": {
+        "opt_uppercase": "Uppercase (A-Z)",
+        "opt_lowercase": "Lowercase (a-z)",
+        "opt_numbers": "Numbers (0-9)",
+        "opt_symbols": "Symbols (!@#$...)",
+        "count_1": "1 password",
+        "count_5": "5 passwords",
+        "count_10": "10 passwords",
+        "btn_generate": "Generate Password",
+        "label_generated": "Generated Passwords"
+      }
+    },
+    "uuid_generator": {
+      "name": "UUID Generator",
+      "description": "Generate unique UUIDs (v4) for your applications instantly.",
+      "seo": {
+        "intro": "A UUID (Universally Unique Identifier) is a 128-bit label used to uniquely identify objects in software. Version 4 UUIDs are randomly generated, making collisions virtually impossible — perfect for database primary keys, session tokens, and unique resource IDs.",
+        "steps": [
+          "A single UUID v4 is generated automatically when the page loads.",
+          "Click Generate to create a new random UUID, or use the bulk generator to produce up to 100 at once.",
+          "Toggle uppercase/lowercase and with/without hyphens to match your requirements.",
+          "Click any UUID to copy it to your clipboard instantly."
+        ],
+        "faq": [
+          {
+            "q": "What is a UUID v4?",
+            "a": "UUID v4 is a randomly generated universally unique identifier. It contains 122 random bits, giving a total of 2^122 possible values — making accidental collisions practically impossible."
+          },
+          {
+            "q": "When should I use UUIDs?",
+            "a": "Use UUIDs as primary keys in databases, unique identifiers for API resources, session tokens, file names, and anywhere you need a globally unique string that doesn't expose sequential information."
+          },
+          {
+            "q": "Are UUIDs truly unique?",
+            "a": "While not mathematically guaranteed, the probability of two randomly generated UUIDs colliding is astronomically low — about 1 in 5.3 × 10^36. In practice, they are treated as unique."
+          },
+          {
+            "q": "What is the difference between UUID v1, v4, and v7?",
+            "a": "v1 is time-based (may expose the machine's MAC address), v4 is fully random, and v7 (newer) combines a timestamp with randomness for sortability. v4 is the most widely used for general purposes."
+          }
+        ]
+      },
+      "ui": {
+        "opt_uppercase": "Uppercase",
+        "opt_hyphens": "Include Hyphens",
+        "btn_bulk": "Bulk Generate",
+        "label_generated": "Generated UUIDs"
+      }
+    },
+    "image_pixelator": {
+      "name": "Image Pixelator",
+      "description": "Apply a pixel art effect to any image with adjustable block size.",
+      "seo": {
+        "intro": "The image pixelator applies a retro pixel-art effect to any photo or graphic. By dividing the image into blocks and filling each block with a single average color, it creates a mosaic look that's great for privacy protection, artistic effects, or game-style graphics.",
+        "steps": [
+          "Click the upload area or drag and drop an image file onto it.",
+          "Drag the pixel size slider to adjust the block size (2–50px). Larger blocks = more pixelated.",
+          "The preview updates live as you move the slider.",
+          "Click Download to save the pixelated image as a PNG file."
+        ],
+        "faq": [
+          {
+            "q": "What image formats are supported?",
+            "a": "You can upload JPEG, PNG, WebP, GIF, and most other common image formats. The output is always saved as a PNG."
+          },
+          {
+            "q": "Can I use this to anonymize faces?",
+            "a": "Yes. Increasing the pixel block size to 20–50px is an effective way to blur out faces, license plates, or other sensitive information in images."
+          },
+          {
+            "q": "Does the original image get uploaded anywhere?",
+            "a": "No. All processing happens entirely in your browser using the Canvas API. Your images never leave your device."
+          },
+          {
+            "q": "Will the downloaded image match what I see in the preview?",
+            "a": "Yes, the download uses the exact same canvas that the preview displays, so the output will be pixel-perfect to what you see."
+          }
+        ]
+      },
+      "ui": {
+        "label_pixel_size": "Pixel Size",
+        "drop_zone": "Drop image here or click to upload",
+        "btn_download": "Download Pixelated",
+        "btn_reset": "Reset"
+      }
+    },
+    "image_compressor": {
+      "name": "Image Compressor",
+      "description": "Compress and reduce image file size while maintaining quality.",
+      "seo": {
+        "intro": "Large images slow down websites and consume unnecessary storage. This tool compresses images directly in your browser, reducing file size by up to 80% while preserving as much visual quality as possible — no uploading to a server required.",
+        "steps": [
+          "Click the upload area or drag and drop your image onto it.",
+          "Use the quality slider to choose a compression level (1–100%). 70–85% is usually the sweet spot.",
+          "Optionally set a maximum width or height to also resize the image.",
+          "Select the output format (JPEG, PNG, or WebP), then click Compress and download the result."
+        ],
+        "faq": [
+          {
+            "q": "Which format should I choose for best compression?",
+            "a": "WebP typically achieves the best compression with excellent quality, followed by JPEG. Use PNG only when you need transparency or lossless quality, as it produces larger files."
+          },
+          {
+            "q": "What quality level should I use?",
+            "a": "For web images, 75–85% quality is usually ideal — it produces a significant file size reduction with barely noticeable quality loss. Go lower (50–70%) for thumbnails or background images."
+          },
+          {
+            "q": "Does compression reduce image dimensions?",
+            "a": "No, unless you explicitly set a max width or height. Compression only reduces file size. Use the resize inputs if you also want to change dimensions."
+          },
+          {
+            "q": "Is my image data private?",
+            "a": "Yes. Images are processed entirely in your browser using the Canvas API. No data is ever uploaded to a server."
+          }
+        ]
+      },
+      "ui": {
+        "label_quality": "Quality",
+        "label_format": "Output Format",
+        "fmt_jpeg": "JPEG",
+        "fmt_png": "PNG",
+        "fmt_webp": "WebP",
+        "label_max_width": "Max Width (px)",
+        "label_max_height": "Max Height (px)",
+        "placeholder_optional": "Optional",
+        "btn_compress": "Compress Image",
+        "btn_download": "Download",
+        "drop_zone": "Drop image here or click to upload"
+      }
+    },
+    "css_gradient_generator": {
+      "name": "CSS Gradient Generator",
+      "description": "Design beautiful CSS gradients with a visual editor and copy the code.",
+      "seo": {
+        "intro": "CSS gradients let you create smooth transitions between colors without using image files. This visual editor makes it easy to design linear, radial, and conic gradients with custom color stops, angles, and positions — then copy the ready-to-use CSS with one click.",
+        "steps": [
+          "Choose a gradient type: linear (straight), radial (circular), or conic (angular sweep).",
+          "Adjust the angle or direction using the slider (for linear gradients).",
+          "Set your color stops — pick colors and drag the position sliders to control where each color appears.",
+          "Click Copy CSS to copy the generated code and paste it directly into your stylesheet."
+        ],
+        "faq": [
+          {
+            "q": "What is a CSS gradient?",
+            "a": "A CSS gradient is a smooth color transition defined in CSS using the `linear-gradient()`, `radial-gradient()`, or `conic-gradient()` functions. They are rendered by the browser without needing any image files."
+          },
+          {
+            "q": "How many color stops can I add?",
+            "a": "This tool supports up to 5 color stops. In standard CSS there is no hard limit on the number of stops a gradient can have."
+          },
+          {
+            "q": "What is the difference between linear and radial gradients?",
+            "a": "A linear gradient transitions colors along a straight line at a given angle. A radial gradient radiates outward from a central point in a circular or elliptical pattern."
+          },
+          {
+            "q": "Will the generated CSS work in all browsers?",
+            "a": "Yes. CSS gradients are fully supported in all modern browsers (Chrome, Firefox, Safari, Edge). No vendor prefixes are needed for current browser versions."
+          }
+        ]
+      },
+      "ui": {
+        "label_type": "Gradient Type",
+        "type_linear": "Linear",
+        "type_radial": "Radial",
+        "type_conic": "Conic",
+        "label_angle": "Angle",
+        "label_stops": "Color Stops",
+        "btn_add_stop": "+ Add Stop",
+        "label_output": "Generated CSS",
+        "btn_copy_css": "Copy CSS",
+        "btn_random": "Random Gradient",
+        "label_presets": "Presets"
+      }
+    },
+    "color_palette_generator": {
+      "name": "Color Palette Generator",
+      "description": "Generate harmonious color palettes for your design projects.",
+      "seo": {
+        "intro": "Good color choices are the foundation of great design. This tool generates harmonious 5-color palettes based on proven color theory rules — complementary, analogous, triadic, tetradic, and monochromatic — starting from any base color you choose.",
+        "steps": [
+          "Pick a base color using the color picker, or type a hex code directly into the input.",
+          "Choose a color harmony type from the dropdown (complementary, analogous, triadic, tetradic, or monochromatic).",
+          "The palette generates instantly. Click any swatch to copy its hex code.",
+          "Click Copy CSS Variables to get all 5 colors as CSS custom properties ready to paste into your stylesheet."
+        ],
+        "faq": [
+          {
+            "q": "What is color harmony?",
+            "a": "Color harmony refers to combinations of colors that are pleasing to the eye because they follow specific relationships on the color wheel. Common harmonies include complementary (opposite colors), analogous (adjacent colors), and triadic (evenly spaced thirds)."
+          },
+          {
+            "q": "What is the difference between analogous and triadic palettes?",
+            "a": "An analogous palette uses colors that sit next to each other on the color wheel, creating a cohesive, calm look. A triadic palette uses three colors evenly spaced (120° apart), creating a more vibrant, high-contrast combination."
+          },
+          {
+            "q": "What is a monochromatic palette?",
+            "a": "A monochromatic palette uses variations of a single hue — different lightness and saturation levels — creating a refined, elegant look that's easy to apply consistently throughout a design."
+          },
+          {
+            "q": "Can I use these palettes for commercial projects?",
+            "a": "Yes, absolutely. Colors cannot be copyrighted. Any palette you generate here is free to use in personal or commercial projects."
+          }
+        ]
+      },
+      "ui": {
+        "label_base_color": "Base Color",
+        "label_harmony": "Harmony Type",
+        "harmony_complementary": "Complementary",
+        "harmony_analogous": "Analogous",
+        "harmony_triadic": "Triadic",
+        "harmony_tetradic": "Tetradic",
+        "harmony_monochromatic": "Monochromatic",
+        "label_css_vars": "CSS Variables",
+        "btn_copy_vars": "Copy CSS Variables",
+        "btn_shuffle": "Shuffle"
+      }
+    },
+    "base64_encoder_decoder": {
+      "name": "Base64 Encoder / Decoder",
+      "description": "Encode text to Base64 or decode Base64 strings back to text.",
+      "seo": {
+        "intro": "Base64 is an encoding scheme that converts binary or text data into a string of ASCII characters. It's widely used to embed images in HTML/CSS, transmit data in JSON payloads, encode email attachments, and store binary data in text-based systems.",
+        "steps": [
+          "Choose a mode: Encode (text → Base64) or Decode (Base64 → text).",
+          "Type or paste your input text into the left area.",
+          "The output updates automatically, or click the Encode/Decode button.",
+          "Click Copy to copy the output, or use the Swap button to flip input and output."
+        ],
+        "faq": [
+          {
+            "q": "What is Base64 encoding?",
+            "a": "Base64 converts data into a string using 64 safe ASCII characters (A–Z, a–z, 0–9, +, /). It increases data size by about 33% but makes binary data safe to transmit in text-based protocols."
+          },
+          {
+            "q": "Is Base64 encryption?",
+            "a": "No. Base64 is an encoding scheme, not encryption. It does not provide any security. Anyone can decode a Base64 string without a key. Never use Base64 to hide sensitive data."
+          },
+          {
+            "q": "Why does Base64 output end with = or ==?",
+            "a": "The = characters are padding. Base64 encodes data in 3-byte chunks. If the input length isn't a multiple of 3, padding characters are added to ensure the output length is a multiple of 4."
+          },
+          {
+            "q": "What is URL-safe Base64?",
+            "a": "Standard Base64 uses + and / which have special meanings in URLs. URL-safe Base64 replaces these with - and _ so the encoded string can be safely used in URLs and filenames."
+          }
+        ]
+      },
+      "ui": {
+        "placeholder_encode": "Enter text to encode…",
+        "placeholder_decode": "Enter Base64 to decode…",
+        "title_swap": "Swap input and output",
+        "btn_copy_output": "Copy Output"
+      }
+    },
+    "currency_converter": {
+      "name": "Currency Converter",
+      "description": "Convert between world currencies using the latest exchange rates.",
+      "seo": {
+        "intro": "This currency converter supports 32 major world currencies and fetches live exchange rates when available. All conversions happen instantly in your browser — no account or API key needed.",
+        "steps": [
+          "Enter the amount you want to convert in the amount field.",
+          "Select the source currency (From) and the target currency (To) from the dropdowns.",
+          "The result updates automatically as you type or change currencies.",
+          "Use the Swap button to reverse the conversion direction, or click a quick-pair button for common conversions."
+        ],
+        "faq": [
+          {
+            "q": "How accurate are the exchange rates?",
+            "a": "The tool attempts to fetch live rates from a free exchange rate API. If the request fails (e.g. due to network issues), it falls back to periodically updated hardcoded rates. Live rates should be accurate to within a few minutes."
+          },
+          {
+            "q": "Why does it say 'approximate'?",
+            "a": "When live rate fetching fails, the tool uses built-in fallback rates that may be slightly out of date. For financial transactions, always verify rates with your bank or a financial institution."
+          },
+          {
+            "q": "Which currencies are supported?",
+            "a": "The tool supports 32 major currencies including USD, EUR, GBP, JPY, CAD, AUD, CHF, CNY, INR, BRL, MXN, KRW, and more. New currencies may be added in future updates."
+          },
+          {
+            "q": "Can I use this for financial transactions?",
+            "a": "This tool is intended for informational and planning purposes only. For actual financial transactions, use rates provided by your bank, broker, or official financial service."
+          }
+        ]
+      },
+      "ui": {
+        "label_popular_pairs": "Popular Pairs",
+        "label_amount": "Amount",
+        "placeholder_search": "Search…",
+        "title_swap": "Swap currencies",
+        "disclaimer": "Exchange rates may be approximate."
+      }
+    },
+    "word_character_counter": {
+      "name": "Word & Character Counter",
+      "description": "Count words, characters, sentences, and paragraphs in your text.",
+      "seo": {
+        "intro": "Whether you're writing an essay, a tweet, a meta description, or an article, keeping track of your word and character count is essential. This tool provides real-time statistics as you type, including reading time and speaking time estimates.",
+        "steps": [
+          "Type or paste your text into the large textarea.",
+          "Statistics update live — no button click needed.",
+          "Review the stat cards: characters (with/without spaces), words, sentences, paragraphs, and average word length.",
+          "Check the estimated reading time and speaking time at the bottom of the stats."
+        ],
+        "faq": [
+          {
+            "q": "How is reading time calculated?",
+            "a": "Reading time is estimated at 200 words per minute, which is the average adult silent reading speed. The displayed time is rounded to the nearest practical unit (seconds, minutes, or hours)."
+          },
+          {
+            "q": "How is speaking time calculated?",
+            "a": "Speaking time is estimated at 150 words per minute, the average for a comfortable presentation pace. This is useful for estimating speech or podcast length."
+          },
+          {
+            "q": "How are sentences counted?",
+            "a": "Sentences are counted by splitting the text on sentence-ending punctuation (., !, ?). This is a heuristic and may not be perfectly accurate for texts that use punctuation in unusual ways."
+          },
+          {
+            "q": "What counts as a word?",
+            "a": "Words are counted by splitting on whitespace and filtering out empty strings. Any sequence of non-whitespace characters is treated as a word, including numbers and hyphenated words."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "Your Text",
+        "placeholder": "Start typing or paste your text here…",
+        "stat_chars": "Characters",
+        "stat_chars_no_space": "Characters (no spaces)",
+        "stat_words": "Words",
+        "stat_sentences": "Sentences",
+        "stat_paragraphs": "Paragraphs",
+        "stat_avg_word": "Avg. Word Length",
+        "stat_reading_time": "Reading Time",
+        "stat_speaking_time": "Speaking Time"
+      }
+    },
+    "days_between_dates": {
+      "name": "Days Between Dates",
+      "description": "Calculate the number of days, weeks, and months between two dates.",
+      "seo": {
+        "intro": "Need to know how many days until a deadline, how long ago an event occurred, or how many business days are in a period? This date calculator gives you a complete breakdown including total days, weeks, business days, and hours.",
+        "steps": [
+          "Set the start date using the date picker (defaults to today).",
+          "Set the end date using the second date picker (defaults to 30 days from today).",
+          "The result updates automatically. Review the breakdown: total days, weeks, months, business days, and hours.",
+          "Use the Swap button to reverse start and end dates, or the Today shortcut to reset either date to today."
+        ],
+        "faq": [
+          {
+            "q": "How are business days calculated?",
+            "a": "Business days exclude Saturdays and Sundays. Public holidays are not automatically excluded since they vary by country and region. You can manually adjust for holidays."
+          },
+          {
+            "q": "What if the end date is before the start date?",
+            "a": "The calculator will show a negative result or display an alert depending on the date values. Use the Swap button to quickly reverse the two dates."
+          },
+          {
+            "q": "How accurate is the month calculation?",
+            "a": "The month figure is an approximation (total days ÷ 30.44). For exact calendar months between two dates, note that months have different lengths, so this is always an estimate."
+          },
+          {
+            "q": "Can I calculate dates in the past?",
+            "a": "Yes. You can enter any two dates — past, present, or future — and the calculator will show the difference. A status badge indicates whether the end date is in the past or future."
+          }
+        ]
+      },
+      "ui": {
+        "label_start": "Start Date",
+        "label_end": "End Date",
+        "title_swap": "Swap dates",
+        "stat_days": "Total Days",
+        "stat_weeks": "Weeks & Days",
+        "weeks_days_format": "{weeks} weeks {days} days",
+        "weeks_days_format_short": "{weeks}w {days}d",
+        "stat_months": "Months",
+        "stat_business": "Business Days",
+        "stat_weekends": "Weekend Days",
+        "stat_hours": "Hours",
+        "status_same_date": "Same date",
+        "status_end_before_start": "End date is before start date ({days} days ago)",
+        "status_both_past": "Both dates are in the past",
+        "status_end_in_future": "End date is {days} days in the future"
+      }
+    }
+  }
+}

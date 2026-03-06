@@ -1,0 +1,589 @@
+{
+  "common": {
+    "home": "Inicio",
+    "tools": "Herramientas",
+    "about": "Acerca de",
+    "search_placeholder": "Buscar herramientas...",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "clear": "Limpiar",
+    "generate": "Generar",
+    "download": "Descargar",
+    "reset": "Restablecer",
+    "result": "Resultado",
+    "input": "Entrada",
+    "output": "Salida",
+    "settings": "Configuración",
+    "related_tools": "Herramientas Relacionadas",
+    "ad_space": "Publicidad",
+    "footer_rights": "Todos los derechos reservados.",
+    "footer_tagline": "Herramientas en línea gratuitas que funcionan directamente en tu navegador. Sin registro.",
+    "privacy_policy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "legal": "Legal",
+    "hero_title_1": "Herramientas Online",
+    "hero_title_2": "Gratuitas para Developers",
+    "hero_subtitle": "Herramientas simples, rápidas y respetuosas con la privacidad que funcionan directamente en tu navegador. Sin registro.",
+    "popular_tools": "Herramientas Populares",
+    "all_tools": "Todas las Herramientas",
+    "categories": "Categorías",
+    "no_results": "No se encontraron herramientas.",
+    "what_is": "¿Qué es",
+    "how_to_use": "Cómo Usar",
+    "faq": "Preguntas Frecuentes",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "upload": "Subir",
+    "processing": "Procesando...",
+    "from": "De",
+    "to": "A",
+    "convert": "Convertir",
+    "calculate": "Calcular",
+    "length": "Longitud",
+    "options": "Opciones",
+    "count": "Cantidad",
+    "today": "Hoy",
+    "quality": "Calidad",
+    "amount": "Monto",
+    "optional": "Opcional",
+    "copy_all": "Copiar Todo",
+    "copy_output": "Copiar Salida",
+    "swap": "Intercambiar",
+    "start_date": "Fecha de Inicio",
+    "end_date": "Fecha de Fin",
+    "popular_pairs": "Pares Populares",
+    "your_text": "Tu Texto",
+    "bulk_generate": "Generar en Lote",
+    "generated": "Generados",
+    "shuffle": "Mezclar",
+    "presets": "Preajustes",
+    "add_stop": "+ Añadir Parada",
+    "gradient_type": "Tipo de Degradado",
+    "color_stops": "Paradas de Color",
+    "angle": "Ángulo",
+    "base_color": "Color Base",
+    "harmony_type": "Tipo de Armonía",
+    "css_variables": "Variables CSS",
+    "output_format": "Formato de Salida",
+    "max_width": "Ancho Máximo (px)",
+    "max_height": "Alto Máximo (px)",
+    "pixel_size": "Tamaño de Píxel",
+    "indent": "Sangría",
+    "password_length": "Longitud de Contraseña",
+    "compress": "Comprimir",
+    "copy_css": "Copiar CSS",
+    "copy_css_vars": "Copiar Variables CSS",
+    "random_gradient": "Degradado Aleatorio",
+    "format_beautify": "Formatear / Embellecer",
+    "minify": "Minificar",
+    "validate": "Validar"
+  },
+  "categories": {
+    "generators": "Generadores",
+    "text_data": "Texto y Datos",
+    "image_tools": "Herramientas de Imagen",
+    "calculators": "Calculadoras"
+  },
+  "tools": {
+    "qr_code_generator": {
+      "name": "Generador de Códigos QR",
+      "description": "Genera códigos QR desde texto, URLs o cualquier dato al instante.",
+      "seo": {
+        "intro": "Un código QR (Respuesta Rápida) es un código de barras bidimensional que almacena información en un formato legible por máquinas. Inventado originalmente para la industria automotriz, hoy se usa en todos lados — desde menús de restaurantes hasta aplicaciones de pago — porque cualquier smartphone puede escanearlo al instante.",
+        "steps": [
+          "Escribe o pega el texto, URL, número de teléfono o cualquier dato que desees codificar.",
+          "Elige el tamaño de tu código QR: pequeño (128px), mediano (256px) o grande (512px).",
+          "Opcionalmente, selecciona colores personalizados para el frente y el fondo.",
+          "Haz clic en Generar, luego descarga el código QR como PNG o cópialo al portapapeles."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué tipos de datos puede almacenar un código QR?",
+            "a": "Los códigos QR pueden almacenar URLs, texto, correos electrónicos, números de teléfono, SMS, credenciales Wi-Fi, información de contacto vCard y mucho más. La capacidad máxima es de aproximadamente 4.296 caracteres alfanuméricos."
+          },
+          {
+            "q": "¿Existe un límite de tamaño para los datos del QR?",
+            "a": "Un código QR puede contener hasta aproximadamente 3 KB de datos. Para contenido más extenso, codifica una URL corta que redirija a la página completa en lugar de insertar todo el texto directamente."
+          },
+          {
+            "q": "¿Los colores personalizados afectan la legibilidad?",
+            "a": "Sí — siempre asegúrate de que haya un contraste fuerte entre el color del frente y el fondo. Los colores claros en el frente o colores muy similares entre frente y fondo pueden hacer que el código sea ilegible."
+          },
+          {
+            "q": "¿Puedo usar estos códigos QR comercialmente?",
+            "a": "Por supuesto. Todos los códigos QR generados aquí son completamente gratuitos, sin necesidad de atribución, para uso personal y comercial."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "Texto o URL",
+        "placeholder_input": "Ingresa texto, URL, correo, teléfono...",
+        "label_size": "Tamaño",
+        "size_small": "Pequeño (128×128)",
+        "size_medium": "Mediano (256×256)",
+        "size_large": "Grande (512×512)",
+        "label_fg_color": "Color del Frente",
+        "label_bg_color": "Color de Fondo",
+        "btn_generate": "Generar Código QR",
+        "btn_download": "Descargar PNG",
+        "btn_copy": "Copiar al Portapapeles"
+      }
+    },
+    "json_formatter": {
+      "name": "Formateador JSON",
+      "description": "Formatea, valida y embellece tus datos JSON con la indentación correcta.",
+      "seo": {
+        "intro": "JSON (JavaScript Object Notation) es el formato más utilizado para intercambiar datos entre servidores y aplicaciones web. Esta herramienta formatea, minifica o valida cualquier cadena JSON al instante, facilitando su lectura y depuración.",
+        "steps": [
+          "Pega tu JSON crudo o minificado en el área de texto de entrada.",
+          "Selecciona la indentación que prefieras: 2 espacios, 4 espacios o tabulaciones.",
+          "Haz clic en Formatear / Embellecer para una presentación legible, o en Minificar para comprimirlo en una sola línea.",
+          "Usa el botón Validar para comprobar errores de sintaxis, luego copia el resultado al portapapeles."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué hace formatear un JSON?",
+            "a": "Formatear agrega indentación y saltos de línea consistentes para que la estructura de datos sea fácil de leer. No cambia los valores de los datos, solo la presentación visual."
+          },
+          {
+            "q": "¿Por qué querría minificar un JSON?",
+            "a": "Minificar elimina todos los espacios en blanco, produciendo el archivo más pequeño posible. Esto es útil al transmitir JSON por red o almacenarlo en APIs, bases de datos o localStorage donde el tamaño importa."
+          },
+          {
+            "q": "¿Cómo funciona la validación de JSON?",
+            "a": "El validador analiza tu entrada usando el parser JSON integrado del navegador. Si el análisis falla, reporta el error exacto y la posición en la cadena donde se encontró el problema."
+          },
+          {
+            "q": "¿Puede esta herramienta manejar archivos JSON grandes?",
+            "a": "Sí, para archivos de tamaño razonable. Los archivos muy grandes (varios MB) pueden ser lentos porque el procesamiento ocurre en el navegador. Para archivos enormes, considera una herramienta de escritorio."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "JSON de Entrada",
+        "placeholder": "Pega tu JSON aquí, p.ej. {\"nombre\":\"Juan\",\"edad\":30}",
+        "label_indent": "Sangría",
+        "indent_2": "2 Espacios",
+        "indent_4": "4 Espacios",
+        "indent_tab": "Tabulación",
+        "btn_format": "Formatear / Embellecer",
+        "btn_minify": "Minificar",
+        "btn_validate": "Validar",
+        "btn_copy": "Copiar"
+      }
+    },
+    "password_generator": {
+      "name": "Generador de Contraseñas",
+      "description": "Crea contraseñas seguras y aleatorias con opciones personalizables.",
+      "seo": {
+        "intro": "Una contraseña segura es tu primera línea de defensa contra el acceso no autorizado. Esta herramienta usa el generador de números aleatorios criptográficamente seguro de tu navegador para crear contraseñas prácticamente imposibles de descifrar por fuerza bruta.",
+        "steps": [
+          "Arrastra el control deslizante de longitud para establecer el número de caracteres (8–128). Más larga siempre es más segura.",
+          "Marca o desmarca los conjuntos de caracteres: mayúsculas, minúsculas, números y símbolos.",
+          "Elige cuántas contraseñas generar a la vez (1, 5 o 10).",
+          "Haz clic en Generar o deja que la herramienta genere automáticamente, luego copia tu contraseña con un clic."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué hace segura a una contraseña?",
+            "a": "Una contraseña segura es larga (16+ caracteres), aleatoria y usa una mezcla de mayúsculas, minúsculas, números y símbolos. Evita palabras del diccionario, nombres o patrones predecibles."
+          },
+          {
+            "q": "¿Es seguro usar esta herramienta?",
+            "a": "Sí. Las contraseñas se generan completamente en tu navegador usando la Web Crypto API (crypto.getRandomValues). Nada se envía a un servidor ni se almacena en ningún lugar."
+          },
+          {
+            "q": "¿Debería usar un gestor de contraseñas?",
+            "a": "Sí — un gestor de contraseñas te permite usar una contraseña única y compleja para cada cuenta sin tener que memorizarlas. Genera una contraseña segura aquí y guárdala en tu gestor."
+          },
+          {
+            "q": "¿Con qué frecuencia debo cambiar mis contraseñas?",
+            "a": "Los expertos en seguridad ahora recomiendan cambiar las contraseñas solo cuando hay motivos para sospechar una brecha, en lugar de hacerlo en un horario fijo. Lo más importante es usar una contraseña única para cada sitio."
+          }
+        ]
+      },
+      "ui": {
+        "opt_uppercase": "Mayúsculas (A-Z)",
+        "opt_lowercase": "Minúsculas (a-z)",
+        "opt_numbers": "Números (0-9)",
+        "opt_symbols": "Símbolos (!@#$...)",
+        "count_1": "1 contraseña",
+        "count_5": "5 contraseñas",
+        "count_10": "10 contraseñas",
+        "btn_generate": "Generar Contraseña",
+        "label_generated": "Contraseñas Generadas"
+      }
+    },
+    "uuid_generator": {
+      "name": "Generador de UUID",
+      "description": "Genera UUIDs únicos (v4) para tus aplicaciones al instante.",
+      "seo": {
+        "intro": "Un UUID (Identificador Único Universal) es una etiqueta de 128 bits usada para identificar de forma única objetos en el software. Los UUID versión 4 son generados aleatoriamente, haciendo que las colisiones sean virtualmente imposibles — perfectos para claves primarias de bases de datos, tokens de sesión e IDs únicos de recursos.",
+        "steps": [
+          "Se genera automáticamente un UUID v4 cuando se carga la página.",
+          "Haz clic en Generar para crear un nuevo UUID aleatorio, o usa el generador masivo para producir hasta 100 a la vez.",
+          "Activa mayúsculas/minúsculas y con/sin guiones según tus necesidades.",
+          "Haz clic en cualquier UUID para copiarlo al portapapeles al instante."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué es un UUID v4?",
+            "a": "UUID v4 es un identificador único universal generado aleatoriamente. Contiene 122 bits aleatorios, dando un total de 2^122 valores posibles — haciendo que las colisiones accidentales sean prácticamente imposibles."
+          },
+          {
+            "q": "¿Cuándo debo usar UUIDs?",
+            "a": "Usa UUIDs como claves primarias en bases de datos, identificadores únicos para recursos de API, tokens de sesión, nombres de archivos y en cualquier lugar donde necesites una cadena globalmente única que no exponga información secuencial."
+          },
+          {
+            "q": "¿Son realmente únicos los UUIDs?",
+            "a": "Aunque no hay garantía matemática absoluta, la probabilidad de que dos UUIDs generados aleatoriamente colisionen es astronómicamente baja — aproximadamente 1 en 5.3 × 10^36. En la práctica, se tratan como únicos."
+          },
+          {
+            "q": "¿Cuál es la diferencia entre UUID v1, v4 y v7?",
+            "a": "v1 se basa en el tiempo (puede exponer la dirección MAC de la máquina), v4 es completamente aleatorio, y v7 (más nuevo) combina una marca de tiempo con aleatoriedad para permitir ordenamiento. v4 es el más usado en general."
+          }
+        ]
+      },
+      "ui": {
+        "opt_uppercase": "Mayúsculas",
+        "opt_hyphens": "Incluir Guiones",
+        "btn_bulk": "Generar en Lote",
+        "label_generated": "UUIDs Generados"
+      }
+    },
+    "image_pixelator": {
+      "name": "Pixelador de Imágenes",
+      "description": "Aplica un efecto de pixel art a cualquier imagen con tamaño ajustable.",
+      "seo": {
+        "intro": "El pixelador de imágenes aplica un efecto retro de pixel art a cualquier foto o gráfico. Al dividir la imagen en bloques y rellenar cada bloque con un solo color promedio, crea un aspecto de mosaico ideal para protección de privacidad, efectos artísticos o gráficos estilo videojuego.",
+        "steps": [
+          "Haz clic en el área de carga o arrastra y suelta una imagen sobre ella.",
+          "Arrastra el control deslizante de tamaño de píxel para ajustar el tamaño del bloque (2–50px). Bloques más grandes = más pixelado.",
+          "La vista previa se actualiza en tiempo real mientras mueves el control.",
+          "Haz clic en Descargar para guardar la imagen pixelada como archivo PNG."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué formatos de imagen se admiten?",
+            "a": "Puedes subir JPEG, PNG, WebP, GIF y la mayoría de los formatos de imagen comunes. La salida siempre se guarda como PNG."
+          },
+          {
+            "q": "¿Puedo usarlo para anonimizar rostros?",
+            "a": "Sí. Aumentar el tamaño del bloque de píxeles a 20–50px es una forma efectiva de difuminar rostros, matrículas u otra información sensible en las imágenes."
+          },
+          {
+            "q": "¿La imagen original se sube a algún servidor?",
+            "a": "No. Todo el procesamiento ocurre completamente en tu navegador usando la Canvas API. Tus imágenes nunca abandonan tu dispositivo."
+          },
+          {
+            "q": "¿La imagen descargada coincidirá con la vista previa?",
+            "a": "Sí, la descarga usa exactamente el mismo canvas que muestra la vista previa, por lo que el resultado será idéntico a lo que ves."
+          }
+        ]
+      },
+      "ui": {
+        "label_pixel_size": "Tamaño de Píxel",
+        "drop_zone": "Suelta la imagen aquí o haz clic para subir",
+        "btn_download": "Descargar Pixelada",
+        "btn_reset": "Restablecer"
+      }
+    },
+    "image_compressor": {
+      "name": "Compresor de Imágenes",
+      "description": "Comprime y reduce el tamaño de archivos de imagen manteniendo la calidad.",
+      "seo": {
+        "intro": "Las imágenes grandes ralentizan los sitios web y consumen almacenamiento innecesario. Esta herramienta comprime imágenes directamente en tu navegador, reduciendo el tamaño del archivo hasta un 80% mientras preserva la mayor calidad visual posible — sin necesidad de subir a un servidor.",
+        "steps": [
+          "Haz clic en el área de carga o arrastra y suelta tu imagen sobre ella.",
+          "Usa el control de calidad para elegir el nivel de compresión (1–100%). El 70–85% suele ser el punto óptimo.",
+          "Opcionalmente, establece un ancho o alto máximo para redimensionar la imagen.",
+          "Selecciona el formato de salida (JPEG, PNG o WebP), haz clic en Comprimir y descarga el resultado."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué formato debo elegir para la mejor compresión?",
+            "a": "WebP generalmente logra la mejor compresión con excelente calidad, seguido de JPEG. Usa PNG solo cuando necesites transparencia o calidad sin pérdida, ya que produce archivos más grandes."
+          },
+          {
+            "q": "¿Qué nivel de calidad debo usar?",
+            "a": "Para imágenes web, 75–85% de calidad suele ser ideal: produce una reducción significativa del tamaño con una pérdida de calidad casi imperceptible. Baja a 50–70% para miniaturas o imágenes de fondo."
+          },
+          {
+            "q": "¿La compresión reduce las dimensiones de la imagen?",
+            "a": "No, a menos que establezcas explícitamente un ancho o alto máximo. La compresión solo reduce el tamaño del archivo. Usa los campos de redimensionado si también quieres cambiar las dimensiones."
+          },
+          {
+            "q": "¿Son privados mis datos de imagen?",
+            "a": "Sí. Las imágenes se procesan completamente en tu navegador usando la Canvas API. Ningún dato se sube nunca a un servidor."
+          }
+        ]
+      },
+      "ui": {
+        "label_quality": "Calidad",
+        "label_format": "Formato de Salida",
+        "fmt_jpeg": "JPEG",
+        "fmt_png": "PNG",
+        "fmt_webp": "WebP",
+        "label_max_width": "Ancho Máximo (px)",
+        "label_max_height": "Alto Máximo (px)",
+        "placeholder_optional": "Opcional",
+        "btn_compress": "Comprimir Imagen",
+        "btn_download": "Descargar",
+        "drop_zone": "Suelta la imagen aquí o haz clic para subir"
+      }
+    },
+    "css_gradient_generator": {
+      "name": "Generador de Gradientes CSS",
+      "description": "Diseña hermosos gradientes CSS con un editor visual y copia el código.",
+      "seo": {
+        "intro": "Los gradientes CSS permiten crear transiciones suaves entre colores sin usar archivos de imagen. Este editor visual facilita el diseño de gradientes lineales, radiales y cónicos con paradas de color personalizadas, ángulos y posiciones — luego copia el CSS listo para usar con un clic.",
+        "steps": [
+          "Elige un tipo de gradiente: lineal (recto), radial (circular) o cónico (barrido angular).",
+          "Ajusta el ángulo o dirección usando el control deslizante (para gradientes lineales).",
+          "Establece tus paradas de color — elige colores y arrastra los controles de posición para controlar dónde aparece cada color.",
+          "Haz clic en Copiar CSS para copiar el código generado y pegarlo directamente en tu hoja de estilos."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué es un gradiente CSS?",
+            "a": "Un gradiente CSS es una transición suave de colores definida en CSS usando las funciones `linear-gradient()`, `radial-gradient()` o `conic-gradient()`. El navegador los renderiza sin necesitar archivos de imagen."
+          },
+          {
+            "q": "¿Cuántas paradas de color puedo agregar?",
+            "a": "Esta herramienta admite hasta 5 paradas de color. En CSS estándar no hay un límite estricto en el número de paradas que puede tener un gradiente."
+          },
+          {
+            "q": "¿Cuál es la diferencia entre gradientes lineales y radiales?",
+            "a": "Un gradiente lineal hace la transición de colores a lo largo de una línea recta en un ángulo dado. Un gradiente radial irradia hacia afuera desde un punto central en un patrón circular o elíptico."
+          },
+          {
+            "q": "¿El CSS generado funcionará en todos los navegadores?",
+            "a": "Sí. Los gradientes CSS son totalmente compatibles con todos los navegadores modernos (Chrome, Firefox, Safari, Edge). No se necesitan prefijos de proveedor para las versiones actuales."
+          }
+        ]
+      },
+      "ui": {
+        "label_type": "Tipo de Degradado",
+        "type_linear": "Lineal",
+        "type_radial": "Radial",
+        "type_conic": "Cónico",
+        "label_angle": "Ángulo",
+        "label_stops": "Paradas de Color",
+        "btn_add_stop": "+ Añadir Parada",
+        "label_output": "CSS Generado",
+        "btn_copy_css": "Copiar CSS",
+        "btn_random": "Degradado Aleatorio",
+        "label_presets": "Preajustes"
+      }
+    },
+    "color_palette_generator": {
+      "name": "Generador de Paletas de Color",
+      "description": "Genera paletas de colores armoniosas para tus proyectos de diseño.",
+      "seo": {
+        "intro": "Las buenas elecciones de color son la base de un gran diseño. Esta herramienta genera paletas armoniosas de 5 colores basadas en reglas probadas de teoría del color — complementario, análogo, triádico, tetrádico y monocromático — a partir del color base que elijas.",
+        "steps": [
+          "Elige un color base usando el selector de color, o escribe directamente un código hex en el campo de entrada.",
+          "Selecciona un tipo de armonía de color en el menú desplegable (complementario, análogo, triádico, tetrádico o monocromático).",
+          "La paleta se genera al instante. Haz clic en cualquier muestra para copiar su código hex.",
+          "Haz clic en Copiar Variables CSS para obtener los 5 colores como propiedades personalizadas CSS listas para pegar en tu hoja de estilos."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué es la armonía de color?",
+            "a": "La armonía de color se refiere a combinaciones de colores agradables a la vista porque siguen relaciones específicas en la rueda de colores. Las armonías comunes incluyen complementario (colores opuestos), análogo (colores adyacentes) y triádico (tercios equidistantes)."
+          },
+          {
+            "q": "¿Cuál es la diferencia entre paletas análogas y triádicas?",
+            "a": "Una paleta análoga usa colores que están uno al lado del otro en la rueda de colores, creando un aspecto cohesivo y tranquilo. Una paleta triádica usa tres colores equidistantes (120° de separación), creando una combinación más vibrante y de alto contraste."
+          },
+          {
+            "q": "¿Qué es una paleta monocromática?",
+            "a": "Una paleta monocromática usa variaciones de un solo tono — diferentes niveles de luminosidad y saturación — creando un aspecto refinado y elegante que es fácil de aplicar consistentemente en un diseño."
+          },
+          {
+            "q": "¿Puedo usar estas paletas en proyectos comerciales?",
+            "a": "Sí, absolutamente. Los colores no tienen derechos de autor. Cualquier paleta que generes aquí es libre de usar en proyectos personales o comerciales."
+          }
+        ]
+      },
+      "ui": {
+        "label_base_color": "Color Base",
+        "label_harmony": "Tipo de Armonía",
+        "harmony_complementary": "Complementario",
+        "harmony_analogous": "Análogo",
+        "harmony_triadic": "Triádico",
+        "harmony_tetradic": "Tetrádico",
+        "harmony_monochromatic": "Monocromático",
+        "label_css_vars": "Variables CSS",
+        "btn_copy_vars": "Copiar Variables CSS",
+        "btn_shuffle": "Mezclar"
+      }
+    },
+    "base64_encoder_decoder": {
+      "name": "Codificador / Decodificador Base64",
+      "description": "Codifica texto a Base64 o decodifica cadenas Base64 a texto.",
+      "seo": {
+        "intro": "Base64 es un esquema de codificación que convierte datos binarios o de texto en una cadena de caracteres ASCII. Se usa ampliamente para incrustar imágenes en HTML/CSS, transmitir datos en cargas JSON, codificar archivos adjuntos de correo electrónico y almacenar datos binarios en sistemas basados en texto.",
+        "steps": [
+          "Elige un modo: Codificar (texto → Base64) o Decodificar (Base64 → texto).",
+          "Escribe o pega tu texto de entrada en el área izquierda.",
+          "La salida se actualiza automáticamente, o haz clic en el botón Codificar/Decodificar.",
+          "Haz clic en Copiar para copiar la salida, o usa el botón Intercambiar para voltear entrada y salida."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué es la codificación Base64?",
+            "a": "Base64 convierte datos en una cadena usando 64 caracteres ASCII seguros (A–Z, a–z, 0–9, +, /). Aumenta el tamaño de los datos aproximadamente un 33% pero hace que los datos binarios sean seguros para transmitir en protocolos basados en texto."
+          },
+          {
+            "q": "¿Es Base64 un cifrado?",
+            "a": "No. Base64 es un esquema de codificación, no de cifrado. No proporciona ninguna seguridad. Cualquiera puede decodificar una cadena Base64 sin necesidad de clave. Nunca uses Base64 para ocultar datos sensibles."
+          },
+          {
+            "q": "¿Por qué la salida de Base64 termina con = o ==?",
+            "a": "Los caracteres = son relleno. Base64 codifica datos en bloques de 3 bytes. Si la longitud de entrada no es múltiplo de 3, se agregan caracteres de relleno para asegurar que la longitud de salida sea múltiplo de 4."
+          },
+          {
+            "q": "¿Qué es Base64 seguro para URL?",
+            "a": "El Base64 estándar usa + y / que tienen significados especiales en las URLs. El Base64 seguro para URL reemplaza estos con - y _ para que la cadena codificada pueda usarse de forma segura en URLs y nombres de archivos."
+          }
+        ]
+      },
+      "ui": {
+        "placeholder_encode": "Ingresa el texto a codificar…",
+        "placeholder_decode": "Ingresa el Base64 a decodificar…",
+        "title_swap": "Intercambiar entrada y salida",
+        "btn_copy_output": "Copiar Salida"
+      }
+    },
+    "currency_converter": {
+      "name": "Conversor de Monedas",
+      "description": "Convierte entre monedas del mundo usando las últimas tasas de cambio.",
+      "seo": {
+        "intro": "Este conversor de monedas admite 32 monedas principales del mundo y obtiene tasas de cambio en tiempo real cuando están disponibles. Todas las conversiones ocurren al instante en tu navegador — sin necesidad de cuenta ni clave de API.",
+        "steps": [
+          "Introduce la cantidad que deseas convertir en el campo de importe.",
+          "Selecciona la moneda de origen (De) y la moneda destino (A) en los menús desplegables.",
+          "El resultado se actualiza automáticamente mientras escribes o cambias las monedas.",
+          "Usa el botón Intercambiar para invertir la dirección de conversión, o haz clic en un par de monedas rápido para conversiones comunes."
+        ],
+        "faq": [
+          {
+            "q": "¿Qué tan precisas son las tasas de cambio?",
+            "a": "La herramienta intenta obtener tasas en tiempo real desde una API gratuita. Si la solicitud falla (por ejemplo, por problemas de red), recurre a tasas actualizadas periódicamente. Las tasas en vivo deberían ser precisas con unos pocos minutos de diferencia."
+          },
+          {
+            "q": "¿Por qué dice 'aproximado'?",
+            "a": "Cuando falla la obtención de tasas en vivo, la herramienta usa tasas de reserva integradas que pueden estar ligeramente desactualizadas. Para transacciones financieras, siempre verifica las tasas con tu banco o institución financiera."
+          },
+          {
+            "q": "¿Qué monedas están disponibles?",
+            "a": "La herramienta admite 32 monedas principales incluyendo USD, EUR, GBP, JPY, CAD, AUD, CHF, CNY, INR, BRL, MXN, KRW y más. Se podrán agregar nuevas monedas en futuras actualizaciones."
+          },
+          {
+            "q": "¿Puedo usar esto para transacciones financieras?",
+            "a": "Esta herramienta es solo para fines informativos y de planificación. Para transacciones financieras reales, usa las tasas proporcionadas por tu banco, corredor o servicio financiero oficial."
+          }
+        ]
+      },
+      "ui": {
+        "label_popular_pairs": "Pares Populares",
+        "label_amount": "Monto",
+        "placeholder_search": "Buscar…",
+        "title_swap": "Intercambiar monedas",
+        "disclaimer": "Las tasas de cambio pueden ser aproximadas."
+      }
+    },
+    "word_character_counter": {
+      "name": "Contador de Palabras y Caracteres",
+      "description": "Cuenta palabras, caracteres, oraciones y párrafos en tu texto.",
+      "seo": {
+        "intro": "Ya sea que estés escribiendo un ensayo, un tweet, una meta descripción o un artículo, llevar un control de tu recuento de palabras y caracteres es esencial. Esta herramienta proporciona estadísticas en tiempo real mientras escribes, incluidas estimaciones de tiempo de lectura y de locución.",
+        "steps": [
+          "Escribe o pega tu texto en el área de texto grande.",
+          "Las estadísticas se actualizan en tiempo real — no necesitas hacer clic en ningún botón.",
+          "Revisa las tarjetas de estadísticas: caracteres (con/sin espacios), palabras, oraciones, párrafos y longitud promedio de palabra.",
+          "Consulta el tiempo estimado de lectura y de locución al final de las estadísticas."
+        ],
+        "faq": [
+          {
+            "q": "¿Cómo se calcula el tiempo de lectura?",
+            "a": "El tiempo de lectura se estima a 200 palabras por minuto, que es la velocidad media de lectura silenciosa de un adulto. El tiempo mostrado se redondea a la unidad práctica más cercana (segundos, minutos u horas)."
+          },
+          {
+            "q": "¿Cómo se calcula el tiempo de locución?",
+            "a": "El tiempo de locución se estima a 150 palabras por minuto, el promedio para un ritmo de presentación cómodo. Esto es útil para estimar la duración de un discurso o podcast."
+          },
+          {
+            "q": "¿Cómo se cuentan las oraciones?",
+            "a": "Las oraciones se cuentan dividiendo el texto en los signos de puntuación que terminan una oración (., !, ?). Esto es una heurística y puede no ser perfectamente precisa para textos que usan la puntuación de formas inusuales."
+          },
+          {
+            "q": "¿Qué cuenta como una palabra?",
+            "a": "Las palabras se cuentan dividiendo el texto por espacios en blanco y filtrando las cadenas vacías. Cualquier secuencia de caracteres que no sea espacio en blanco se trata como una palabra, incluidos números y palabras con guión."
+          }
+        ]
+      },
+      "ui": {
+        "label_input": "Tu Texto",
+        "placeholder": "Escribe o pega tu texto aquí…",
+        "stat_chars": "Caracteres",
+        "stat_chars_no_space": "Caracteres (sin espacios)",
+        "stat_words": "Palabras",
+        "stat_sentences": "Oraciones",
+        "stat_paragraphs": "Párrafos",
+        "stat_avg_word": "Long. Media de Palabra",
+        "stat_reading_time": "Tiempo de Lectura",
+        "stat_speaking_time": "Tiempo al Hablar"
+      }
+    },
+    "days_between_dates": {
+      "name": "Días Entre Fechas",
+      "description": "Calcula el número de días, semanas y meses entre dos fechas.",
+      "seo": {
+        "intro": "¿Necesitas saber cuántos días faltan para una fecha límite, cuánto tiempo hace que ocurrió un evento o cuántos días hábiles hay en un período? Esta calculadora de fechas te da un desglose completo incluyendo días totales, semanas, días hábiles y horas.",
+        "steps": [
+          "Establece la fecha de inicio usando el selector de fecha (por defecto es hoy).",
+          "Establece la fecha de fin usando el segundo selector (por defecto es 30 días a partir de hoy).",
+          "El resultado se actualiza automáticamente. Revisa el desglose: días totales, semanas, meses, días hábiles y horas.",
+          "Usa el botón Intercambiar para invertir las fechas de inicio y fin, o el acceso directo Hoy para restablecer cualquier fecha a hoy."
+        ],
+        "faq": [
+          {
+            "q": "¿Cómo se calculan los días hábiles?",
+            "a": "Los días hábiles excluyen sábados y domingos. Los días festivos no se excluyen automáticamente ya que varían según el país y la región. Puedes ajustar manualmente para los festivos."
+          },
+          {
+            "q": "¿Qué pasa si la fecha de fin es anterior a la de inicio?",
+            "a": "La calculadora mostrará un resultado negativo o una alerta dependiendo de los valores de fecha. Usa el botón Intercambiar para invertir rápidamente las dos fechas."
+          },
+          {
+            "q": "¿Qué tan preciso es el cálculo de meses?",
+            "a": "La cifra de meses es una aproximación (días totales ÷ 30,44). Para meses de calendario exactos entre dos fechas, ten en cuenta que los meses tienen diferentes longitudes, por lo que esto siempre es una estimación."
+          },
+          {
+            "q": "¿Puedo calcular fechas del pasado?",
+            "a": "Sí. Puedes introducir cualquier par de fechas — pasadas, presentes o futuras — y la calculadora mostrará la diferencia. Una insignia de estado indica si la fecha de fin está en el pasado o en el futuro."
+          }
+        ]
+      },
+      "ui": {
+        "label_start": "Fecha de Inicio",
+        "label_end": "Fecha de Fin",
+        "title_swap": "Intercambiar fechas",
+        "stat_days": "Días Totales",
+        "stat_weeks": "Semanas y Días",
+        "weeks_days_format": "{weeks} semanas {days} días",
+        "weeks_days_format_short": "{weeks} sem {days} d",
+        "stat_months": "Meses",
+        "stat_business": "Días Hábiles",
+        "stat_weekends": "Días de Fin de Semana",
+        "stat_hours": "Horas",
+        "status_same_date": "Misma fecha",
+        "status_end_before_start": "La fecha de fin es anterior a la fecha de inicio (hace {days} días)",
+        "status_both_past": "Ambas fechas están en el pasado",
+        "status_end_in_future": "La fecha de fin está {days} días en el futuro"
+      }
+    }
+  }
+}

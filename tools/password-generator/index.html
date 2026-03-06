@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="password-generator">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator - Free Online Tool | ManyUtils</title>
+  <meta name="description" content="Generate strong, secure random passwords instantly. Customize length, characters, and generate multiple passwords at once.">
+  <link rel="canonical" href="https://manyutils.com/tools/password-generator/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <div id="top-ad-banner"></div>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.password_generator.name">Password Generator</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.password_generator.description">Generate strong, secure random passwords instantly.</p>
+          <div id="tool-container">
+            <div class="space-y-6">
+
+              <div id="pw-display" class="relative bg-slate-50 border border-slate-200 rounded-xl p-5">
+                <div id="pw-output" class="font-mono text-lg sm:text-xl break-all text-slate-900 pr-10 select-all min-h-[1.75rem]"></div>
+                <button id="pw-copy-btn" class="absolute top-4 right-4 p-2 rounded-lg hover:bg-slate-200 text-slate-500 hover:text-slate-700 transition-colors" title="Copy password">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9.75a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"/></svg>
+                </button>
+              </div>
+
+              <div>
+                <div id="pw-strength-bar" class="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                  <div id="pw-strength-fill" class="h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+                <p id="pw-strength-label" class="text-sm font-medium mt-1.5 text-slate-500"></p>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <label for="pw-length" class="block text-sm font-medium text-slate-700" data-i18n="common.password_length">Password Length</label>
+                  <span id="pw-length-value" class="text-sm font-semibold text-primary-600 bg-primary-50 px-2.5 py-0.5 rounded-lg">16</span>
+                </div>
+                <input type="range" id="pw-length" min="8" max="128" value="16" class="w-full h-2 bg-slate-200 rounded-full appearance-none cursor-pointer accent-primary-500">
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                  <input type="checkbox" id="pw-uppercase" checked class="w-4 h-4 rounded text-primary-500 border-slate-300 focus:ring-primary-500">
+                  <span class="text-sm font-medium text-slate-700" data-i18n="tools.password_generator.ui.opt_uppercase">Uppercase (A-Z)</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                  <input type="checkbox" id="pw-lowercase" checked class="w-4 h-4 rounded text-primary-500 border-slate-300 focus:ring-primary-500">
+                  <span class="text-sm font-medium text-slate-700" data-i18n="tools.password_generator.ui.opt_lowercase">Lowercase (a-z)</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                  <input type="checkbox" id="pw-numbers" checked class="w-4 h-4 rounded text-primary-500 border-slate-300 focus:ring-primary-500">
+                  <span class="text-sm font-medium text-slate-700" data-i18n="tools.password_generator.ui.opt_numbers">Numbers (0-9)</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition-colors">
+                  <input type="checkbox" id="pw-symbols" checked class="w-4 h-4 rounded text-primary-500 border-slate-300 focus:ring-primary-500">
+                  <span class="text-sm font-medium text-slate-700" data-i18n="tools.password_generator.ui.opt_symbols">Symbols (!@#$...)</span>
+                </label>
+              </div>
+
+              <div class="flex flex-wrap items-end gap-3">
+                <div>
+                  <label for="pw-count" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.count">Count</label>
+                  <select id="pw-count" class="px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                    <option value="1" selected data-i18n="tools.password_generator.ui.count_1">1 password</option>
+                    <option value="5" data-i18n="tools.password_generator.ui.count_5">5 passwords</option>
+                    <option value="10" data-i18n="tools.password_generator.ui.count_10">10 passwords</option>
+                  </select>
+                </div>
+                <button id="pw-generate-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white transition-colors" data-i18n="tools.password_generator.ui.btn_generate">
+                  Generate
+                </button>
+              </div>
+
+              <div id="pw-multi-output" class="hidden">
+                <div class="flex items-center justify-between mb-1.5">
+                  <label class="block text-sm font-medium text-slate-700" data-i18n="tools.password_generator.ui.label_generated">Generated Passwords</label>
+                  <button id="pw-copy-all-btn" class="px-3 py-1.5 rounded-lg font-medium text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.copy_all">
+                    Copy All
+                  </button>
+                </div>
+                <div id="pw-multi-list" class="bg-slate-50 border border-slate-200 rounded-xl p-4 font-mono text-sm space-y-2 max-h-64 overflow-y-auto"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                  <div id="seo-content"></div>
+        </div>
+      </div>
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+    </div>
+  </main>
+  <div id="bottom-ad-banner"></div>
+  <footer id="footer"></footer>
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/tools/password-generator.js"></script>
+</body>
+</html>
