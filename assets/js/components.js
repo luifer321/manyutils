@@ -6,7 +6,7 @@ const Components = {
       <nav class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-16">
-            <a href="/" class="flex items-center gap-2 group">
+            <a href="${homeUrl()}" class="flex items-center gap-2 group">
               <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
                 <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
@@ -15,8 +15,8 @@ const Components = {
               <span class="text-white font-bold text-lg group-hover:text-primary-400">ManyUtils</span>
             </a>
             <div class="hidden md:flex items-center gap-6">
-              <a href="/" class="text-slate-300 hover:text-white text-sm font-medium" data-i18n="common.home">Home</a>
-              <a href="/#tools" class="text-slate-300 hover:text-white text-sm font-medium" data-i18n="common.tools">Tools</a>
+              <a href="${homeUrl()}" class="text-slate-300 hover:text-white text-sm font-medium" data-i18n="common.home">Home</a>
+              <a href="${homeUrl()}#tools" class="text-slate-300 hover:text-white text-sm font-medium" data-i18n="common.tools">Tools</a>
               <div class="relative" id="lang-switcher">
                 <button id="lang-toggle" class="flex items-center gap-1.5 text-slate-300 hover:text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-slate-800">
                   <span id="lang-current">🇺🇸 EN</span>
@@ -42,8 +42,8 @@ const Components = {
         </div>
         <div id="mobile-menu" class="mobile-menu md:hidden border-t border-slate-800">
           <div class="px-4 py-3 space-y-2">
-            <a href="/" class="block text-slate-300 hover:text-white text-sm font-medium py-2" data-i18n="common.home">Home</a>
-            <a href="/#tools" class="block text-slate-300 hover:text-white text-sm font-medium py-2" data-i18n="common.tools">Tools</a>
+            <a href="${homeUrl()}" class="block text-slate-300 hover:text-white text-sm font-medium py-2" data-i18n="common.home">Home</a>
+            <a href="${homeUrl()}#tools" class="block text-slate-300 hover:text-white text-sm font-medium py-2" data-i18n="common.tools">Tools</a>
             <div class="border-t border-slate-800 pt-2 mt-2">
               <p class="text-xs text-slate-500 uppercase tracking-wider mb-2">Language</p>
               <div class="flex flex-wrap gap-2">
@@ -123,7 +123,7 @@ const Components = {
               <h4 class="text-white font-semibold text-sm mb-4" data-i18n="common.popular_tools">Popular Tools</h4>
               <ul class="space-y-2">
                 ${getPopularTools().slice(0, 5).map(t => `
-                  <li><a href="${t.path}" class="text-slate-400 hover:text-primary-400 text-sm">${i18n.t('tools.' + t.i18nKey + '.name') || t.id.replace(/-/g, ' ')}</a></li>
+                  <li><a href="${toolUrl(t.id)}" class="text-slate-400 hover:text-primary-400 text-sm">${i18n.t('tools.' + t.i18nKey + '.name') || t.id.replace(/-/g, ' ')}</a></li>
                 `).join('')}
               </ul>
             </div>
@@ -131,7 +131,7 @@ const Components = {
               <h4 class="text-white font-semibold text-sm mb-4" data-i18n="common.categories">Categories</h4>
               <ul class="space-y-2">
                 ${CATEGORIES.map(c => `
-                  <li><a href="/#${c.id}" class="text-slate-400 hover:text-primary-400 text-sm">${i18n.t('categories.' + c.i18nKey) || c.id.replace(/_/g, ' ')}</a></li>
+                  <li><a href="${homeUrl()}#${c.id}" class="text-slate-400 hover:text-primary-400 text-sm">${i18n.t('categories.' + c.i18nKey) || c.id.replace(/_/g, ' ')}</a></li>
                 `).join('')}
               </ul>
             </div>
@@ -151,23 +151,6 @@ const Components = {
     `;
   },
 
-  renderAdBanner(containerId, size = 'banner') {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    const sizes = {
-      banner: 'h-[90px]',
-      leaderboard: 'h-[90px] sm:h-[90px]',
-      sidebar: 'h-[250px]',
-    };
-    container.innerHTML = `
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div class="ad-space ${sizes[size] || sizes.banner}">
-          <span data-i18n="common.ad_space">Advertisement</span>
-        </div>
-      </div>
-    `;
-  },
-
   renderSidebar() {
     const sidebar = document.getElementById('sidebar-content');
     if (!sidebar) return;
@@ -175,15 +158,12 @@ const Components = {
     const related = getRelatedTools(currentToolId, 5);
     sidebar.innerHTML = `
       <div class="space-y-6">
-        <div class="ad-space h-[250px]">
-          <span data-i18n="common.ad_space">Advertisement</span>
-        </div>
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
           <h3 class="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wider" data-i18n="common.related_tools">Related Tools</h3>
           <ul class="space-y-2">
             ${related.map(t => `
               <li>
-                <a href="${t.path}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 group">
+                <a href="${toolUrl(t.id)}" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 group">
                   <div class="w-9 h-9 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center flex-shrink-0 group-hover:bg-primary-100">
                     ${t.icon}
                   </div>

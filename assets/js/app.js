@@ -106,8 +106,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   await i18n.init();
   Components.renderHeader();
   Components.renderFooter();
-  Components.renderAdBanner('top-ad-banner', 'leaderboard');
-  Components.renderAdBanner('bottom-ad-banner', 'leaderboard');
   Components.renderSidebar();
   renderSeoSection();
   i18n.applyTranslations();

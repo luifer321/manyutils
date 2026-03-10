@@ -41,6 +41,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/assets/js/tailwind-config.js"></script>
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5377170083939417"
+       crossorigin="anonymous"></script>
 </head>
 <body class="bg-slate-50 font-sans antialiased text-slate-800">
   <header id="header"></header>
@@ -66,8 +68,6 @@
     </div>
   </section>
 
-  <div id="top-ad-banner"></div>
-
   <!-- Tools Section -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="tools">
     <!-- Categories -->
@@ -87,8 +87,6 @@
       <p class="text-slate-500 text-lg" data-i18n="common.no_results">No tools found.</p>
     </div>
   </section>
-
-  <div id="bottom-ad-banner"></div>
 
   <footer id="footer"></footer>
 
@@ -147,7 +145,7 @@
         const name = i18n.t('tools.' + t.i18nKey + '.name') || t.id.replace(/-/g, ' ');
         const desc = i18n.t('tools.' + t.i18nKey + '.description') || '';
         return `
-          <a href="${t.path}" class="tool-grid-card bg-white rounded-2xl border border-slate-200 p-5 hover:border-primary-200 block">
+          <a href="${toolUrl(t.id)}" class="tool-grid-card bg-white rounded-2xl border border-slate-200 p-5 hover:border-primary-200 block">
             <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-4">
               ${t.icon}
             </div>

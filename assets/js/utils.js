@@ -1,3 +1,22 @@
+const _SUPPORTED_LANG_CODES = ['en', 'es', 'fr', 'de', 'pt'];
+
+function getCurrentLang() {
+  const firstPart = window.location.pathname.split('/')[1];
+  return (firstPart && _SUPPORTED_LANG_CODES.includes(firstPart) && firstPart !== 'en')
+    ? firstPart
+    : 'en';
+}
+
+function toolUrl(slug) {
+  const lang = getCurrentLang();
+  return lang === 'en' ? `/${slug}/` : `/${lang}/${slug}/`;
+}
+
+function homeUrl() {
+  const lang = getCurrentLang();
+  return lang === 'en' ? '/' : `/${lang}/`;
+}
+
 const Utils = {
   async copyToClipboard(text) {
     try {
