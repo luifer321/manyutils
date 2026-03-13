@@ -437,6 +437,10 @@ function generateSitemap() {
   // English homepage
   addUrl(`${BASE_URL}/`, '1.0', 'weekly');
 
+  // Legal pages
+  addUrl(`${BASE_URL}/terms/`, '0.3', 'yearly');
+  addUrl(`${BASE_URL}/privacy/`, '0.3', 'yearly');
+
   // Language homepages
   for (const lang of EXTRA_LANGS) {
     addUrl(`${BASE_URL}/${lang}/`, '0.9', 'weekly');
@@ -480,9 +484,24 @@ copyDir(path.join(ROOT, 'assets'),  path.join(OUT, 'assets'));
 copyDir(path.join(ROOT, 'locales'), path.join(OUT, 'locales'));
 copyFile(path.join(ROOT, 'robots.txt'), path.join(OUT, 'robots.txt'));
 copyFile(path.join(ROOT, '_redirects'), path.join(OUT, '_redirects'));
-['privacy.html', 'terms.html'].forEach(f =>
-  copyFile(path.join(ROOT, f), path.join(OUT, f)),
-);
+copyFile(path.join(ROOT, 'ads.txt'), path.join(OUT, 'ads.txt'));
+copyDir(path.join(ROOT, 'terms'),   path.join(OUT, 'terms'));
+copyDir(path.join(ROOT, 'privacy'), path.join(OUT, 'privacy'));
+
+// ── Legal page language variants ──────────────────────────────────────────────
+// Content stays in English but each language path must exist so the header's
+// language switcher never navigates to a 404. The <html lang> attribute is set
+// to the target language so the JS i18n layer renders the header/footer in the
+// right language. Canonical keeps pointing to the English URL to prevent
+// duplicate-content issues.
+['terms', 'privacy'].forEach(slug => {
+  const src = fs.readFileSync(path.join(ROOT, slug, 'index.html'), 'utf8');
+  for (const lang of EXTRA_LANGS) {
+    // Set the correct lang attribute so i18n.init() picks the right language.
+    let html = src.replace(/(<html[^>]*)\blang="en"/, `$1lang="${lang}"`);
+    writeFile(path.join(OUT, lang, slug, 'index.html'), html);
+  }
+});
 
 // Load all locales
 const locales = {};

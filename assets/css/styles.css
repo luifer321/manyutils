@@ -1,5 +1,16 @@
 /* ManyUtils - Custom Styles */
 
+/* Calibrate the system-ui fallback to Inter's metrics so the font swap
+   causes zero layout shift (size-adjust compensates for glyph width delta). */
+@font-face {
+  font-family: 'Inter fallback';
+  src: local('Arial');
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
 /* Smooth transitions */
 * {
   transition-property: color, background-color, border-color, box-shadow, opacity, transform;
@@ -69,6 +80,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Reserve header height before JS renders the nav, preventing CLS on the hero */
+#header {
+  min-height: 4rem;
+  contain: layout;
 }
 
 /* Hero gradient background */

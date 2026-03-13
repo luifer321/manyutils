@@ -157,11 +157,16 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        renderCategoryFilters();
-        renderToolsGrid();
-        document.getElementById('search-tools')?.addEventListener('input', Utils.debounce(renderToolsGrid, 200));
-      }, 100);
+      // Set up search listener immediately — it doesn't depend on translations.
+      document.getElementById('search-tools')?.addEventListener('input', Utils.debounce(renderToolsGrid, 200));
+    });
+
+    // Render the grid once translations are loaded (fires on init and on language switch).
+    // This guarantees cards always show their title + description, even on a cold cache
+    // where the locale fetch takes longer than a fixed setTimeout would allow.
+    document.addEventListener('manyutils:language-changed', () => {
+      renderCategoryFilters();
+      renderToolsGrid();
     });
   </script>
 </body>
