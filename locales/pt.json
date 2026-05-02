@@ -90,13 +90,38 @@
     "results_count": "{n} ferramentas",
     "results_count_filtered": "{n} de {total} ferramentas",
     "back_to_tools": "← Voltar às Ferramentas",
-    "last_updated": "Última atualização"
+    "last_updated": "Última atualização",
+    "drop_image_here": "Arraste e solte uma imagem aqui",
+    "or_click_to_browse": "ou clique para procurar",
+    "drop_video_here": "Arraste e solte um vídeo aqui",
+    "or_click_to_browse_video": "ou clique para procurar — MP4, MOV, WebM (máx. 100 MB, 30s)",
+    "original": "Original",
+    "savings": "Economia",
+    "format": "Formato",
+    "width": "Largura (px)",
+    "height": "Altura (px)",
+    "percent": "Porcentagem (%)",
+    "keep_aspect_ratio": "Manter proporção",
+    "resize": "Redimensionar",
+    "crop": "Aplicar corte",
+    "aspect_ratio": "Proporção",
+    "flip_horizontal": "Inverter ↔",
+    "flip_vertical": "Inverter ↕",
+    "custom_angle": "Ângulo personalizado (graus)",
+    "preview": "Pré-visualização",
+    "trim_start": "Início (s)",
+    "trim_end": "Fim (s)",
+    "fps": "FPS",
+    "convert_to_gif": "Converter para GIF",
+    "audio_privacy_note": "Seu áudio permanece no seu dispositivo. O processamento acontece localmente no seu navegador."
   },
   "categories": {
     "generators": "Geradores",
     "text_data": "Texto e Dados",
     "image_tools": "Ferramentas de Imagem",
-    "calculators": "Calculadoras"
+    "calculators": "Calculadoras",
+    "media": "Mídia",
+    "audio": "Áudio"
   },
   "tools": {
     "qr_code_generator": {
@@ -598,6 +623,461 @@
         "status_both_past": "Ambas as datas estão no passado",
         "status_end_in_future": "A data final está em {days} dias no futuro"
       }
+    },
+    "png_to_jpg": {
+      "name": "Conversor PNG para JPG",
+      "description": "Converta imagens PNG para JPG (JPEG) diretamente no seu navegador — rápido, grátis, sem upload.",
+      "seo": {
+        "intro": "PNG e JPG são os dois formatos de imagem mais comuns na web – mas são construídos para trabalhos diferentes. O PNG mantém cada pixel exatamente como foi salvo, incluindo transparência, o que torna os arquivos grandes. O JPG (também chamado de JPEG) usa compressão com perda que descarta pequenos detalhes que seu olho não consegue ver facilmente, produzindo arquivos de 5 a 10 vezes menores. Se você tem uma captura de tela PNG, foto ou gráfico que não precisa de transparência, convertê-lo para JPG é a maneira mais rápida de torná-lo mais leve para e-mail, páginas da web ou armazenamento. Este conversor funciona inteiramente no seu navegador — sua imagem nunca é enviada para lugar nenhum.",
+        "steps": [
+          "Carregue seu PNG — Arraste um PNG para a área de upload, ou clique para procurar. Arquivos de qualquer tamanho são suportados, desde que seu navegador consiga mantê-los na memória.",
+          "Escolha sua qualidade — Mova o controle deslizante de qualidade. 90% é um bom padrão — visualmente sem perdas para a maioria das imagens. Reduza para 75% para arquivos muito pequenos.",
+          "Baixe o JPG — Clique em Baixar. O JPG é salvo no seu dispositivo com o mesmo nome base e extensão .jpg."
+        ],
+        "faq": [
+          {
+            "q": "Minha transparência PNG será preservada?",
+            "a": "Não. O JPG não suporta transparência. Quaisquer áreas transparentes no seu PNG serão preenchidas com branco. Se você precisar de transparência, use nosso conversor JPG para PNG ou PNG para WebP."
+          },
+          {
+            "q": "Qual será o tamanho do JPG?",
+            "a": "Tipicamente de 5 a 15 vezes menor que o PNG de origem, dependendo do conteúdo da imagem. Fotos comprimem drasticamente; gráficos de cor sólida nem tanto."
+          },
+          {
+            "q": "Meus arquivos são enviados para um servidor?",
+            "a": "Não. A conversão acontece inteiramente no seu navegador usando a API Canvas. Nós nunca vemos sua imagem."
+          },
+          {
+            "q": "Há limite de tamanho de arquivo?",
+            "a": "Não há limite rígido. A única restrição é a memória do seu navegador. A maioria dos navegadores modernos lida confortavelmente com imagens de 50 MB ou mais."
+          },
+          {
+            "q": "Qual qualidade devo escolher?",
+            "a": "Para a maioria dos usos, 85–90% é indistinguível do original aos olhos humanos e produz arquivos pequenos. Reduza para abaixo de 75% apenas quando o tamanho do arquivo for mais importante que a fidelidade visual."
+          }
+        ]
+      }
+    },
+    "jpg_to_png": {
+      "name": "Conversor JPG para PNG",
+      "description": "Converta imagens JPG (JPEG) para PNG sem perdas no seu navegador — com suporte a transparência.",
+      "seo": {
+        "intro": "Converter JPG para PNG é mais útil quando você precisa adicionar transparência, editar a imagem sem reintroduzir artefatos JPEG ou alimentar a imagem em uma ferramenta que exige PNG. Observe que o JPG tem perda — uma vez que a compressão foi aplicada, os dados se foram. Converter para PNG não restaurará magicamente os detalhes, mas impedirá *mais* perdas em salvamentos subsequentes. Casos de uso comuns: preparar imagens para edição vetorial, remover fundos em outra ferramenta ou fornecer ativos para sistemas que exigem PNG.",
+        "steps": [
+          "Carregue seu JPG — Arraste um arquivo JPG/JPEG para a área de upload, ou clique para procurar.",
+          "Converter — PNG não tem perda, portanto não há controle deslizante de qualidade. Clique em Converter.",
+          "Baixar — Um arquivo .png com pixels idênticos (nenhuma perda adicional) é gerado e está pronto para download."
+        ],
+        "faq": [
+          {
+            "q": "O PNG adiciona transparência ao meu JPG?",
+            "a": "Não. O JPG não pode armazenar transparência, portanto não podemos inventá-la. Converta para PNG primeiro e depois use uma ferramenta de remoção de fundo para adicionar transparência."
+          },
+          {
+            "q": "O PNG será maior que o JPG?",
+            "a": "Geralmente sim — frequentemente de 3 a 5 vezes maior. O PNG é sem perdas e o JPG tem perda, isso é inevitável. Use PNG quando a qualidade for mais importante que o tamanho."
+          },
+          {
+            "q": "Algo é enviado para o servidor?",
+            "a": "Não. A conversão é executada inteiramente no seu navegador. Seu arquivo nunca sai do seu dispositivo."
+          }
+        ]
+      }
+    },
+    "png_to_webp": {
+      "name": "Conversor PNG para WebP",
+      "description": "Converta PNG para WebP — formato moderno com arquivos até 30% menores com a mesma qualidade.",
+      "seo": {
+        "intro": "WebP é o formato de imagem moderno do Google que oferece compressão com e sem perdas, com tamanhos de arquivo tipicamente 25–35% menores que PNG/JPG equivalentes na mesma qualidade. WebP suporta transparência *e* animação, tornando-se um substituto quase universal. Todos os navegadores modernos — Chrome, Firefox, Safari (desde a versão 14), Edge — exibem WebP nativamente. Converter seu PNG para WebP é uma das ações de maior impacto para a velocidade do seu site.",
+        "steps": [
+          "Carregue seu PNG — Escolha o PNG que deseja converter.",
+          "Ajuste a qualidade — WebP com qualidade 80 parece visualmente idêntico ao PNG para a maioria das imagens e é cerca de 70% menor. Aumente para artes e capturas de tela.",
+          "Baixar — Salve o arquivo .webp. Ele está pronto para ser enviado para um CDN ou anexado a um e-mail."
+        ],
+        "faq": [
+          {
+            "q": "O WebP é suportado em todos os lugares?",
+            "a": "Todos os principais navegadores modernos suportam WebP. Versões mais antigas do Safari (≤13), alguns clientes de e-mail legados e alguns visualizadores de imagem não. Para compatibilidade máxima, mantenha também um fallback JPG."
+          },
+          {
+            "q": "O WebP mantém a transparência?",
+            "a": "Sim. Ao contrário do JPG, o WebP preserva canais alfa, portanto PNGs transparentes são convertidos corretamente."
+          },
+          {
+            "q": "Quanto menor será o WebP?",
+            "a": "Tipicamente 25–35% menor que o PNG. Conteúdo fotográfico comprime mais do que gráficos de cor sólida."
+          }
+        ]
+      }
+    },
+    "webp_to_png": {
+      "name": "Conversor WebP para PNG",
+      "description": "Converta imagens WebP para PNG sem perdas — funciona em qualquer navegador, sem upload.",
+      "seo": {
+        "intro": "Algumas aplicações, editores de imagem e sistemas mais antigos ainda esperam PNG. Se você recebeu um arquivo WebP de um site ou aplicativo moderno e precisa usá-lo em algum lugar que ainda não aceita WebP (pense em certos sistemas de upload de CMS, clientes de e-mail antigos, pipelines de impressão antigos), converter para PNG é a escolha mais segura — o PNG é universalmente suportado e sem perdas.",
+        "steps": [
+          "Carregue seu WebP — Arraste um arquivo .webp para a área de upload, ou clique para escolher um.",
+          "Converter — O PNG é sem perdas — não há controle deslizante de qualidade. O botão de conversão cria um PNG de aparência idêntica.",
+          "Baixar — Salve o arquivo .png. A transparência, se presente, é preservada."
+        ],
+        "faq": [
+          {
+            "q": "A transparência é preservada?",
+            "a": "Sim. O PNG suporta totalmente o canal alfa que o WebP usa, portanto áreas transparentes permanecem transparentes."
+          },
+          {
+            "q": "Por que o PNG é maior que o WebP?",
+            "a": "O PNG é sem perdas e usa um esquema de compressão mais antigo. A maioria dos PNGs convertidos acaba sendo 2–4 vezes maior que o WebP de origem — isso é esperado."
+          },
+          {
+            "q": "Isso funciona com WebPs animados?",
+            "a": "Não. A API Canvas do navegador renderiza apenas o primeiro quadro, portanto as animações são achatadas. Use uma ferramenta dedicada de WebP para GIF para animações."
+          }
+        ]
+      }
+    },
+    "webp_to_jpg": {
+      "name": "Conversor WebP para JPG",
+      "description": "Converta imagens WebP para JPG amplamente compatível — útil para clientes de e-mail e aplicativos mais antigos.",
+      "seo": {
+        "intro": "O JPG ainda é o formato raster de compatibilidade mais ampla do planeta — todo cliente de e-mail, toda gráfica, todo visualizador de imagem barato o lê. Se você precisa compartilhar uma imagem WebP com alguém cujas ferramentas não reconhecem o formato, converter para JPG é a resposta confiável. Observe que o JPG tem perda e não pode representar transparência: quaisquer áreas transparentes no seu WebP serão preenchidas com branco no JPG convertido.",
+        "steps": [
+          "Carregue seu WebP — Arraste o arquivo .webp para a área, ou clique para procurar.",
+          "Escolha sua qualidade — Para e-mail e compartilhamento casual, 85% é um bom equilíbrio. Reduza para 70% para anexos muito pequenos.",
+          "Baixar — Um .jpg pronto para qualquer plataforma — e-mail, redes sociais, CMS, impressão."
+        ],
+        "faq": [
+          {
+            "q": "As áreas transparentes serão preservadas?",
+            "a": "Não. O JPG não pode armazenar transparência. Pixels transparentes serão preenchidos com branco. Se você precisar de transparência, converta para PNG."
+          },
+          {
+            "q": "Posso converter WebPs animados em JPGs animados?",
+            "a": "JPG não é um formato animado. Use nossa ferramenta WebP para GIF ou vídeo para GIF se precisar de animação."
+          }
+        ]
+      }
+    },
+    "jpg_to_webp": {
+      "name": "Conversor JPG para WebP",
+      "description": "Converta JPG para WebP para imagens menores e otimizadas para a web — ótimo para blogs e páginas de produto.",
+      "seo": {
+        "intro": "Substituir JPG por WebP em um site normalmente reduz os bytes de imagem em 25–35% sem perda perceptível de qualidade — é uma grande vitória para Lighthouse / Core Web Vitals com muito pouco esforço. Use esta ferramenta sempre que tiver um ativo JPG destinado à web (imagens de postagens de blog, fotos de produtos de e-commerce, imagens OG) e seu público estiver usando navegadores modernos.",
+        "steps": [
+          "Carregue seu JPG — Arraste um JPG para a caixa de upload, ou clique para procurar.",
+          "Escolha uma qualidade — WebP com qualidade 80 é visualmente idêntico para a maioria das fotos e é cerca de 30% menor que o JPG de origem.",
+          "Baixe o WebP — O novo arquivo .webp está pronto para seu CDN ou página de produto."
+        ],
+        "faq": [
+          {
+            "q": "O WebP terá aparência pior que o JPG?",
+            "a": "Com qualidade 80+, não. O WebP geralmente retém um pouco mais de detalhes do que o JPG com o mesmo tamanho de arquivo, especialmente em áreas de cor sólida."
+          },
+          {
+            "q": "Como isso afeta o SEO e o Core Web Vitals?",
+            "a": "A mudança para WebP geralmente melhora a métrica LCP (Largest Contentful Paint) e o peso geral da página, que o Google usa como sinal de classificação."
+          }
+        ]
+      }
+    },
+    "svg_to_png": {
+      "name": "Conversor SVG para PNG",
+      "description": "Converta SVG para PNG de alta qualidade em qualquer tamanho — preserva a transparência.",
+      "seo": {
+        "intro": "SVG é ótimo para gráficos escaláveis, mas muitos contextos ainda esperam imagens raster: sistemas de upload de redes sociais, certos CMS, quadros de design, apresentações, impressoras de fotos. Esta ferramenta rasteriza seu SVG para um PNG de alta qualidade usando o renderizador SVG do navegador, então o resultado é perfeito no tamanho escolhido.",
+        "steps": [
+          "Carregue seu SVG — Arraste um arquivo .svg para a área de upload, ou clique para escolher um.",
+          "Converter — O SVG é renderizado em uma tela em suas dimensões intrínsecas e salvo como PNG.",
+          "Baixar — Salve o .png. A transparência é preservada."
+        ],
+        "faq": [
+          {
+            "q": "Por que meu PNG está desfocado?",
+            "a": "Provavelmente seu SVG não declarou largura/altura. Nesse caso, renderizamos em 1024×1024 por padrão. Adicione width=\"...\" height=\"...\" explicitamente ao seu SVG ou use o redimensionador depois."
+          },
+          {
+            "q": "Ativos externos (fontes, imagens) são carregados?",
+            "a": "Fontes externas carregadas com @font-face de outra origem podem não ser renderizadas devido às políticas de segurança do navegador. Incorpore fontes com data URIs ou converta texto em caminhos."
+          },
+          {
+            "q": "Algo é enviado ao servidor?",
+            "a": "Não. O SVG é renderizado inteiramente no seu navegador usando a API Canvas."
+          }
+        ]
+      }
+    },
+    "svg_to_jpg": {
+      "name": "Conversor SVG para JPG",
+      "description": "Converta SVG para JPG com uma cor de fundo escolhida — perfeito para miniaturas e e-mails.",
+      "seo": {
+        "intro": "Quando você precisa de uma versão JPG de um SVG — para uma assinatura de e-mail, uma miniatura em um sistema que exige JPG ou para compartilhar um gráfico com alguém cujas ferramentas não suportam SVG — esta ferramenta rasteriza o SVG e preenche o fundo com branco (já que o JPG não pode transportar transparência).",
+        "steps": [
+          "Carregue seu SVG — Arraste seu .svg para a caixa de upload.",
+          "Escolha sua qualidade — 90% é um bom padrão para gráficos com bordas nítidas; reduza para 75% apenas para conteúdo visual onde o tamanho é importante.",
+          "Baixar — Um .jpg com fundo branco é gerado."
+        ],
+        "faq": [
+          {
+            "q": "Por que o fundo é branco?",
+            "a": "O JPG não pode armazenar transparência, então preenchemos áreas transparentes com branco. Se você precisar de transparência, use SVG para PNG."
+          },
+          {
+            "q": "Posso obter uma cor de fundo diferente?",
+            "a": "Atualmente apenas branco. Para fundos personalizados, converta primeiro para PNG e depois use um editor para definir o fundo."
+          }
+        ]
+      }
+    },
+    "svg_to_webp": {
+      "name": "Conversor SVG para WebP",
+      "description": "Converta SVG para WebP para imagens raster modernas e compactas.",
+      "seo": {
+        "intro": "WebP é um formato raster moderno com amplo suporte do navegador e arquivos muito menores que PNG. Converter SVG para WebP fornece um raster compacto adequado para imagens OG, cabeçalhos de blog e ativos de produto entregues, mantendo a transparência intacta.",
+        "steps": [
+          "Carregue seu SVG — Arraste o arquivo .svg para a área, ou clique para escolher.",
+          "Escolha sua qualidade — Qualidade 80 é um bom padrão — arquivos pequenos, sem perda visível para a maioria dos gráficos.",
+          "Baixar — Salve o .webp. A transparência é preservada."
+        ],
+        "faq": [
+          {
+            "q": "A transparência será preservada?",
+            "a": "Sim. O WebP suporta o mesmo canal alfa que o PNG, portanto áreas SVG transparentes permanecem transparentes."
+          },
+          {
+            "q": "Por que usar WebP em vez de PNG para saída SVG?",
+            "a": "Arquivos WebP são tipicamente 25–40% menores que PNG com a mesma qualidade visual, o que faz uma grande diferença para o desempenho da web."
+          }
+        ]
+      }
+    },
+    "image_resizer": {
+      "name": "Redimensionador de imagens",
+      "description": "Redimensione imagens por dimensões exatas em pixels ou porcentagem, com trava opcional de proporção.",
+      "seo": {
+        "intro": "Redimensionar imagens é uma das operações de imagem mais solicitadas na web — para fotos de perfil com limites estritos de pixels, imagens de blog que precisam se ajustar a um layout, miniaturas de redes sociais ou redução de fotos antes de enviar por e-mail. Nosso redimensionador permite especificar dimensões exatas em pixels, dimensionamento percentual e escolher qualquer formato de saída comum. Ele é executado inteiramente no seu navegador usando a API Canvas, então suas fotos nunca saem do seu dispositivo.",
+        "steps": [
+          "Carregue sua imagem — Arraste um PNG, JPG, WebP ou GIF para a área de upload, ou clique para procurar.",
+          "Defina as dimensões — Digite uma largura ou altura desejada, ou use percentual. Mantenha \"Manter proporção\" ativado para redimensionar proporcionalmente.",
+          "Escolha o formato de saída e qualidade — WebP para o menor tamanho, PNG para transparência, JPG para máxima compatibilidade.",
+          "Baixar — Clique em Baixar para salvar a imagem redimensionada."
+        ],
+        "faq": [
+          {
+            "q": "Minha imagem ficará desfocada?",
+            "a": "Reduzir o tamanho (ex.: 4000 × 3000 → 800 × 600) é essencialmente sem perdas. Aumentar adiciona desfoque — não há detalhes para inventar. Sempre comece a partir da maior fonte que você tem."
+          },
+          {
+            "q": "Como redimensionar para um caso de uso específico (ex.: Twitter, Instagram)?",
+            "a": "Alvos comuns: Instagram quadrado 1080 × 1080, post do Twitter 1200 × 675, Open Graph 1200 × 630, favicon 192 × 192."
+          },
+          {
+            "q": "Algo é enviado ao servidor?",
+            "a": "Não. Tudo é executado no seu navegador; nunca vemos seu arquivo."
+          }
+        ]
+      }
+    },
+    "crop_image": {
+      "name": "Cortar imagem",
+      "description": "Corte imagens arrastando para selecionar, com proporções predefinidas ou coordenadas exatas em pixels.",
+      "seo": {
+        "intro": "Cortar é uma operação de precisão — cada pixel conta. Nosso cortador permite arrastar um retângulo de seleção diretamente na imagem, ajustar a proporções comuns (quadrado, 4:3, 16:9, 9:16) para predefinições de redes sociais ou digitar coordenadas x/y/largura/altura exatas quando você precisa de saída perfeita. A fonte em resolução total é preservada o tempo todo — a prévia na tela é apenas redimensionada para caber na sua janela de visualização.",
+        "steps": [
+          "Carregue sua imagem — Arraste um PNG, JPG, WebP ou GIF.",
+          "Defina a área de corte — Arraste uma nova seleção na imagem ou use as alças dos cantos para redimensionar.",
+          "Escolha uma proporção (opcional) — Clique em 1:1 para quadrado, 16:9 para paisagem, 9:16 para stories verticais — a seleção trava automaticamente.",
+          "Aplicar e baixar — Clique em Aplicar corte, depois em Baixar."
+        ],
+        "faq": [
+          {
+            "q": "Os pixels são perdidos ao cortar?",
+            "a": "Apenas os pixels fora do retângulo de corte são descartados. A área mantida retém sua resolução total."
+          },
+          {
+            "q": "Posso cortar várias imagens de uma vez?",
+            "a": "Atualmente esta ferramenta processa uma imagem por vez. Podemos adicionar um modo de lote no futuro — informe-nos se você precisar."
+          },
+          {
+            "q": "Funciona em telas sensíveis ao toque?",
+            "a": "Sim. A caixa de seleção usa eventos de ponteiro, então toque e mouse funcionam da mesma maneira."
+          }
+        ]
+      }
+    },
+    "rotate_flip_image": {
+      "name": "Rotacionar e inverter imagem",
+      "description": "Gire 90°, 180°, 270° ou qualquer ângulo personalizado e inverta horizontal ou verticalmente.",
+      "seo": {
+        "intro": "Às vezes uma foto sai de lado do seu telefone, uma captura de tela precisa ser invertida para um tutorial ou um gráfico precisa ser espelhado para um layout. Esta ferramenta gira em incrementos de 90° ou qualquer ângulo personalizado (com a tela redimensionada automaticamente para que nada seja cortado) e inverte horizontal ou verticalmente. Tudo acontece no seu navegador.",
+        "steps": [
+          "Carregue uma imagem — Arraste um PNG, JPG, WebP ou GIF.",
+          "Use os botões de ação — Girar 90° / -90° / 180°, inverter horizontal, inverter vertical. Ou digite um ângulo personalizado.",
+          "Escolha um formato — Saída como PNG (preserva transparência), JPG ou WebP.",
+          "Baixar — Clique em Baixar para salvar o resultado."
+        ],
+        "faq": [
+          {
+            "q": "Por que a tela aumenta quando eu giro?",
+            "a": "Rotações diagonais precisam de uma caixa delimitadora maior para evitar cortar os cantos. Redimensionamos automaticamente a tela para que toda a imagem girada caiba."
+          },
+          {
+            "q": "A orientação EXIF será corrigida automaticamente?",
+            "a": "Navegadores modernos respeitam a orientação EXIF ao decodificar, então a ferramenta vê a imagem visualmente correta. A rotação manual permite ir além."
+          }
+        ]
+      }
+    },
+    "video_to_gif": {
+      "name": "Conversor de Vídeo para GIF",
+      "description": "Transforme vídeos curtos (≤ 30s, ≤ 100 MB) em GIFs animados otimizados, totalmente no seu navegador.",
+      "seo": {
+        "intro": "GIFs animados ainda estão em toda parte — Slack, GitHub, Twitter, postagens de blog. Converter um clipe de vídeo curto em GIF costumava significar enviar para um site suspeito. Esta ferramenta executa toda a conversão no seu navegador: extraímos quadros usando o decodificador de vídeo do navegador e os codificamos com a biblioteca de codificação GIF carregada apenas quando você clica em Converter. Seu arquivo nunca sai do seu dispositivo.",
+        "steps": [
+          "Carregue um vídeo — Arraste um MP4, MOV, WebM ou outro vídeo suportado pelo navegador. Máx. 100 MB e 30 segundos.",
+          "Corte e ajuste — Defina os segundos de início/fim, escolha FPS (12 é um bom padrão) e uma largura de saída (480 px é uma escolha equilibrada).",
+          "Converter — Clique em Converter para GIF. O codificador carrega (~30 KB) e o processamento acontece localmente com uma barra de progresso.",
+          "Baixar — Salve o arquivo .gif. Clipes menores e FPS mais baixo geram arquivos menores."
+        ],
+        "faq": [
+          {
+            "q": "Por que há um limite de 30 segundos?",
+            "a": "GIF é um formato ineficiente. Um clipe de 30 segundos em 480p a 12 FPS já tem 5–10 MB. Qualquer coisa mais longa se torna impraticável."
+          },
+          {
+            "q": "Meu vídeo é enviado para algum lugar?",
+            "a": "Não. Tudo acontece no seu navegador — a extração de quadros e a codificação GIF são executadas localmente."
+          },
+          {
+            "q": "Como posso fazer GIFs menores?",
+            "a": "Reduza o FPS (12 → 8), reduza a largura (480 → 320) e corte agressivamente. Cada corte reduz o tamanho aproximadamente proporcionalmente."
+          },
+          {
+            "q": "Por que a conversão parece lenta no meu telefone?",
+            "a": "A codificação GIF exige muita CPU. Cortar o clipe para alguns segundos e reduzir o FPS acelera drasticamente as coisas."
+          }
+        ]
+      }
+    },
+    "audio_cutter": {
+      "name": "Cortador de áudio",
+      "description": "Corte e edite arquivos MP3, WAV, M4A e outros com precisão de subsegundo no seu navegador.",
+      "seo": {
+        "intro": "Cortar áudio é uma das tarefas mais comuns para qualquer pessoa que trabalha com som — remover silêncio no início de um podcast, isolar uma citação de uma gravação longa, eliminar os poucos segundos estranhos no final de uma mensagem de voz. Nosso cortador de áudio usa a API Web Audio para decodificar qualquer formato suportado pelo navegador (MP3, WAV, M4A, AAC, OGG, FLAC) e escreve um corte WAV preciso e sem perdas inteiramente no seu navegador.",
+        "steps": [
+          "Carregue um arquivo de áudio — Arraste qualquer MP3 / WAV / M4A / AAC / OGG / FLAC para a área de upload.",
+          "Escolha os horários de início e fim — Use os controles deslizantes de intervalo ou digite segundos exatos — precisão de subsegundo.",
+          "Cortar e pré-visualizar — Clique em Cortar e pré-visualizar para ouvir o resultado antes de baixar.",
+          "Baixar — Salve o corte como um arquivo WAV PCM de 16 bits."
+        ],
+        "faq": [
+          {
+            "q": "Por que a saída é um arquivo WAV mesmo se eu enviei um MP3?",
+            "a": "A codificação MP3 no navegador sem uma biblioteca pesada (LAME) não é prática. WAV é universalmente suportado e sem perdas. Você pode recodificar para MP3 com nosso futuro codificador MP3 ou usar uma ferramenta de desktop."
+          },
+          {
+            "q": "Isso preserva a qualidade do áudio?",
+            "a": "Sim. Decodificar para PCM e recodificar como WAV é sem perdas — você só perde informações quando recodifica para um formato com perda como MP3 / AAC."
+          },
+          {
+            "q": "Qual é o tamanho máximo do arquivo?",
+            "a": "Limitado apenas pela memória do seu navegador. A maioria dos navegadores modernos lida confortavelmente com 200 MB+."
+          }
+        ]
+      }
+    },
+    "volume_changer": {
+      "name": "Amplificador e redutor de volume de áudio",
+      "description": "Aumente o áudio baixo ou reduza o áudio alto de -20 dB a +20 dB. 100% no navegador.",
+      "seo": {
+        "intro": "Notas de voz que soam bem no seu telefone, mas fracas no laptop de outra pessoa, podcasts que variam de nível entre convidados, palestras gravadas muito baixas — todos problemas comuns. O alterador de volume aplica um ganho constante (em decibéis) a cada amostra do seu arquivo de áudio, no seu navegador. ±20 dB é o limite prático antes que o recorte se torne audível.",
+        "steps": [
+          "Carregue o áudio — Arraste um MP3, WAV, M4A ou outro arquivo de áudio.",
+          "Defina o ganho — +6 dB é \"notavelmente mais alto\", +10 dB é \"muito mais alto\". -6 dB reduz aproximadamente o volume pela metade. Tente passos pequenos primeiro.",
+          "Aplicar e pré-visualizar — Ouça o resultado antes de baixar.",
+          "Baixar — Salve a versão amplificada/reduzida como WAV."
+        ],
+        "faq": [
+          {
+            "q": "Amplificar demais vai distorcer meu áudio?",
+            "a": "Sim. Ultrapassar cerca de +12 dB em áudio já alto causa recorte (distorção dura). Comece devagar."
+          },
+          {
+            "q": "Posso normalizar para um nível de pico específico?",
+            "a": "Esta ferramenta aplica um ganho constante. Para normalização de pico/LUFS, use uma DAW de desktop."
+          }
+        ]
+      }
+    },
+    "audio_speed_changer": {
+      "name": "Alterador de velocidade de áudio",
+      "description": "Acelere até 4× ou desacelere até 0,25× — útil para podcasts e prática de idiomas.",
+      "seo": {
+        "intro": "Acelerar podcasts para caberem no trajeto, desacelerar uma música para aprender um riff no violão ou tornar uma palestra mais digerível — a alteração de velocidade é uma das ferramentas de áudio mais úteis para o uso diário. Esta ferramenta usa interpolação linear para reamostrar seu áudio. Como é padrão para \"mudança de velocidade sem preservar o tom\", a reprodução mais rápida aumenta o tom e a reprodução mais lenta o diminui, que é o que a maioria dos usuários realmente deseja.",
+        "steps": [
+          "Carregue o áudio — Arraste qualquer arquivo de áudio suportado pelo navegador.",
+          "Escolha uma velocidade — Use o controle deslizante ou uma das predefinições. 1,5× e 2× são ótimos para podcasts; 0,5× para transcrição musical.",
+          "Aplicar e pré-visualizar — Ouça o resultado antes de salvar.",
+          "Baixar — Salve o arquivo WAV esticado no tempo."
+        ],
+        "faq": [
+          {
+            "q": "Por que o tom muda?",
+            "a": "A reamostragem sem alongamento de tempo altera o tom com a velocidade. O alongamento de tempo com preservação de tom (PSOLA, vocoder de fase) precisa de um algoritmo muito mais pesado e está no nosso roteiro."
+          },
+          {
+            "q": "Há perda de qualidade?",
+            "a": "A interpolação linear introduz uma pequena suavização nas altas frequências. Para conteúdo de voz é inaudível; para música de alta qualidade, use uma DAW."
+          }
+        ]
+      }
+    },
+    "audio_to_wav": {
+      "name": "Conversor de Áudio para WAV",
+      "description": "Converta MP3, M4A, AAC, OGG, FLAC e muito mais para arquivos WAV PCM de 16 bits não comprimidos.",
+      "seo": {
+        "intro": "WAV é o contêiner universal \"PCM bruto\" — todo sistema operacional, todo editor de áudio, todo dispositivo embarcado o entende. Converter MP3, M4A, AAC, OGG ou FLAC para WAV é útil quando você precisa alimentar áudio em uma ferramenta que não aceita formatos comprimidos ou quando deseja uma cópia de trabalho sem perdas antes de edições posteriores. A API Web Audio do navegador decodifica a fonte e escrevemos um arquivo WAV estéreo (ou mono) de 16 bits usando os mesmos parâmetros da entrada.",
+        "steps": [
+          "Carregue o áudio — Arraste qualquer arquivo de áudio decodificável pelo navegador.",
+          "Converter — Clique em Converter para WAV. A decodificação + recodificação geralmente leva <2 segundos para um arquivo de 5 minutos.",
+          "Baixar — Salve o arquivo .wav."
+        ],
+        "faq": [
+          {
+            "q": "O WAV será muito maior que meu MP3?",
+            "a": "Tipicamente de 5 a 10 vezes maior. WAV é não comprimido — essa é a troca por compatibilidade universal e zero perda geracional."
+          },
+          {
+            "q": "Ele suporta todos os formatos de áudio?",
+            "a": "Ele suporta todos os formatos que seu navegador pode decodificar via API Web Audio: MP3, WAV, M4A, AAC, OGG (Vorbis), FLAC. O suporte do navegador varia ligeiramente — versões mais antigas do Safari podem ter dificuldades com Ogg Vorbis."
+          }
+        ]
+      }
+    },
+    "mp3_metadata_viewer": {
+      "name": "Visualizador de metadados MP3",
+      "description": "Veja tags ID3v1 e ID3v2 em arquivos MP3: título, artista, álbum, ano, gênero, capa embutida.",
+      "seo": {
+        "intro": "Todo arquivo MP3 tem metadados incorporados — o título, artista, álbum, ano, gênero, comentário e frequentemente uma capa de álbum embutida. Esses são os dados que seu player de música usa para mostrar cartões de \"Tocando agora\". Às vezes você quer ver o que está lá: ao solucionar uma faixa com nome incorreto, quando uma exportação MP3 de um gravador mostra tags estranhas ou apenas por curiosidade. Este visualizador lê tags ID3v1 (cabeçalho legado de 128 bytes) e ID3v2 (moderno, prefixado), incluindo artes embutidas, tudo no seu navegador.",
+        "steps": [
+          "Carregue um MP3 — Arraste um arquivo .mp3 para a área de upload.",
+          "Leia as tags — Título, artista, álbum, ano, gênero, comentário e artes embutidas aparecem instantaneamente.",
+          "Redefinir para carregar outro arquivo — Clique em Redefinir para carregar um MP3 diferente."
+        ],
+        "faq": [
+          {
+            "q": "Posso editar as tags aqui?",
+            "a": "Ainda não — esta ferramenta é somente leitura. Estamos considerando adicionar um editor de tags — informe-nos via formulário de contato se você usaria um."
+          },
+          {
+            "q": "E se meu MP3 não tiver tags?",
+            "a": "Você verá \"Nenhuma tag encontrada\". Muitos transcodificadores removem tags por padrão — marque novamente com uma ferramenta de desktop como Mp3tag."
+          },
+          {
+            "q": "O arquivo é enviado para o servidor?",
+            "a": "Não. O arquivo é lido localmente no seu navegador. Nada é enviado pela rede."
+          }
+        ]
+      }
     }
   },
   "home": {
@@ -626,7 +1106,9 @@
       "cat_generators_body": "Senhas fortes, UUIDs, QR codes, gradientes CSS e paletas de cores — tudo o que você teria que criar à mão.",
       "cat_text_data_body": "Formate respostas de API, codifique e decodifique strings, conte palavras para conteúdos com limites estritos.",
       "cat_image_body": "Comprima fotos antes de enviá-las ou pixele imagens para anonimizar conteúdo sensível.",
-      "cat_calc_body": "Cálculos rápidos do dia a dia: converta moedas com taxas em tempo real, calcule dias entre datas e dias úteis."
+      "cat_calc_body": "Cálculos rápidos do dia a dia: converta moedas com taxas em tempo real, calcule dias entre datas e dias úteis.",
+      "cat_media_body": "Converta vídeos curtos em GIFs animados otimizados, totalmente no seu navegador. Sem upload, sem cadastro.",
+      "cat_audio_body": "Corte áudio, altere volume ou velocidade, converta para WAV e inspecione metadados MP3 — localmente, com a Web Audio API."
     },
     "faq": {
       "title": "Perguntas frequentes",

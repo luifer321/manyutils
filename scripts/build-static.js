@@ -12,6 +12,7 @@ const ALL_LANGS   = ['en', 'fr', 'es', 'de', 'pt'];
 const EXTRA_LANGS = ALL_LANGS.filter(l => l !== 'en');
 
 const TOOL_IDS = [
+  // Existing
   'qr-code-generator',
   'json-formatter',
   'password-generator',
@@ -24,11 +25,34 @@ const TOOL_IDS = [
   'currency-converter',
   'word-character-counter',
   'days-between-dates',
+  // Image converters (PNG / JPG / WEBP / SVG matrix)
+  'png-to-jpg',
+  'jpg-to-png',
+  'png-to-webp',
+  'webp-to-png',
+  'webp-to-jpg',
+  'jpg-to-webp',
+  'svg-to-png',
+  'svg-to-jpg',
+  'svg-to-webp',
+  // Image manipulation
+  'image-resizer',
+  'crop-image',
+  'rotate-flip-image',
+  // Media (video)
+  'video-to-gif',
+  // Audio
+  'audio-cutter',
+  'volume-changer',
+  'audio-speed-changer',
+  'audio-to-wav',
+  'mp3-metadata-viewer',
 ];
 
 const POPULAR_TOOL_IDS = new Set([
   'json-formatter', 'qr-code-generator', 'password-generator',
   'base64-encoder-decoder', 'uuid-generator', 'image-compressor',
+  'png-to-jpg', 'jpg-to-png', 'image-resizer', 'video-to-gif', 'audio-cutter',
 ]);
 
 // "Free online" suffix in each non-English language, used to build page titles

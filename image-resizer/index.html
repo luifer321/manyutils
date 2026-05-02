@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="image-resizer">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+  <link rel="mask-icon" href="/assets/favicon.svg" color="#6366f1">
+  <meta name="theme-color" content="#6366f1">
+  <title>Image Resizer — Free Online Resizer for PNG, JPG, WebP | ManyUtils</title>
+  <meta name="description" content="Resize images online by exact width, height, or percentage. Lock aspect ratio or scale freely. 100% browser-based — your files never leave your device.">
+  <meta name="keywords" content="image resizer, resize image online, resize png, resize jpg, resize webp, image dimensions, free image resizer">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://manyutils.com/image-resizer/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Image Resizer — Free Online Resizer for PNG, JPG, WebP | ManyUtils">
+  <meta property="og:description" content="Resize images by pixel dimensions or percentage. Aspect-ratio lock, batch-friendly. Browser-based — files never uploaded.">
+  <meta property="og:url" content="https://manyutils.com/image-resizer/">
+  <meta property="og:site_name" content="ManyUtils">
+  <meta property="og:image" content="https://manyutils.com/assets/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Image Resizer — Free Online Resizer for PNG, JPG, WebP | ManyUtils">
+  <meta name="twitter:description" content="Resize images by pixel dimensions or percentage. Browser-based — files never uploaded.">
+  <meta name="twitter:image" content="https://manyutils.com/assets/images/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Image Resizer",
+    "url": "https://manyutils.com/image-resizer/",
+    "description": "Resize PNG, JPG, and WebP images online for free. Adjust width, height, or percentage with optional aspect-ratio lock.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": ["Resize by pixel dimensions or percent", "Lock aspect ratio", "PNG / JPG / WebP output", "100% browser-based", "Drag & drop upload"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="google-adsense-account" content="ca-pub-5377170083939417">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5377170083939417"
+       crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <nav aria-label="Breadcrumb" class="text-xs text-slate-500 mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-primary-600" data-i18n="common.home">Home</a></li>
+        <li class="text-slate-300">/</li>
+        <li><a href="/#tools" class="hover:text-primary-600" data-i18n="common.tools">Tools</a></li>
+        <li class="text-slate-300">/</li>
+        <li class="text-slate-700 font-medium" data-i18n="tools.image_resizer.name">Image Resizer</li>
+      </ol>
+    </nav>
+
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.image_resizer.name">Image Resizer</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.image_resizer.description">Resize images by pixel dimensions or percentage with optional aspect-ratio lock.</p>
+
+          <div id="tool-container">
+            <div class="space-y-6">
+              <div id="imgresize-drop" class="drop-zone" data-accept="image/*" tabindex="0" role="button" aria-label="Upload image">
+                <div class="flex flex-col items-center justify-center py-10 text-center">
+                  <svg class="w-10 h-10 text-slate-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg>
+                  <p class="text-sm font-medium text-slate-600 mb-1" data-i18n="common.drop_image_here">Drag &amp; drop an image here</p>
+                  <p class="text-xs text-slate-400" data-i18n="common.or_click_to_browse">or click to browse — PNG, JPG, WebP, GIF</p>
+                </div>
+              </div>
+
+              <div id="imgresize-controls" class="hidden space-y-5">
+                <div id="imgresize-file-info" class="text-sm text-slate-500"></div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <div>
+                    <label for="imgresize-width" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.width">Width (px)</label>
+                    <input type="number" id="imgresize-width" min="1" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                  </div>
+                  <div>
+                    <label for="imgresize-height" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.height">Height (px)</label>
+                    <input type="number" id="imgresize-height" min="1" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                  </div>
+                  <div>
+                    <label for="imgresize-percent" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.percent">Percent (%)</label>
+                    <input type="number" id="imgresize-percent" min="1" max="500" placeholder="e.g. 50" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                  </div>
+                  <div>
+                    <label for="imgresize-format" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.format">Format</label>
+                    <select id="imgresize-format" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                      <option value="image/png">PNG</option>
+                      <option value="image/jpeg">JPEG</option>
+                      <option value="image/webp" selected>WebP</option>
+                    </select>
+                  </div>
+                </div>
+
+                <label class="inline-flex items-center gap-2 text-sm text-slate-700">
+                  <input type="checkbox" id="imgresize-keep-ratio" checked class="w-4 h-4 rounded text-primary-600 focus:ring-primary-500 border-slate-300">
+                  <span data-i18n="common.keep_aspect_ratio">Keep aspect ratio</span>
+                </label>
+
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <label for="imgresize-quality" class="block text-sm font-medium text-slate-700" data-i18n="common.quality">Quality</label>
+                    <span id="imgresize-quality-value" class="text-sm font-semibold text-primary-600 bg-primary-50 px-2.5 py-0.5 rounded-lg">90%</span>
+                  </div>
+                  <input type="range" id="imgresize-quality" min="1" max="100" value="90" class="w-full h-2 bg-slate-200 rounded-full appearance-none cursor-pointer accent-primary-500">
+                </div>
+
+                <div>
+                  <button id="imgresize-process-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white transition-colors" data-i18n="common.resize">
+                    Resize Image
+                  </button>
+                </div>
+
+                <div id="imgresize-results" class="hidden space-y-4">
+                  <div class="grid grid-cols-3 gap-3 text-center">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+                      <p class="text-xs text-slate-500 mb-0.5" data-i18n="common.original">Original</p>
+                      <p id="imgresize-original-size" class="text-sm font-semibold text-slate-900"></p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+                      <p class="text-xs text-slate-500 mb-0.5" data-i18n="common.output">Output</p>
+                      <p id="imgresize-output-size" class="text-sm font-semibold text-slate-900"></p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3">
+                      <p class="text-xs text-emerald-600 mb-0.5" data-i18n="common.savings">Savings</p>
+                      <p id="imgresize-savings" class="text-sm font-semibold text-emerald-700"></p>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <p class="text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.original">Original</p>
+                      <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center min-h-[200px]">
+                        <canvas id="imgresize-canvas-preview" class="max-w-full h-auto"></canvas>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.output">Output</p>
+                      <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center min-h-[200px]">
+                        <img id="imgresize-preview-result" class="max-w-full h-auto" alt="Resized preview">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-wrap gap-3">
+                    <button id="imgresize-download-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white transition-colors" data-i18n="common.download">
+                      Download Resized Image
+                    </button>
+                    <button id="imgresize-reset-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.reset">
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <div id="seo-content"></div>
+        </div>
+      </div>
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/tools/_image-base.js"></script>
+  <script src="/assets/js/tools/image-resizer.js"></script>
+</body>
+</html>

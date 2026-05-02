@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-tool="rotate-flip-image">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+  <link rel="mask-icon" href="/assets/favicon.svg" color="#6366f1">
+  <meta name="theme-color" content="#6366f1">
+  <title>Rotate &amp; Flip Image — Free Online Tool | ManyUtils</title>
+  <meta name="description" content="Rotate images 90°, 180°, 270°, or by any angle. Flip horizontally or vertically. 100% browser-based — no upload, instant download.">
+  <meta name="keywords" content="rotate image, flip image, mirror image, image rotator, free online image tool, rotate 90, rotate 180">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://manyutils.com/rotate-flip-image/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rotate &amp; Flip Image — Free Online Tool | ManyUtils">
+  <meta property="og:description" content="Rotate by 90°, 180°, 270° or any angle. Flip horizontally or vertically. Browser-based.">
+  <meta property="og:url" content="https://manyutils.com/rotate-flip-image/">
+  <meta property="og:site_name" content="ManyUtils">
+  <meta property="og:image" content="https://manyutils.com/assets/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rotate &amp; Flip Image — Free Online Tool | ManyUtils">
+  <meta name="twitter:description" content="Rotate or flip images instantly in your browser.">
+  <meta name="twitter:image" content="https://manyutils.com/assets/images/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Rotate &amp; Flip Image",
+    "url": "https://manyutils.com/rotate-flip-image/",
+    "description": "Rotate images by any angle (90°, 180°, 270° or custom) and flip horizontally or vertically — entirely in your browser.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": ["Rotate 90°, 180°, 270°", "Custom angle", "Horizontal &amp; vertical flip", "PNG / JPG / WebP output", "Browser-based — no upload"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="google-adsense-account" content="ca-pub-5377170083939417">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5377170083939417"
+       crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <nav aria-label="Breadcrumb" class="text-xs text-slate-500 mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-primary-600" data-i18n="common.home">Home</a></li>
+        <li class="text-slate-300">/</li>
+        <li><a href="/#tools" class="hover:text-primary-600" data-i18n="common.tools">Tools</a></li>
+        <li class="text-slate-300">/</li>
+        <li class="text-slate-700 font-medium" data-i18n="tools.rotate_flip_image.name">Rotate &amp; Flip Image</li>
+      </ol>
+    </nav>
+
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.rotate_flip_image.name">Rotate &amp; Flip Image</h1>
+          <p class="text-slate-500 mb-6" data-i18n="tools.rotate_flip_image.description">Rotate by 90° steps or any custom angle, and flip horizontally or vertically.</p>
+
+          <div id="tool-container">
+            <div class="space-y-6">
+              <div id="rotflip-drop" class="drop-zone" data-accept="image/*" tabindex="0" role="button" aria-label="Upload image">
+                <div class="flex flex-col items-center justify-center py-10 text-center">
+                  <svg class="w-10 h-10 text-slate-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+                  <p class="text-sm font-medium text-slate-600 mb-1" data-i18n="common.drop_image_here">Drag &amp; drop an image here</p>
+                  <p class="text-xs text-slate-400" data-i18n="common.or_click_to_browse">or click to browse — PNG, JPG, WebP, GIF</p>
+                </div>
+              </div>
+
+              <div id="rotflip-controls" class="hidden space-y-5">
+                <div id="rotflip-file-info" class="text-sm text-slate-500"></div>
+
+                <div class="flex flex-wrap gap-2">
+                  <button data-act="rotate" data-deg="90"  class="rotflip-btn px-3 py-2 rounded-lg text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-primary-300">↻ 90°</button>
+                  <button data-act="rotate" data-deg="-90" class="rotflip-btn px-3 py-2 rounded-lg text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-primary-300">↺ 90°</button>
+                  <button data-act="rotate" data-deg="180" class="rotflip-btn px-3 py-2 rounded-lg text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-primary-300">↻ 180°</button>
+                  <button data-act="flip-h"                class="rotflip-btn px-3 py-2 rounded-lg text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-primary-300" data-i18n="common.flip_horizontal">Flip ↔</button>
+                  <button data-act="flip-v"                class="rotflip-btn px-3 py-2 rounded-lg text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-primary-300" data-i18n="common.flip_vertical">Flip ↕</button>
+                  <button data-act="reset-trans"           class="rotflip-btn px-3 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-700 hover:bg-slate-200" data-i18n="common.clear">Clear</button>
+                </div>
+
+                <div>
+                  <label for="rotflip-angle" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.custom_angle">Custom angle (degrees)</label>
+                  <input type="number" id="rotflip-angle" min="-360" max="360" step="1" value="0" class="w-32 px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                </div>
+
+                <div>
+                  <label for="rotflip-format" class="block text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.format">Format</label>
+                  <select id="rotflip-format" class="w-full sm:w-48 px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-sm">
+                    <option value="image/png" selected>PNG</option>
+                    <option value="image/jpeg">JPEG</option>
+                    <option value="image/webp">WebP</option>
+                  </select>
+                </div>
+
+                <div>
+                  <p class="text-sm font-medium text-slate-700 mb-1.5" data-i18n="common.preview">Preview</p>
+                  <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center min-h-[260px] p-4">
+                    <canvas id="rotflip-canvas" class="max-w-full h-auto"></canvas>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3">
+                  <button id="rotflip-download-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-primary-500 hover:bg-primary-600 text-white transition-colors" data-i18n="common.download">Download Image</button>
+                  <button id="rotflip-reset-btn" class="px-5 py-2.5 rounded-xl font-medium text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-i18n="common.reset">Start over</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <div id="seo-content"></div>
+        </div>
+      </div>
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div id="sidebar-content"></div>
+      </aside>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/tools/rotate-flip-image.js"></script>
+</body>
+</html>
