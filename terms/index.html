@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+  <link rel="mask-icon" href="/assets/favicon.svg" color="#6366f1">
+  <meta name="theme-color" content="#6366f1">
   <title>Terms of Service | ManyUtils</title>
   <meta name="description" content="Read ManyUtils' Terms of Service. Learn about acceptable use, our service description, limitation of liability, and your rights when using our free online tools.">
   <meta name="robots" content="index, follow">
@@ -48,10 +53,18 @@
   <header id="header"></header>
 
   <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <nav aria-label="Breadcrumb" class="text-xs text-slate-500 mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-primary-600" data-i18n="common.home">Home</a></li>
+        <li class="text-slate-300">/</li>
+        <li class="text-slate-700 font-medium" data-i18n="common.terms">Terms of Service</li>
+      </ol>
+    </nav>
+
     <!-- Page header -->
     <div class="mb-8">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Terms of Service</h1>
-      <p class="text-slate-500 text-sm">Last updated: <time datetime="2025-01-01">January 1, 2025</time></p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3" data-i18n="common.terms">Terms of Service</h1>
+      <p class="text-slate-500 text-sm"><span data-i18n="common.last_updated">Last updated</span>: <time datetime="2025-01-01">January 1, 2025</time></p>
     </div>
 
     <!-- Content card -->
@@ -68,7 +81,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">1</span>
-          Acceptance of Terms
+          <span data-i18n="trust.terms.s1_title">Acceptance of Terms</span>
         </h2>
         <div class="text-slate-600 leading-relaxed space-y-3 pl-9">
           <p>By using ManyUtils you confirm that you are at least 13 years of age and have the legal capacity to enter into these terms. If you are using ManyUtils on behalf of an organisation, you represent that you have the authority to bind that organisation to these terms.</p>
@@ -80,7 +93,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">2</span>
-          Description of Services
+          <span data-i18n="trust.terms.s2_title">Description of Services</span>
         </h2>
         <div class="text-slate-600 leading-relaxed space-y-3 pl-9">
           <p>ManyUtils provides a collection of free browser-based utilities for developers, designers, and general users. These include but are not limited to:</p>
@@ -101,7 +114,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">3</span>
-          Acceptable Use
+          <span data-i18n="trust.terms.s3_title">Acceptable Use</span>
         </h2>
         <div class="text-slate-600 leading-relaxed space-y-3 pl-9">
           <p>You agree to use ManyUtils only for lawful purposes and in a way that does not infringe the rights of others. You must not:</p>
@@ -118,7 +131,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">4</span>
-          Intellectual Property
+          <span data-i18n="trust.terms.s4_title">Intellectual Property</span>
         </h2>
         <div class="text-slate-600 leading-relaxed space-y-3 pl-9">
           <p>All content, design, and code on ManyUtils — except where otherwise noted — is the property of ManyUtils and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works without our explicit written permission.</p>
@@ -130,7 +143,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">5</span>
-          Disclaimers
+          <span data-i18n="trust.terms.s5_title">Disclaimers</span>
         </h2>
         <div class="text-slate-600 leading-relaxed space-y-3 pl-9">
           <p>ManyUtils is provided <strong class="text-slate-700">"as is"</strong> and <strong class="text-slate-700">"as available"</strong> without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
@@ -142,7 +155,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">6</span>
-          Limitation of Liability
+          <span data-i18n="trust.terms.s6_title">Limitation of Liability</span>
         </h2>
         <div class="text-slate-600 leading-relaxed space-y-3 pl-9">
           <p>To the fullest extent permitted by law, ManyUtils and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of — or inability to use — the site or any of its tools.</p>
@@ -154,7 +167,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">7</span>
-          Third-Party Links
+          <span data-i18n="trust.terms.s7_title">Third-Party Links</span>
         </h2>
         <div class="text-slate-600 leading-relaxed pl-9">
           <p>ManyUtils may contain links to third-party websites. These links are provided for convenience only. We have no control over the content of those sites and accept no responsibility for them or for any loss or damage that may arise from your use of them.</p>
@@ -165,7 +178,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">8</span>
-          Changes to Service and Terms
+          <span data-i18n="trust.terms.s8_title">Changes to Service and Terms</span>
         </h2>
         <div class="text-slate-600 leading-relaxed space-y-3 pl-9">
           <p>We reserve the right to modify or discontinue ManyUtils — or any part of it — at any time without prior notice. We also reserve the right to update these Terms of Service at our sole discretion.</p>
@@ -177,7 +190,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">9</span>
-          Governing Law
+          <span data-i18n="trust.terms.s9_title">Governing Law</span>
         </h2>
         <div class="text-slate-600 leading-relaxed pl-9">
           <p>These terms shall be governed by and construed in accordance with applicable law. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the competent courts.</p>
@@ -188,7 +201,7 @@
       <section>
         <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
           <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary-100 text-primary-600 text-sm font-bold flex items-center justify-center">10</span>
-          Contact Us
+          <span data-i18n="trust.terms.s10_title">Contact Us</span>
         </h2>
         <div class="text-slate-600 leading-relaxed pl-9">
           <p>If you have any questions about these Terms of Service, please contact us at:</p>
@@ -203,8 +216,10 @@
 
       <!-- Footer nav -->
       <div class="border-t border-slate-200 pt-6 flex flex-wrap gap-4 text-sm">
-        <a href="/" class="text-slate-500 hover:text-primary-600">← Back to Tools</a>
-        <a href="/privacy/" class="text-slate-500 hover:text-primary-600">Privacy Policy</a>
+        <a href="/" class="text-slate-500 hover:text-primary-600" data-i18n="common.back_to_tools">← Back to Tools</a>
+        <a href="/about/" class="text-slate-500 hover:text-primary-600" data-i18n="common.about">About</a>
+        <a href="/contact/" class="text-slate-500 hover:text-primary-600" data-i18n="common.contact">Contact</a>
+        <a href="/privacy/" class="text-slate-500 hover:text-primary-600" data-i18n="common.privacy_policy">Privacy Policy</a>
       </div>
     </div>
   </main>

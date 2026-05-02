@@ -21,6 +21,8 @@
     "privacy_policy": "Privacy Policy",
     "terms": "Terms of Service",
     "legal": "Legal",
+    "company": "Company",
+    "contact": "Contact",
     "hero_title_1": "Free Online",
     "hero_title_2": "Developer Tools",
     "hero_subtitle": "Simple, fast, and privacy-friendly tools that work right in your browser. No signup required.",
@@ -29,8 +31,14 @@
     "categories": "Categories",
     "no_results": "No tools found.",
     "what_is": "What is",
-    "how_to_use": "How to Use",
+    "how_to_use": "How to use",
     "faq": "Frequently Asked Questions",
+    "why_useful": "Why this tool is useful",
+    "examples": "Example input and output",
+    "common_mistakes": "Common mistakes to avoid",
+    "cta_more_title": "Looking for more free tools?",
+    "cta_more_body": "ManyUtils has dozens of fast, privacy-friendly utilities for developers, designers, writers and everyday users. All free, all in your browser.",
+    "cta_more_link": "Browse all tools →",
     "encode": "Encode",
     "decode": "Decode",
     "upload": "Upload",
@@ -76,7 +84,13 @@
     "random_gradient": "Random Gradient",
     "format_beautify": "Format / Beautify",
     "minify": "Minify",
-    "validate": "Validate"
+    "validate": "Validate",
+    "view_all_tools": "View all tools →",
+    "search_button_aria": "Search tools",
+    "results_count": "{n} tools",
+    "results_count_filtered": "{n} of {total} tools",
+    "back_to_tools": "← Back to Tools",
+    "last_updated": "Last updated"
   },
   "categories": {
     "generators": "Generators",
@@ -134,36 +148,94 @@
       }
     },
     "json_formatter": {
-      "name": "JSON Formatter",
-      "description": "Format, validate, and beautify your JSON data with proper indentation.",
+      "name": "JSON Formatter & Validator",
+      "description": "Format, beautify, minify and validate JSON instantly in your browser. Free, private, no signup — paste your data and get a clean, readable structure in one click.",
+      "tagline": "Paste messy JSON, get clean, readable, valid JSON back — instantly.",
       "seo": {
-        "intro": "This free JSON formatter online instantly beautifies, minifies, and validates any JSON string — right in your browser, with no installation or signup required. JSON (JavaScript Object Notation) is the most widely used format for exchanging data between servers and web applications. Poorly formatted or minified JSON is difficult to read and debug; this tool adds clean indentation and line breaks to make the structure immediately clear.",
+        "intro": "<p>The <strong>ManyUtils JSON Formatter</strong> is a free online tool that turns raw, minified, or broken JSON into clean, indented, human-readable text — and tells you exactly where the syntax errors are if it can't. Everything happens locally in your browser using the native <code>JSON.parse</code> engine, so your data is never uploaded, logged, or stored on a server.</p><p>JSON (JavaScript Object Notation) is the de-facto data exchange format on the modern web. Almost every REST API, log file, configuration file, browser storage entry, and webhook payload you encounter as a developer is JSON. But JSON is also notoriously unforgiving: a single trailing comma, an unquoted key, or a stray smart quote can break your parser and crash your build. This formatter is built for those moments — when you've copied a payload from a network tab, a Slack message, or a Stack Overflow answer, and you need to see the structure clearly and confirm it's valid before pasting it into your code.</p><p>Use it to format API responses, debug production logs, prepare fixtures for tests, prettify configuration files, validate webhook payloads, or simply learn how a piece of data is structured. It supports 2-space, 4-space, and tab indentation, one-click minification for production, and a strict validator that reports the exact line and column of any syntax error.</p>",
+        "valueProps": [
+          { "title": "100% browser-based — privacy by default", "body": "Your JSON never leaves your device. There's no upload, no server round trip, and no log. Safe for API keys, customer records, and proprietary payloads." },
+          { "title": "Instant feedback, even on large payloads", "body": "Format, validate, and minify run synchronously in the browser. Most real-world payloads (API responses, log lines, configs) are processed in under a millisecond." },
+          { "title": "Clear, actionable error messages", "body": "If your JSON is invalid, the validator points to the exact position of the problem — not a generic 'Unexpected token' wall of red." },
+          { "title": "Works offline once loaded", "body": "After the page loads, the formatter keeps working without an internet connection. Useful on planes, in restricted networks, or on locked-down corporate machines." },
+          { "title": "Three indentation styles", "body": "Match your team's style guide: 2 spaces (most JS / TS projects), 4 spaces (Python-style), or tabs (Go and many config files)." },
+          { "title": "No signup, no ads on the editor itself", "body": "The tool UI stays clean. Ads only appear in clearly-labelled spots around the article content, never inside or above the editor." }
+        ],
         "steps": [
-          "Paste your raw or minified JSON into the input textarea.",
-          "Select your preferred indentation: 2 spaces, 4 spaces, or tabs.",
-          "Click Format / Beautify to pretty-print with proper indentation, or Minify to compress it to a single line.",
-          "Use the Validate button to check for syntax errors, then copy the result to your clipboard."
+          "Paste your raw or minified JSON into the <em>Input JSON</em> textarea. You can paste copy/pasted API responses, log entries, or content from a file.",
+          "Pick your preferred indentation — 2 spaces, 4 spaces, or tabs — from the <em>Indent</em> dropdown.",
+          "Click <strong>Format / Beautify</strong> to pretty-print the JSON with proper indentation and line breaks. The output appears below the buttons.",
+          "Click <strong>Minify</strong> to remove every byte of unnecessary whitespace and produce a single-line string ready for transport or storage.",
+          "Click <strong>Validate</strong> to check syntax without changing the layout. If something is wrong you'll get a clear error message with the position of the problem.",
+          "Click <strong>Copy</strong> on the output panel to copy the result to your clipboard with one click."
+        ],
+        "examples": [
+          {
+            "title": "Beautify a minified API response",
+            "input": "{\"id\":42,\"name\":\"Ada Lovelace\",\"roles\":[\"admin\",\"author\"],\"profile\":{\"email\":\"ada@example.com\",\"verified\":true}}",
+            "output": "{\n  \"id\": 42,\n  \"name\": \"Ada Lovelace\",\n  \"roles\": [\n    \"admin\",\n    \"author\"\n  ],\n  \"profile\": {\n    \"email\": \"ada@example.com\",\n    \"verified\": true\n  }\n}"
+          },
+          {
+            "title": "Minify before sending over the wire",
+            "input": "{\n  \"event\": \"user.created\",\n  \"timestamp\": \"2025-04-12T08:30:00Z\",\n  \"data\": {\n    \"id\": \"u_8821\",\n    \"plan\": \"pro\"\n  }\n}",
+            "output": "{\"event\":\"user.created\",\"timestamp\":\"2025-04-12T08:30:00Z\",\"data\":{\"id\":\"u_8821\",\"plan\":\"pro\"}}"
+          },
+          {
+            "title": "Catch an invalid JSON payload",
+            "input": "{\n  \"name\": \"Alex\",\n  \"age\": 30,\n}",
+            "output": "Error: Unexpected token } in JSON at position 28 — trailing comma after \"age\": 30 is not valid JSON. Remove the comma to make the payload parseable."
+          }
+        ],
+        "mistakes": [
+          "<strong>Trailing commas.</strong> JSON does not allow a comma after the last element of an array or object. <code>{\"a\":1,}</code> is valid JavaScript but invalid JSON.",
+          "<strong>Single quotes around keys or strings.</strong> JSON requires double quotes. <code>{'name':'Alex'}</code> will fail; use <code>{\"name\":\"Alex\"}</code>.",
+          "<strong>Unquoted keys.</strong> Even if a key looks like a valid identifier, it must be wrapped in double quotes. <code>{name:\"Alex\"}</code> is invalid JSON.",
+          "<strong>Comments inside the payload.</strong> JSON has no support for <code>//</code> or <code>/* */</code> comments. Use a separate documentation file or switch to JSON5 / JSONC if you really need them.",
+          "<strong>NaN, Infinity, undefined.</strong> These JavaScript values are not valid JSON. Convert to <code>null</code> or a string before serialising.",
+          "<strong>Smart quotes from rich-text editors.</strong> Pasting from Word, Notion, or Slack can replace straight <code>\"</code> with curly <code>“ ”</code> quotes that look identical but break the parser.",
+          "<strong>Mixing tabs and spaces in nested structures.</strong> JSON itself doesn't care about whitespace, but inconsistent indentation makes diffs noisy. Pick one style per file and stick to it.",
+          "<strong>Sending a JavaScript object literal instead of JSON.</strong> If you accidentally <code>console.log</code> an object and copy it from the console, the output is a JS literal — single quotes, unquoted keys, and all. Always copy from the network tab's <em>Response</em> view instead."
         ],
         "faq": [
           {
-            "q": "What does formatting JSON do?",
-            "a": "Formatting adds consistent indentation and line breaks to make the data structure human-readable. It does not change the data values — only the visual presentation."
+            "q": "What is the difference between formatting, beautifying, and pretty-printing JSON?",
+            "a": "They all mean the same thing: adding consistent indentation and line breaks so a human can read the structure at a glance. The values themselves are not changed — only the layout. The terms are used interchangeably across editors, libraries, and documentation."
+          },
+          {
+            "q": "Is my JSON sent to your servers when I use this tool?",
+            "a": "No. The formatter is a client-side JavaScript page. When you click Format, Minify, or Validate, the work runs entirely inside your browser tab. We don't have a backend that processes user JSON, and we don't log the content of what you paste."
+          },
+          {
+            "q": "How do I fix a JSON syntax error?",
+            "a": "Click Validate. The tool prints the parser's exact error — usually 'Unexpected token X at position Y'. Scroll to that position in your input. The four most common culprits are: a trailing comma, single quotes around keys/strings, an unquoted key, or a missing closing bracket/brace. Fix that one character and re-validate."
           },
           {
             "q": "Why would I minify JSON?",
-            "a": "Minifying removes all whitespace, producing the smallest possible file size. This is useful when transmitting JSON over a network or storing it in APIs, databases, or localStorage where size matters."
+            "a": "Minified JSON is smaller — typically 30–60% smaller for human-readable payloads — which means faster transfers, lower mobile data costs, and less storage in caches, databases, or localStorage. Servers and APIs almost always send minified JSON in production for this reason."
           },
           {
-            "q": "How does JSON validation work?",
-            "a": "The validator parses your input using the browser's built-in JSON parser. If parsing fails, it reports the exact error and the position in the string where the problem was found."
+            "q": "Can this tool handle very large JSON files?",
+            "a": "It comfortably handles payloads up to a few megabytes, which covers the vast majority of API responses and log entries. For multi-hundred-megabyte files (database dumps, big analytics exports), the synchronous browser parser becomes slow — in those cases use a streaming parser like ijson (Python) or stream-json (Node.js), or jq from the command line."
           },
           {
-            "q": "Can this tool handle large JSON files?",
-            "a": "Yes, for reasonably sized JSON. Very large files (several MB) may be slow because the processing happens in the browser. For huge files, consider a desktop tool."
+            "q": "Does the tool support JSON5, JSONC, or NDJSON?",
+            "a": "It supports strict, standards-compliant JSON only — the format every API and library agrees on. JSON5 (with comments and trailing commas) and NDJSON / JSON Lines (one JSON object per line) are different formats that require dedicated parsers. We may add a separate JSON5 tool in the future."
           },
           {
-            "q": "What is the difference between JSON beautify and JSON format?",
-            "a": "They mean the same thing: both terms refer to adding indentation and line breaks to make compact or minified JSON human-readable. 'Beautify', 'format', and 'pretty-print' are used interchangeably."
+            "q": "Will this tool change the order of my keys?",
+            "a": "No. Both formatting and minifying preserve the original key order. JSON objects are technically unordered per the spec, but every modern parser preserves insertion order, and so does this tool."
+          },
+          {
+            "q": "Can I save my formatted JSON?",
+            "a": "Click Copy to copy the result to your clipboard, then paste it into a file in your editor or save it from there. We deliberately don't auto-download files so the tool stays single-purpose and frictionless."
+          },
+          {
+            "q": "Does the formatter work on mobile?",
+            "a": "Yes. The layout is mobile-first: textareas resize, buttons stack, and the output panel scrolls horizontally for long lines. You can format and validate JSON entirely from your phone — handy for debugging webhooks on the go."
+          },
+          {
+            "q": "Is this tool free for commercial use?",
+            "a": "Yes. The tool, its UI, and the output it produces are completely free for both personal and commercial use, with no attribution required."
           }
         ]
       },
@@ -604,6 +676,120 @@
         "status_both_past": "Both dates are in the past",
         "status_end_in_future": "End date is {days} days in the future"
       }
+    }
+  },
+  "home": {
+    "why": {
+      "title": "Why ManyUtils exists",
+      "body": "We got tired of the same online-tools experience: pop-ups, broken paywalls, ads stacked above the input box, and tools that quietly upload your private data to a server you've never heard of. ManyUtils is the opposite. Every utility on this site is free, runs entirely in your browser, loads in under a second on a basic mobile connection, and does one thing well. No account, no upload, no surprise paywall on the third use.",
+      "card1_title": "Privacy by default",
+      "card1_body": "Your inputs never leave your device. No upload, no log, no analytics on what you paste.",
+      "card2_title": "Sub-second load",
+      "card2_body": "Static HTML, vanilla JavaScript, mobile-first layout. The page is interactive before most sites have started loading.",
+      "card3_title": "Zero friction",
+      "card3_body": "No signup, no email gate, no \"create an account to copy your result\". Open, use, leave.",
+      "card4_title": "Honest content",
+      "card4_body": "Every tool ships with a real article — examples, common mistakes, and FAQs written by people who use it daily."
+    },
+    "popular": {
+      "title": "Popular tools",
+      "subtitle": "The most-used utilities on ManyUtils this month."
+    },
+    "browse": {
+      "title": "Browse by category",
+      "subtitle": "Filter the full library by what you're trying to do."
+    },
+    "explore": {
+      "title": "What you'll find here",
+      "cat_generators_body": "Strong passwords, UUIDs, QR codes, CSS gradients, and color palettes — anything you'd otherwise hand-craft from scratch.",
+      "cat_text_data_body": "Format API responses, encode and decode strings, and count words for content with strict limits.",
+      "cat_image_body": "Compress photos before uploading them, or pixelate images to anonymise sensitive content.",
+      "cat_calc_body": "Quick everyday math: convert currencies at live rates, calculate days between dates and business-day deltas."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Is ManyUtils really free?",
+      "a1": "Yes. Every tool on ManyUtils is free to use without an account. The site is supported by ads displayed around the article content, never inside the tool UI itself.",
+      "q2": "Do you upload my data when I use a tool?",
+      "a2": "No. Almost all of our tools — JSON formatter, password generator, image compressor, base64 encoder, and so on — process your input entirely inside your browser. Nothing is uploaded to our servers.",
+      "q3": "Do I need to create an account?",
+      "a3": "No. ManyUtils has no login system. Every feature is fully usable on your first visit and forever after.",
+      "q4": "Can I use the tools on mobile?",
+      "a4": "Yes. Every tool is designed mobile-first: layouts, buttons, and outputs scale to small screens. You can format JSON, generate passwords, or compress an image entirely from your phone.",
+      "q5": "Are the outputs free for commercial use?",
+      "a5": "Yes. Whatever the tools produce — formatted JSON, generated passwords, color palettes, QR codes, compressed images, gradients, etc. — is yours to use for personal or commercial projects, with no attribution required.",
+      "q6_html": "Why are some tools missing features I'd expect?",
+      "a6_html": "We deliberately keep each tool focused on the most common 90% of use cases so the interface stays fast and clean. If something you need is missing, <a href=\"/contact/\" class=\"text-primary-600 hover:underline\">contact us</a> — we read every request."
+    }
+  },
+  "trust": {
+    "about": {
+      "page_title": "About ManyUtils — Free Online Tools for Developers & Designers",
+      "page_meta": "ManyUtils builds fast, free, privacy-friendly online tools for developers, designers and everyday users. Learn who we are, what we believe, and how every tool is built.",
+      "h1": "About ManyUtils",
+      "subtitle": "Free, fast, privacy-friendly online tools — built by people who got tired of opening five tabs to format a JSON file.",
+      "s1_title": "Who we are",
+      "s1_body_html": "<p>ManyUtils is an independent project that builds and maintains a growing library of free online utilities. We started in 2024 because we kept reaching for the same handful of tools — JSON formatters, password generators, image compressors — and being met with cluttered websites full of pop-ups, broken paywalls, and tools that secretly uploaded private data to a server.</p><p>So we built our own. Every tool on ManyUtils is designed around three rules: it must work in the browser without sending your data anywhere, it must load in under a second on a basic mobile connection, and it must do one thing well.</p>",
+      "s2_title": "What we believe",
+      "s2_body_html": "<li><strong class=\"text-slate-800\">Your data is yours.</strong> Tools that process your input — JSON, passwords, images, text — should never need to upload it. Almost everything we build runs entirely on your device.</li><li><strong class=\"text-slate-800\">Speed is a feature.</strong> A \"free online tool\" that takes ten seconds to load isn't free; it costs you attention. We aim for sub-second time-to-interactive on every page.</li><li><strong class=\"text-slate-800\">No fake walls.</strong> No \"sign up to copy your result\", no \"upgrade to remove the watermark\". Every feature you see is fully usable, forever, for free.</li><li><strong class=\"text-slate-800\">Honest content.</strong> Our articles around each tool are written by people who actually use them. Examples are tested. Mistakes are real ones we've made.</li><li><strong class=\"text-slate-800\">Ads, not surveillance.</strong> ManyUtils is supported by Google AdSense, shown in clearly labelled spots around the article — never inside or above the tool itself.</li>",
+      "s3_title": "How we build tools",
+      "s3_body_html": "<p>Every tool follows the same pattern: a static HTML page, a small piece of vanilla JavaScript, and zero server-side processing of user data. There is no account system, no database of user inputs, no tracking script that follows you around the internet. The only third-party services we use are listed transparently in our <a href=\"/privacy/\" class=\"text-primary-600 hover:underline\">Privacy Policy</a>.</p><p>The codebase is organised so that each tool is a self-contained page. That keeps the surface area small, the security story simple, and the load time fast — even if you only need one tool, you only download the code for that tool.</p>",
+      "s4_title": "Who we build for",
+      "s4_body_html": "<p>Most of our visitors are developers and designers — people who want to format a JSON payload, generate a UUID, build a CSS gradient, or compress a screenshot before pasting it into a ticket. But we deliberately also build tools for everyday users: a strong password generator, a QR code generator, a days-between-dates calculator, a currency converter. Anyone with a browser should be able to land on ManyUtils and finish their task in under a minute.</p>",
+      "s5_title": "Get in touch",
+      "s5_body_html": "<p>Found a bug, want a new tool, or noticed a typo? We read every message.</p><p><a href=\"/contact/\" class=\"inline-flex items-center gap-1.5 text-primary-600 hover:text-primary-700 font-medium\">Contact us →</a></p>"
+    },
+    "contact": {
+      "page_title": "Contact ManyUtils — Feedback, Bug Reports & Tool Requests",
+      "page_meta": "Get in touch with the ManyUtils team. Report a bug, request a new tool, ask about advertising, or just say hi. We read every message.",
+      "h1": "Contact ManyUtils",
+      "subtitle": "We're a small team. We read everything you send us, and we usually reply within two business days.",
+      "email_title": "Email us",
+      "email_body": "For all enquiries — bug reports, feature requests, advertising, partnerships, press, or general feedback — send an email to:",
+      "include_title": "What to include",
+      "include_intro": "To help us reply faster, please include:",
+      "card_bug_title": "Bug report",
+      "card_bug_body": "The tool URL, what you tried to do, what happened, what you expected, and (if you can) your browser and OS version.",
+      "card_feature_title": "Feature or new-tool request",
+      "card_feature_body": "A short description of the use case. Real workflows beat abstract feature lists every time.",
+      "card_ads_title": "Advertising / partnerships",
+      "card_ads_body": "Your company, what you'd like to promote, and your monthly budget range.",
+      "card_press_title": "Press / interviews",
+      "card_press_body": "Outlet, deadline, and a few sample questions or topics.",
+      "faq_title": "Frequently asked",
+      "faq_q1": "Do you offer paid support or custom tools?",
+      "faq_a1": "For custom internal tools, white-label utilities, or sponsored tools, email us at the address above with the brief.",
+      "faq_q2": "Can I use ManyUtils tools on my own site?",
+      "faq_a2": "The output of any tool (formatted JSON, generated passwords, gradients, palettes, QR codes, etc.) is yours to use freely, including commercially. Embedding the tools themselves into your own site is not currently supported — please get in touch if that's something you need.",
+      "faq_q3": "How do I report a privacy or security issue?",
+      "faq_a3": "Please email us with \"Security\" in the subject line. We treat security reports with the highest priority.",
+      "faq_q4": "Do you reply in languages other than English?",
+      "faq_a4": "Yes — feel free to write in English, French, Spanish, German or Portuguese. We'll reply in the same language."
+    },
+    "privacy": {
+      "s1_title": "Who We Are",
+      "s2_title": "Data We Collect",
+      "s3_title": "Cookies",
+      "s4_title": "Analytics",
+      "s5_title": "Advertising (Google AdSense / AdMob)",
+      "s6_title": "Third-Party Services",
+      "s7_title": "Data Retention",
+      "s8_title": "Your Rights",
+      "s9_title": "Children's Privacy",
+      "s10_title": "Changes to This Policy",
+      "s11_title": "Contact Us"
+    },
+    "terms": {
+      "s1_title": "Acceptance of Terms",
+      "s2_title": "Description of Services",
+      "s3_title": "Acceptable Use",
+      "s4_title": "Intellectual Property",
+      "s5_title": "Disclaimers",
+      "s6_title": "Limitation of Liability",
+      "s7_title": "Third-Party Links",
+      "s8_title": "Changes to Service and Terms",
+      "s9_title": "Governing Law",
+      "s10_title": "Contact Us"
     }
   }
 }

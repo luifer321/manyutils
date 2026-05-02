@@ -136,8 +136,10 @@ const Components = {
               </ul>
             </div>
             <div>
-              <h4 class="text-white font-semibold text-sm mb-4" data-i18n="common.legal">Legal</h4>
+              <h4 class="text-white font-semibold text-sm mb-4" data-i18n="common.company">Company</h4>
               <ul class="space-y-2">
+                <li><a href="/about/" class="text-slate-400 hover:text-primary-400 text-sm" data-i18n="common.about">About</a></li>
+                <li><a href="/contact/" class="text-slate-400 hover:text-primary-400 text-sm" data-i18n="common.contact">Contact</a></li>
                 <li><a href="/privacy/" class="text-slate-400 hover:text-primary-400 text-sm" data-i18n="common.privacy_policy">Privacy Policy</a></li>
                 <li><a href="/terms/" class="text-slate-400 hover:text-primary-400 text-sm" data-i18n="common.terms">Terms of Service</a></li>
               </ul>

@@ -3,36 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ManyUtils — Free Online Tools for Developers &amp; Designers</title>
-  <meta name="description" content="Free online tools for developers and designers: JSON formatter, Base64 encoder, QR code generator, password generator, UUID generator, and more. No signup required.">
-  <meta name="keywords" content="free online tools, developer tools, json formatter online, base64 encoder, qr code generator, password generator, uuid generator, image compressor">
-  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+  <link rel="mask-icon" href="/assets/favicon.svg" color="#6366f1">
+  <meta name="theme-color" content="#6366f1">
+  <title>ManyUtils — Free Online Tools for Developers, Designers &amp; Everyday Users</title>
+  <meta name="description" content="Free online tools that run in your browser. Format JSON, generate strong passwords, compress images, build CSS gradients, create QR codes, and dozens more. No signup, no upload, no tracking your inputs.">
+  <meta name="keywords" content="free online tools, developer tools, json formatter online, base64 encoder, qr code generator, password generator, uuid generator, image compressor, css gradient generator, color palette generator, currency converter">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://manyutils.com/">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ManyUtils — Free Online Tools for Developers &amp; Designers">
-  <meta property="og:description" content="Free online tools for developers and designers: JSON formatter, Base64 encoder, QR code generator, password generator, UUID generator, and more. No signup required.">
+  <meta property="og:title" content="ManyUtils — Free Online Tools for Developers, Designers &amp; Everyday Users">
+  <meta property="og:description" content="Free online tools that run in your browser. Format JSON, generate strong passwords, compress images, build CSS gradients, create QR codes, and dozens more.">
   <meta property="og:url" content="https://manyutils.com/">
   <meta property="og:site_name" content="ManyUtils">
   <meta property="og:image" content="https://manyutils.com/assets/images/og-default.png">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ManyUtils — Free Online Tools for Developers &amp; Designers">
-  <meta name="twitter:description" content="Free online tools: JSON formatter, Base64 encoder, QR code generator, password generator, UUID generator, and more. No signup.">
+  <meta name="twitter:title" content="ManyUtils — Free Online Tools for Developers, Designers &amp; Everyday Users">
+  <meta name="twitter:description" content="Free online tools that run in your browser. Format JSON, generate strong passwords, compress images, and dozens more. No signup.">
   <meta name="twitter:image" content="https://manyutils.com/assets/images/og-default.png">
-  <!-- Structured Data -->
+  <!-- Structured Data: WebSite + Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "ManyUtils",
     "url": "https://manyutils.com/",
-    "description": "Free online tools for developers and designers. No signup required.",
+    "description": "Free online tools for developers, designers, and everyday users. Runs entirely in your browser — no signup required.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ManyUtils",
+      "url": "https://manyutils.com/",
+      "logo": "https://manyutils.com/assets/images/og-default.png"
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://manyutils.com/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
+  }
+  </script>
+  <!-- Structured Data: FAQ on homepage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is ManyUtils really free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every tool on ManyUtils is free to use without an account. The site is supported by ads displayed around the article content, never inside the tool UI itself." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you upload my data when I use a tool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Almost all of our tools — JSON formatter, password generator, image compressor, base64 encoder, and so on — process your input entirely inside your browser. Nothing is uploaded to our servers." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to create an account?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. ManyUtils has no login system. Every feature is fully usable on your first visit and forever after." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the tools on mobile?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every tool is designed mobile-first: layouts, buttons, and outputs scale to small screens. You can format JSON, generate passwords, or compress an image entirely from your phone." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the outputs free for commercial use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whatever the tools produce — formatted JSON, generated passwords, color palettes, QR codes, compressed images, gradients, etc. — is yours to use for personal or commercial projects, with no attribution required." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why are some tools missing features I'd expect?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We deliberately keep each tool focused on the most common 90% of use cases so the interface stays fast and clean. If something you need is missing, contact us — we read every request." }
+      }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,44 +98,208 @@
 <body class="bg-slate-50 font-sans antialiased text-slate-800">
   <header id="header"></header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (search removed — now lives next to the tools grid for better UX) -->
   <section class="hero-gradient text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
         <span data-i18n="common.hero_title_1">Free Online</span>
         <span class="block bg-gradient-to-r from-primary-400 to-violet-400 bg-clip-text text-transparent" data-i18n="common.hero_title_2">Developer Tools</span>
       </h1>
-      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10" data-i18n="common.hero_subtitle">Simple, fast, and privacy-friendly tools that work right in your browser. No signup required.</p>
-      <div class="max-w-xl mx-auto relative">
-        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
-        <input
-          id="search-tools"
-          type="text"
-          data-i18n-placeholder="common.search_placeholder"
-          placeholder="Search tools..."
-          class="w-full pl-12 pr-4 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:bg-white/15 text-base"
-        >
+      <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8" data-i18n="common.hero_subtitle">Simple, fast, and privacy-friendly tools that work right in your browser. No signup required.</p>
+      <a href="#tools" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 text-white font-medium text-sm transition-colors">
+        <span data-i18n="home.popular.title">Popular tools</span>
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Why ManyUtils -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3" data-i18n="home.why.title">Why ManyUtils exists</h2>
+      <p class="text-slate-600 leading-relaxed" data-i18n="home.why.body">We got tired of the same online-tools experience: pop-ups, broken paywalls, ads stacked above the input box, and tools that quietly upload your private data to a server you've never heard of. ManyUtils is the opposite. Every utility on this site is free, runs entirely in your browser, loads in under a second on a basic mobile connection, and does one thing well. No account, no upload, no surprise paywall on the third use.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-1" data-i18n="home.why.card1_title">Privacy by default</h3>
+        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="home.why.card1_body">Your inputs never leave your device. No upload, no log, no analytics on what you paste.</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-3">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-1" data-i18n="home.why.card2_title">Sub-second load</h3>
+        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="home.why.card2_body">Static HTML, vanilla JavaScript, mobile-first layout. The page is interactive before most sites have started loading.</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-3">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-1" data-i18n="home.why.card3_title">Zero friction</h3>
+        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="home.why.card3_body">No signup, no email gate, no "create an account to copy your result". Open, use, leave.</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <div class="w-10 h-10 rounded-xl bg-violet-50 text-violet-600 flex items-center justify-center mb-3">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+        </div>
+        <h3 class="font-semibold text-slate-900 mb-1" data-i18n="home.why.card4_title">Honest content</h3>
+        <p class="text-sm text-slate-600 leading-relaxed" data-i18n="home.why.card4_body">Every tool ships with a real article — examples, common mistakes, and FAQs written by people who use it daily.</p>
       </div>
     </div>
   </section>
 
-  <!-- Tools Section -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="tools">
+  <!-- Popular Tools (rendered before the full grid) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <div class="flex items-end justify-between mb-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-1" data-i18n="home.popular.title">Popular tools</h2>
+        <p class="text-slate-500 text-sm" data-i18n="home.popular.subtitle">The most-used utilities on ManyUtils this month.</p>
+      </div>
+      <a href="#tools" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700" data-i18n="common.view_all_tools">View all tools →</a>
+    </div>
+    <div id="popular-tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- Tools Section (categories + full grid + search) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 scroll-mt-20" id="tools">
+    <!-- Header row: title on the left, search on the right (collapses on mobile) -->
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-1" data-i18n="home.browse.title">Browse by category</h2>
+        <p class="text-slate-500 text-sm" data-i18n="home.browse.subtitle">Filter the full library by what you're trying to do.</p>
+      </div>
+      <!-- Search lives here so users see the grid update as they type. -->
+      <div class="relative w-full sm:w-72">
+        <label for="search-tools" class="sr-only" data-i18n="common.search_button_aria">Search tools</label>
+        <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        <input
+          id="search-tools"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          data-i18n-placeholder="common.search_placeholder"
+          data-i18n-aria-label="common.search_button_aria"
+          aria-controls="tools-grid"
+          placeholder="Search tools..."
+          class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-sm"
+        >
+      </div>
+    </div>
+
     <!-- Categories -->
-    <div class="flex flex-wrap gap-2 mb-8" id="category-filters">
+    <div class="flex flex-wrap gap-2 mb-6" id="category-filters" role="tablist" aria-label="Tool categories">
       <button data-category="all" class="category-btn active px-4 py-2 rounded-xl text-sm font-medium bg-primary-500 text-white">
         <span data-i18n="common.all_tools">All Tools</span>
       </button>
     </div>
 
+    <!-- Result count -->
+    <p class="text-xs text-slate-500 mb-4" id="results-count" aria-live="polite"></p>
+
     <!-- Tools Grid -->
-    <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" aria-busy="false">
     </div>
 
     <!-- No Results -->
     <div id="no-results" class="hidden text-center py-16">
       <svg class="w-16 h-16 mx-auto text-slate-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
       <p class="text-slate-500 text-lg" data-i18n="common.no_results">No tools found.</p>
+    </div>
+  </section>
+
+  <!-- Categories explainer -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6" data-i18n="home.explore.title">What you'll find here</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <h3 class="font-semibold text-slate-900 mb-2" data-i18n="categories.generators">Generators</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-3" data-i18n="home.explore.cat_generators_body">Strong passwords, UUIDs, QR codes, CSS gradients, and color palettes — anything you'd otherwise hand-craft from scratch.</p>
+        <ul class="text-sm space-y-1.5">
+          <li><a href="/password-generator/" class="text-primary-600 hover:underline" data-i18n="tools.password_generator.name">Password Generator</a></li>
+          <li><a href="/uuid-generator/" class="text-primary-600 hover:underline" data-i18n="tools.uuid_generator.name">UUID Generator</a></li>
+          <li><a href="/qr-code-generator/" class="text-primary-600 hover:underline" data-i18n="tools.qr_code_generator.name">QR Code Generator</a></li>
+          <li><a href="/css-gradient-generator/" class="text-primary-600 hover:underline" data-i18n="tools.css_gradient_generator.name">CSS Gradient Generator</a></li>
+          <li><a href="/color-palette-generator/" class="text-primary-600 hover:underline" data-i18n="tools.color_palette_generator.name">Color Palette Generator</a></li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <h3 class="font-semibold text-slate-900 mb-2" data-i18n="categories.text_data">Text &amp; data</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-3" data-i18n="home.explore.cat_text_data_body">Format API responses, encode and decode strings, and count words for content with strict limits.</p>
+        <ul class="text-sm space-y-1.5">
+          <li><a href="/json-formatter/" class="text-primary-600 hover:underline" data-i18n="tools.json_formatter.name">JSON Formatter &amp; Validator</a></li>
+          <li><a href="/base64-encoder-decoder/" class="text-primary-600 hover:underline" data-i18n="tools.base64_encoder_decoder.name">Base64 Encoder / Decoder</a></li>
+          <li><a href="/word-character-counter/" class="text-primary-600 hover:underline" data-i18n="tools.word_character_counter.name">Word &amp; Character Counter</a></li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <h3 class="font-semibold text-slate-900 mb-2" data-i18n="categories.image_tools">Image tools</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-3" data-i18n="home.explore.cat_image_body">Compress photos before uploading them, or pixelate images to anonymise sensitive content.</p>
+        <ul class="text-sm space-y-1.5">
+          <li><a href="/image-compressor/" class="text-primary-600 hover:underline" data-i18n="tools.image_compressor.name">Image Compressor</a></li>
+          <li><a href="/image-pixelator/" class="text-primary-600 hover:underline" data-i18n="tools.image_pixelator.name">Image Pixelator</a></li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-200 p-5">
+        <h3 class="font-semibold text-slate-900 mb-2" data-i18n="categories.calculators">Calculators</h3>
+        <p class="text-sm text-slate-600 leading-relaxed mb-3" data-i18n="home.explore.cat_calc_body">Quick everyday math: convert currencies at live rates, calculate days between dates and business-day deltas.</p>
+        <ul class="text-sm space-y-1.5">
+          <li><a href="/currency-converter/" class="text-primary-600 hover:underline" data-i18n="tools.currency_converter.name">Currency Converter</a></li>
+          <li><a href="/days-between-dates/" class="text-primary-600 hover:underline" data-i18n="tools.days_between_dates.name">Days Between Dates</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 text-center" data-i18n="home.faq.title">Frequently asked questions</h2>
+    <div class="space-y-3" id="home-faq">
+      <div class="faq-item active border border-slate-200 rounded-xl overflow-hidden bg-white">
+        <button class="faq-question w-full flex items-center justify-between p-4 text-left font-medium text-slate-900 hover:bg-slate-50">
+          <span data-i18n="home.faq.q1">Is ManyUtils really free?</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="faq-answer px-4 text-slate-600"><p class="pb-2" data-i18n="home.faq.a1">Yes. Every tool on ManyUtils is free to use without an account. The site is supported by ads displayed around the article content, never inside the tool UI itself.</p></div>
+      </div>
+      <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-white">
+        <button class="faq-question w-full flex items-center justify-between p-4 text-left font-medium text-slate-900 hover:bg-slate-50">
+          <span data-i18n="home.faq.q2">Do you upload my data when I use a tool?</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="faq-answer px-4 text-slate-600"><p class="pb-2" data-i18n="home.faq.a2">No. Almost all of our tools — JSON formatter, password generator, image compressor, base64 encoder, and so on — process your input entirely inside your browser. Nothing is uploaded to our servers.</p></div>
+      </div>
+      <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-white">
+        <button class="faq-question w-full flex items-center justify-between p-4 text-left font-medium text-slate-900 hover:bg-slate-50">
+          <span data-i18n="home.faq.q3">Do I need to create an account?</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="faq-answer px-4 text-slate-600"><p class="pb-2" data-i18n="home.faq.a3">No. ManyUtils has no login system. Every feature is fully usable on your first visit and forever after.</p></div>
+      </div>
+      <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-white">
+        <button class="faq-question w-full flex items-center justify-between p-4 text-left font-medium text-slate-900 hover:bg-slate-50">
+          <span data-i18n="home.faq.q4">Can I use the tools on mobile?</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="faq-answer px-4 text-slate-600"><p class="pb-2" data-i18n="home.faq.a4">Yes. Every tool is designed mobile-first: layouts, buttons, and outputs scale to small screens. You can format JSON, generate passwords, or compress an image entirely from your phone.</p></div>
+      </div>
+      <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-white">
+        <button class="faq-question w-full flex items-center justify-between p-4 text-left font-medium text-slate-900 hover:bg-slate-50">
+          <span data-i18n="home.faq.q5">Are the outputs free for commercial use?</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="faq-answer px-4 text-slate-600"><p class="pb-2" data-i18n="home.faq.a5">Yes. Whatever the tools produce — formatted JSON, generated passwords, color palettes, QR codes, compressed images, gradients, etc. — is yours to use for personal or commercial projects, with no attribution required.</p></div>
+      </div>
+      <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-white">
+        <button class="faq-question w-full flex items-center justify-between p-4 text-left font-medium text-slate-900 hover:bg-slate-50">
+          <span data-i18n="home.faq.q6_html">Why are some tools missing features I'd expect?</span>
+          <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+        </button>
+        <div class="faq-answer px-4 text-slate-600"><p class="pb-2" data-i18n-html="home.faq.a6_html">We deliberately keep each tool focused on the most common 90% of use cases so the interface stays fast and clean. If something you need is missing, <a href="/contact/" class="text-primary-600 hover:underline">contact us</a> — we read every request.</p></div>
+      </div>
     </div>
   </section>
 
@@ -121,6 +335,34 @@
       });
     }
 
+    function renderPopularTools() {
+      const container = document.getElementById('popular-tools-grid');
+      if (!container) return;
+      const popular = (typeof getPopularTools === 'function') ? getPopularTools().slice(0, 6) : [];
+      container.innerHTML = popular.map(t => {
+        const name = i18n.t('tools.' + t.i18nKey + '.name') || t.id.replace(/-/g, ' ');
+        const desc = i18n.t('tools.' + t.i18nKey + '.description') || '';
+        return `
+          <a href="${toolUrl(t.id)}" class="tool-grid-card bg-white rounded-2xl border border-slate-200 p-5 hover:border-primary-200 block">
+            <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-4">
+              ${t.icon}
+            </div>
+            <h3 class="font-semibold text-slate-900 mb-1.5">${name}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">${desc}</p>
+          </a>
+        `;
+      }).join('');
+    }
+
+    function updateResultCount(shown, total) {
+      const el = document.getElementById('results-count');
+      if (!el) return;
+      const tpl = (shown === total)
+        ? (i18n.t('common.results_count') || '{n} tools')
+        : (i18n.t('common.results_count_filtered') || '{n} of {total} tools');
+      el.textContent = tpl.replace('{n}', shown).replace('{total}', total);
+    }
+
     function renderToolsGrid() {
       const query = (document.getElementById('search-tools')?.value || '').toLowerCase().trim();
       let tools = TOOLS;
@@ -136,6 +378,7 @@
       }
       const grid = document.getElementById('tools-grid');
       const noResults = document.getElementById('no-results');
+      updateResultCount(tools.length, TOOLS.length);
       if (tools.length === 0) {
         grid.innerHTML = '';
         noResults.classList.remove('hidden');
@@ -158,15 +401,26 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Set up search listener immediately — it doesn't depend on translations.
-      document.getElementById('search-tools')?.addEventListener('input', Utils.debounce(renderToolsGrid, 200));
+      const searchInput = document.getElementById('search-tools');
+      if (searchInput) {
+        searchInput.addEventListener('input', Utils.debounce(renderToolsGrid, 150));
+        // Quick-clear with Escape — natural for a search input.
+        searchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && searchInput.value) {
+            searchInput.value = '';
+            renderToolsGrid();
+          }
+        });
+      }
+      // Wire up the static homepage FAQ accordion as soon as the DOM is ready.
+      Components.initFaqAccordion?.();
     });
 
-    // Render the grid once translations are loaded (fires on init and on language switch).
-    // This guarantees cards always show their title + description, even on a cold cache
-    // where the locale fetch takes longer than a fixed setTimeout would allow.
+    // Re-render dynamic content (cards + filters + counts) when the language switches,
+    // since their text comes from i18n.t() inside JS templates.
     document.addEventListener('manyutils:language-changed', () => {
       renderCategoryFilters();
+      renderPopularTools();
       renderToolsGrid();
     });
   </script>

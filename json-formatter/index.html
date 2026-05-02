@@ -3,35 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free JSON Formatter &amp; Beautifier Online | ManyUtils</title>
-  <meta name="description" content="Format, beautify, minify, and validate JSON instantly. Free online JSON formatter with syntax highlighting and real-time error detection. No signup needed.">
-  <meta name="keywords" content="json formatter online, json beautifier, format json, json validator online, pretty print json, minify json, free json formatter">
-  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+  <link rel="mask-icon" href="/assets/favicon.svg" color="#6366f1">
+  <meta name="theme-color" content="#6366f1">
+  <title>Free JSON Formatter, Validator &amp; Beautifier Online | ManyUtils</title>
+  <meta name="description" content="Free online JSON formatter, validator and beautifier. Paste raw or minified JSON, get clean indented output, fix syntax errors, and copy the result. 100% browser-based — your data never leaves your device.">
+  <meta name="keywords" content="json formatter online, json beautifier, format json, json validator online, pretty print json, minify json, free json formatter, json lint, fix json">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://manyutils.com/json-formatter/">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Free JSON Formatter &amp; Beautifier Online | ManyUtils">
-  <meta property="og:description" content="Format, beautify, minify, and validate JSON instantly. Free browser-based JSON formatter with syntax highlighting and error detection.">
+  <meta property="og:title" content="Free JSON Formatter, Validator &amp; Beautifier Online | ManyUtils">
+  <meta property="og:description" content="Paste messy JSON, get clean readable JSON back. Format, beautify, minify and validate JSON instantly in your browser. No signup, no upload.">
   <meta property="og:url" content="https://manyutils.com/json-formatter/">
   <meta property="og:site_name" content="ManyUtils">
   <meta property="og:image" content="https://manyutils.com/assets/images/og-default.png">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free JSON Formatter &amp; Beautifier Online | ManyUtils">
-  <meta name="twitter:description" content="Format, beautify, minify, and validate JSON instantly. Free browser-based JSON formatter — no signup needed.">
+  <meta name="twitter:title" content="Free JSON Formatter, Validator &amp; Beautifier Online | ManyUtils">
+  <meta name="twitter:description" content="Paste messy JSON, get clean readable JSON back. Format, beautify, minify and validate JSON instantly in your browser.">
   <meta name="twitter:image" content="https://manyutils.com/assets/images/og-default.png">
-  <!-- Structured Data -->
+  <!-- Structured Data: WebApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "JSON Formatter & Validator",
     "url": "https://manyutils.com/json-formatter/",
-    "description": "Format, beautify, minify, and validate JSON online instantly. Free browser-based tool with syntax highlighting.",
+    "description": "Free online JSON formatter, validator and beautifier. Paste raw or minified JSON, get clean indented output, fix syntax errors, and copy the result. Runs entirely in your browser.",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": ["Format & Beautify JSON", "Minify JSON", "Validate JSON syntax", "Syntax highlighting", "Copy output"]
+    "featureList": [
+      "Format and beautify JSON with 2-space, 4-space or tab indentation",
+      "Minify JSON to a single compact line",
+      "Validate JSON syntax with line/column error reporting",
+      "Copy output to clipboard with one click",
+      "Runs entirely in your browser — your data never leaves your device"
+    ],
+    "creator": { "@type": "Organization", "name": "ManyUtils", "url": "https://manyutils.com/" }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,12 +59,45 @@
 </head>
 <body class="bg-slate-50 font-sans antialiased text-slate-800">
   <header id="header"></header>
+
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb (visible) -->
+    <nav aria-label="Breadcrumb" class="text-xs text-slate-500 mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-primary-600">Home</a></li>
+        <li class="text-slate-300">/</li>
+        <li><a href="/#tools" class="hover:text-primary-600">Tools</a></li>
+        <li class="text-slate-300">/</li>
+        <li class="text-slate-700 font-medium">JSON Formatter</li>
+      </ol>
+    </nav>
+
+    <!-- Hero / Value Proposition -->
+    <section class="mb-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-3" data-i18n="tools.json_formatter.name">JSON Formatter &amp; Validator</h1>
+      <p class="text-lg text-slate-600 max-w-3xl leading-relaxed" data-i18n="tools.json_formatter.tagline">Paste messy JSON, get clean, readable, valid JSON back — instantly. Free, private, no signup.</p>
+      <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500">
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          Runs in your browser
+        </span>
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          No upload, no log
+        </span>
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          Works offline once loaded
+        </span>
+      </div>
+    </section>
+
     <div class="lg:grid lg:grid-cols-12 lg:gap-8">
       <div class="lg:col-span-8">
+
+        <!-- Main Tool UI -->
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.json_formatter.name">JSON Formatter & Validator</h1>
-          <p class="text-slate-500 mb-6" data-i18n="tools.json_formatter.description">Format, beautify, minify, and validate your JSON data instantly.</p>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="tools.json_formatter.description">Format, beautify, minify and validate JSON instantly in your browser.</p>
           <div id="tool-container">
             <div class="space-y-5">
               <div>
@@ -102,15 +148,29 @@
           </div>
         </div>
 
-        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-                  <div id="seo-content"></div>
+        <!-- AD SLOT: in-content (between tool and article) -->
+        <div class="ad-slot ad-slot-incontent my-6 hidden lg:block" data-ad-slot="json-formatter-incontent" aria-hidden="true">
+          <!-- Reserved for AdSense in-article unit. Empty until approval. -->
         </div>
+
+        <!-- Long-form SEO content (auto-rendered from locales/en.json) -->
+        <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <div id="seo-content"></div>
+        </div>
+
       </div>
+
       <aside class="mt-8 lg:mt-0 lg:col-span-4">
         <div id="sidebar-content"></div>
+
+        <!-- AD SLOT: sidebar sticky -->
+        <div class="ad-slot ad-slot-sidebar mt-6 hidden lg:block" data-ad-slot="sidebar" aria-hidden="true">
+          <!-- Reserved for AdSense sidebar unit. Empty until approval. -->
+        </div>
       </aside>
     </div>
   </main>
+
   <footer id="footer"></footer>
   <script src="/assets/js/tools-registry.js"></script>
   <script src="/assets/js/utils.js"></script>

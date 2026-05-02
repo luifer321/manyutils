@@ -80,6 +80,13 @@ const i18n = {
       const translation = this.t(key);
       if (translation) el.textContent = translation;
     });
+    // data-i18n-html — for translations that include inline markup (links, strong, etc).
+    // The locale value is trusted: it's bundled with the site at build time.
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      const translation = this.t(key);
+      if (translation) el.innerHTML = translation;
+    });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
       const translation = this.t(key);
@@ -89,6 +96,17 @@ const i18n = {
       const key = el.getAttribute('data-i18n-title');
       const translation = this.t(key);
       if (translation) el.title = translation;
+    });
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+      const key = el.getAttribute('data-i18n-aria-label');
+      const translation = this.t(key);
+      if (translation) el.setAttribute('aria-label', translation);
+    });
+    // data-i18n-content — meta tags & similar attribute-only elements.
+    document.querySelectorAll('[data-i18n-content]').forEach(el => {
+      const key = el.getAttribute('data-i18n-content');
+      const translation = this.t(key);
+      if (translation) el.setAttribute('content', translation);
     });
     const activeLang = this.supportedLangs.find(l => l.code === this.currentLang);
     const langBtn = document.getElementById('lang-current');

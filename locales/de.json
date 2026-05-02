@@ -76,7 +76,21 @@
     "random_gradient": "Zufälliger Verlauf",
     "format_beautify": "Formatieren / Verschönern",
     "minify": "Minimieren",
-    "validate": "Validieren"
+    "validate": "Validieren",
+    "company": "Unternehmen",
+    "contact": "Kontakt",
+    "why_useful": "Warum dieses Werkzeug nützlich ist",
+    "examples": "Beispiel für Eingabe und Ausgabe",
+    "common_mistakes": "Häufige Fehler vermeiden",
+    "cta_more_title": "Suchen Sie weitere kostenlose Werkzeuge?",
+    "cta_more_body": "ManyUtils bietet Dutzende schneller, datenschutzfreundlicher Werkzeuge für Entwickler, Designer, Autoren und alltägliche Nutzer. Alles kostenlos, alles im Browser.",
+    "cta_more_link": "Alle Werkzeuge ansehen →",
+    "view_all_tools": "Alle Werkzeuge ansehen →",
+    "search_button_aria": "Werkzeuge suchen",
+    "results_count": "{n} Werkzeuge",
+    "results_count_filtered": "{n} von {total} Werkzeugen",
+    "back_to_tools": "← Zurück zu den Werkzeugen",
+    "last_updated": "Zuletzt aktualisiert"
   },
   "categories": {
     "generators": "Generatoren",
@@ -584,6 +598,120 @@
         "status_both_past": "Beide Daten liegen in der Vergangenheit",
         "status_end_in_future": "Das Enddatum liegt {days} Tage in der Zukunft"
       }
+    }
+  },
+  "home": {
+    "why": {
+      "title": "Warum es ManyUtils gibt",
+      "body": "Wir hatten genug von der immer gleichen Online-Tools-Erfahrung: Pop-ups, kaputte Paywalls, Werbung über dem Eingabefeld und Werkzeuge, die heimlich Ihre privaten Daten an Server senden, von denen Sie noch nie gehört haben. ManyUtils ist das Gegenteil. Jedes Werkzeug auf dieser Seite ist kostenlos, läuft vollständig in Ihrem Browser, lädt in unter einer Sekunde auf einer einfachen Mobilverbindung und macht eine Sache richtig gut. Kein Konto, kein Upload, keine plötzliche Paywall beim dritten Mal.",
+      "card1_title": "Datenschutz von Haus aus",
+      "card1_body": "Ihre Eingaben verlassen niemals Ihr Gerät. Kein Upload, kein Log, keine Analyse dessen, was Sie einfügen.",
+      "card2_title": "Ladezeit unter einer Sekunde",
+      "card2_body": "Statisches HTML, reines JavaScript, Mobile-First-Layout. Die Seite ist interaktiv, bevor die meisten Sites überhaupt mit dem Laden begonnen haben.",
+      "card3_title": "Null Reibung",
+      "card3_body": "Keine Anmeldung, keine E-Mail-Sperre, kein „Konto erstellen, um Ihr Ergebnis zu kopieren\". Öffnen, nutzen, weitergehen.",
+      "card4_title": "Ehrlicher Inhalt",
+      "card4_body": "Jedes Werkzeug kommt mit einem echten Artikel — Beispiele, häufige Fehler und FAQs, geschrieben von Menschen, die sie täglich nutzen."
+    },
+    "popular": {
+      "title": "Beliebte Werkzeuge",
+      "subtitle": "Die meistgenutzten Werkzeuge auf ManyUtils diesen Monat."
+    },
+    "browse": {
+      "title": "Nach Kategorie durchsuchen",
+      "subtitle": "Filtern Sie die gesamte Bibliothek nach dem, was Sie tun möchten."
+    },
+    "explore": {
+      "title": "Was Sie hier finden",
+      "cat_generators_body": "Starke Passwörter, UUIDs, QR-Codes, CSS-Verläufe und Farbpaletten — alles, was Sie sonst von Hand erstellen würden.",
+      "cat_text_data_body": "Formatieren Sie API-Antworten, codieren und decodieren Sie Zeichenfolgen, zählen Sie Wörter für Inhalte mit strikten Limits.",
+      "cat_image_body": "Komprimieren Sie Fotos vor dem Hochladen oder pixelieren Sie Bilder, um sensible Inhalte zu anonymisieren.",
+      "cat_calc_body": "Schnelle Alltagsrechnungen: Währungen zu Live-Kursen umrechnen, Tage zwischen Daten und Werktagsdifferenzen berechnen."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Ist ManyUtils wirklich kostenlos?",
+      "a1": "Ja. Jedes Werkzeug auf ManyUtils ist ohne Konto kostenlos nutzbar. Die Seite finanziert sich durch Werbung neben dem Artikelinhalt, niemals innerhalb der Werkzeug-Oberfläche.",
+      "q2": "Werden meine Daten hochgeladen, wenn ich ein Werkzeug benutze?",
+      "a2": "Nein. Fast alle unsere Werkzeuge — JSON-Formatierer, Passwortgenerator, Bildkomprimierer, Base64-Encoder usw. — verarbeiten Ihre Eingabe vollständig in Ihrem Browser. Nichts wird an unsere Server gesendet.",
+      "q3": "Muss ich ein Konto erstellen?",
+      "a3": "Nein. ManyUtils hat kein Login-System. Alle Funktionen sind ab dem ersten Besuch und für immer voll nutzbar.",
+      "q4": "Kann ich die Werkzeuge auf dem Handy benutzen?",
+      "a4": "Ja. Jedes Werkzeug ist Mobile-First gestaltet: Layouts, Buttons und Ausgaben passen sich an kleine Bildschirme an. Sie können JSON formatieren, Passwörter generieren oder ein Bild komprimieren — komplett vom Handy aus.",
+      "q5": "Sind die Ergebnisse für die kommerzielle Nutzung frei?",
+      "a5": "Ja. Was die Werkzeuge auch produzieren — formatiertes JSON, generierte Passwörter, Farbpaletten, QR-Codes, komprimierte Bilder, Verläufe usw. — gehört Ihnen für persönliche oder kommerzielle Projekte, ohne Namensnennung.",
+      "q6_html": "Warum fehlen einigen Werkzeugen Funktionen, die ich erwarten würde?",
+      "a6_html": "Wir konzentrieren bewusst jedes Werkzeug auf die häufigsten 90 % der Anwendungsfälle, damit die Oberfläche schnell und übersichtlich bleibt. Wenn etwas fehlt, was Sie brauchen, <a href=\"/contact/\" class=\"text-primary-600 hover:underline\">kontaktieren Sie uns</a> — wir lesen jede Anfrage."
+    }
+  },
+  "trust": {
+    "about": {
+      "page_title": "Über ManyUtils — Kostenlose Online-Werkzeuge für Entwickler & Designer",
+      "page_meta": "ManyUtils baut schnelle, kostenlose, datenschutzfreundliche Online-Werkzeuge für Entwickler, Designer und alltägliche Nutzer. Erfahren Sie, wer wir sind, was wir glauben und wie jedes Werkzeug entsteht.",
+      "h1": "Über ManyUtils",
+      "subtitle": "Kostenlose, schnelle, datenschutzfreundliche Online-Werkzeuge — gebaut von Menschen, die genug davon hatten, fünf Tabs zu öffnen, um eine JSON-Datei zu formatieren.",
+      "s1_title": "Wer wir sind",
+      "s1_body_html": "<p>ManyUtils ist ein unabhängiges Projekt, das eine wachsende Bibliothek kostenloser Online-Werkzeuge entwickelt und pflegt. Wir haben 2024 angefangen, weil wir immer wieder zu denselben Werkzeugen griffen — JSON-Formatierer, Passwortgeneratoren, Bildkomprimierer — und auf überladene Websites mit Pop-ups, kaputten Paywalls und Werkzeugen stießen, die heimlich private Daten an Server hochluden.</p><p>Also haben wir unsere eigenen gebaut. Jedes Werkzeug auf ManyUtils folgt drei Regeln: Es muss im Browser funktionieren, ohne Daten irgendwohin zu senden, es muss in unter einer Sekunde auf einer einfachen Mobilverbindung laden, und es muss eine Sache richtig gut machen.</p>",
+      "s2_title": "Woran wir glauben",
+      "s2_body_html": "<li><strong class=\"text-slate-800\">Ihre Daten gehören Ihnen.</strong> Werkzeuge, die Ihre Eingaben verarbeiten — JSON, Passwörter, Bilder, Text — sollten sie niemals hochladen müssen. Fast alles, was wir bauen, läuft komplett auf Ihrem Gerät.</li><li><strong class=\"text-slate-800\">Geschwindigkeit ist eine Funktion.</strong> Ein „kostenloses Online-Werkzeug\", das zehn Sekunden zum Laden braucht, ist nicht kostenlos; es kostet Sie Aufmerksamkeit. Wir streben auf jeder Seite eine Time-to-Interactive von unter einer Sekunde an.</li><li><strong class=\"text-slate-800\">Keine falschen Mauern.</strong> Kein „registrieren Sie sich, um Ihr Ergebnis zu kopieren\", kein „upgraden Sie, um das Wasserzeichen zu entfernen\". Jede sichtbare Funktion ist vollständig nutzbar, für immer, kostenlos.</li><li><strong class=\"text-slate-800\">Ehrlicher Inhalt.</strong> Unsere Artikel zu jedem Werkzeug stammen von Menschen, die diese tatsächlich nutzen. Beispiele sind getestet. Fehler sind echte, die wir gemacht haben.</li><li><strong class=\"text-slate-800\">Werbung, keine Überwachung.</strong> ManyUtils finanziert sich über Google AdSense, eingeblendet in klar gekennzeichneten Bereichen rund um den Artikel — niemals innerhalb oder über dem Werkzeug.</li>",
+      "s3_title": "Wie wir Werkzeuge bauen",
+      "s3_body_html": "<p>Jedes Werkzeug folgt demselben Muster: eine statische HTML-Seite, ein kleines Stück reines JavaScript und null serverseitige Verarbeitung von Nutzerdaten. Es gibt kein Kontensystem, keine Datenbank mit Nutzereingaben, kein Tracking-Skript, das Ihnen durchs Internet folgt. Die wenigen Dienste Dritter, die wir nutzen, sind transparent in unserer <a href=\"/privacy/\" class=\"text-primary-600 hover:underline\">Datenschutzerklärung</a> aufgeführt.</p><p>Der Code ist so organisiert, dass jedes Werkzeug eine eigenständige Seite ist. Das hält die Angriffsfläche klein, die Sicherheit einfach und die Ladezeit gering — selbst wenn Sie nur ein Werkzeug brauchen, laden Sie nur den Code dieses Werkzeugs.</p>",
+      "s4_title": "Für wen wir bauen",
+      "s4_body_html": "<p>Die meisten unserer Besucher sind Entwickler und Designer — Menschen, die ein JSON-Payload formatieren, eine UUID generieren, einen CSS-Verlauf bauen oder einen Screenshot vor dem Einfügen in ein Ticket komprimieren wollen. Aber wir bauen bewusst auch Werkzeuge für alltägliche Nutzer: einen Generator für starke Passwörter, einen QR-Code-Generator, einen Tagesrechner zwischen Daten, einen Währungsumrechner. Jeder mit einem Browser sollte auf ManyUtils landen und seine Aufgabe in unter einer Minute erledigen können.</p>",
+      "s5_title": "Kontakt aufnehmen",
+      "s5_body_html": "<p>Einen Fehler gefunden, ein neues Werkzeug gewünscht oder einen Tippfehler entdeckt? Wir lesen jede Nachricht.</p><p><a href=\"/contact/\" class=\"inline-flex items-center gap-1.5 text-primary-600 hover:text-primary-700 font-medium\">Kontaktieren Sie uns →</a></p>"
+    },
+    "contact": {
+      "page_title": "Kontakt zu ManyUtils — Feedback, Bug-Reports & Werkzeug-Wünsche",
+      "page_meta": "Nehmen Sie Kontakt zum ManyUtils-Team auf. Melden Sie einen Bug, wünschen Sie sich ein neues Werkzeug, fragen Sie nach Werbung oder sagen Sie einfach Hallo. Wir lesen jede Nachricht.",
+      "h1": "Kontakt zu ManyUtils",
+      "subtitle": "Wir sind ein kleines Team. Wir lesen alles, was Sie uns schicken, und antworten meist innerhalb von zwei Werktagen.",
+      "email_title": "Schreiben Sie uns",
+      "email_body": "Für alle Anfragen — Bug-Reports, Funktionswünsche, Werbung, Partnerschaften, Presse oder allgemeines Feedback — senden Sie eine E-Mail an:",
+      "include_title": "Was Sie mitschicken sollten",
+      "include_intro": "Damit wir schneller antworten können, fügen Sie bitte hinzu:",
+      "card_bug_title": "Bug-Report",
+      "card_bug_body": "Die URL des Werkzeugs, was Sie versucht haben, was passiert ist, was Sie erwartet haben und (wenn möglich) Ihre Browser- und Betriebssystemversion.",
+      "card_feature_title": "Funktions- oder neue Werkzeug-Anfrage",
+      "card_feature_body": "Eine kurze Beschreibung des Anwendungsfalls. Echte Workflows schlagen abstrakte Funktionslisten jedes Mal.",
+      "card_ads_title": "Werbung / Partnerschaften",
+      "card_ads_body": "Ihr Unternehmen, was Sie bewerben möchten, und Ihr monatliches Budget.",
+      "card_press_title": "Presse / Interviews",
+      "card_press_body": "Medium, Deadline und ein paar Beispiel-Fragen oder -Themen.",
+      "faq_title": "Häufige Fragen",
+      "faq_q1": "Bieten Sie kostenpflichtigen Support oder maßgeschneiderte Werkzeuge an?",
+      "faq_a1": "Für maßgeschneiderte interne Werkzeuge, White-Label-Utilities oder gesponserte Werkzeuge schreiben Sie uns bitte mit Briefing an die obige Adresse.",
+      "faq_q2": "Kann ich die ManyUtils-Werkzeuge auf meiner eigenen Seite nutzen?",
+      "faq_a2": "Die Ausgabe jedes Werkzeugs (formatiertes JSON, generierte Passwörter, Verläufe, Paletten, QR-Codes usw.) gehört Ihnen und kann frei verwendet werden, auch kommerziell. Das Einbetten der Werkzeuge selbst auf Ihrer eigenen Seite wird derzeit nicht unterstützt — bitte melden Sie sich, falls Sie das benötigen.",
+      "faq_q3": "Wie melde ich ein Datenschutz- oder Sicherheitsproblem?",
+      "faq_a3": "Bitte schreiben Sie uns mit „Sicherheit\" im Betreff. Sicherheitsmeldungen behandeln wir mit höchster Priorität.",
+      "faq_q4": "Antworten Sie auch in anderen Sprachen als Englisch?",
+      "faq_a4": "Ja — schreiben Sie gerne auf Englisch, Französisch, Spanisch, Deutsch oder Portugiesisch. Wir antworten in derselben Sprache."
+    },
+    "privacy": {
+      "s1_title": "Wer wir sind",
+      "s2_title": "Daten, die wir erheben",
+      "s3_title": "Cookies",
+      "s4_title": "Analytik",
+      "s5_title": "Werbung (Google AdSense / AdMob)",
+      "s6_title": "Dienste Dritter",
+      "s7_title": "Speicherdauer",
+      "s8_title": "Ihre Rechte",
+      "s9_title": "Datenschutz für Minderjährige",
+      "s10_title": "Änderungen dieser Richtlinie",
+      "s11_title": "Kontaktieren Sie uns"
+    },
+    "terms": {
+      "s1_title": "Annahme der Bedingungen",
+      "s2_title": "Beschreibung der Dienste",
+      "s3_title": "Zulässige Nutzung",
+      "s4_title": "Geistiges Eigentum",
+      "s5_title": "Haftungsausschluss",
+      "s6_title": "Haftungsbeschränkung",
+      "s7_title": "Links zu Dritten",
+      "s8_title": "Änderungen am Dienst und an den Bedingungen",
+      "s9_title": "Geltendes Recht",
+      "s10_title": "Kontaktieren Sie uns"
     }
   }
 }
