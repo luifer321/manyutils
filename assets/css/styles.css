@@ -169,7 +169,7 @@
 }
 
 .faq-item.active .faq-answer {
-  max-height: 500px;
+  max-height: 2000px;
 }
 
 .faq-chevron {
@@ -259,7 +259,8 @@ select {
   background-position: right 0.75rem center;
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
-  padding-right: 2.5rem;
+  /* Beat Tailwind's px-* utilities (CDN injects after this stylesheet). */
+  padding-right: 2.5rem !important;
 }
 
 select:focus {

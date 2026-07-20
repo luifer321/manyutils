@@ -17,6 +17,16 @@ function homeUrl() {
   return lang === 'en' ? '/' : `/${lang}/`;
 }
 
+// Guides are localised the same way tools are — delegate to the language-aware
+// helpers in guides-registry.js so there's exactly one place that builds guide URLs.
+function guidesUrl(guideId) {
+  const lang = getCurrentLang();
+  if (typeof guideId !== 'string' || !guideId) {
+    return (typeof guidesIndexUrl === 'function') ? guidesIndexUrl(lang) : '/guides/';
+  }
+  return (typeof guideUrl === 'function') ? guideUrl(guideId, lang) : `/guides/${guideId}/`;
+}
+
 const Utils = {
   async copyToClipboard(text) {
     try {

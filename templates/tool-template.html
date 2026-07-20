@@ -7,23 +7,34 @@
   into the static HTML at build time by scripts/build-static.js.
 
   Required schema in locales/en.json → tools.<key>.seo:
-    intro       string (HTML allowed)        – section "What is …?"
-    valueProps  Array<{title, body}>         – section "Why this tool is useful"
-    steps       Array<string (HTML allowed)> – section "How to use …"
-    examples    Array<{title, input, output}>– section "Example input and output"
-    mistakes    Array<string (HTML allowed)> – section "Common mistakes to avoid"
-    faq         Array<{q, a}>                – section "Frequently Asked Questions"
+    intro          string (HTML allowed)        – section "What is …?"                (Introduction)
+    steps          Array<string (HTML allowed)> – section "How to use …"               (How it Works)
+    useCases       Array<{title, body}>         – section "Common Use Cases"
+    valueProps     Array<{title, body}>         – section "Why this tool is useful"    (Benefits)
+    bestPractices  Array<string (HTML allowed)> – section "Best Practices"
+    examples       Array<{title, input, output}>– section "Example input and output"   (optional)
+    mistakes       Array<string (HTML allowed)> – section "Common mistakes to avoid"   (optional)
+    faq            Array<{q, a}>                – section "Frequently Asked Questions"
+
+  "Related Guides" is NOT stored in locales/*.json — it's computed from
+  assets/js/guides-registry.js (any guide whose relatedTools includes this
+  tool's id). To link a guide to this tool, edit ONLY guides-registry.js.
+
+  Every field above is optional: only sections with data render, so migrate a
+  tool incrementally — add `useCases`/`bestPractices` whenever you have real
+  content for them, and leave the rest untouched.
 
   Page sections, top to bottom:
     1. Header                  (Components.renderHeader)
     2. Breadcrumb              (visible nav)
     3. Hero                    (H1, tagline, trust badges)
     4. Tool UI                 (#tool-container)
-    5. Long-form SEO content   (#seo-content — auto-rendered)
+    5. Long-form SEO content   (#seo-content — auto-rendered, see field order above)
     6. Related tools sidebar   (Components.renderSidebar)
-    7. CTA                     (rendered as last section inside #seo-content)
-    8. Footer                  (Components.renderFooter)
-    9. JSON-LD schema          (WebApplication + FAQPage + BreadcrumbList)
+    7. Related Guides          (auto-rendered inside #seo-content, see above)
+    8. CTA                     (rendered as last section inside #seo-content)
+    9. Footer                  (Components.renderFooter)
+   10. JSON-LD schema           (WebApplication + FAQPage + BreadcrumbList)
 
   Ad-slot zones (use sparingly, never above the fold inside the tool UI):
     .ad-slot-incontent         between tool and article (desktop only by default)
@@ -172,6 +183,8 @@
 
   <!-- Shared scripts (order matters) -->
   <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/guides-registry.js"></script>
+  <script src="/assets/js/guides-registry.js"></script>
   <script src="/assets/js/utils.js"></script>
   <script src="/assets/js/i18n.js"></script>
   <script src="/assets/js/components.js"></script>

@@ -11,7 +11,7 @@
   <title>UUID v4 Generator Online — Free | ManyUtils</title>
   <meta name="description" content="Generate random UUID v4 identifiers instantly online. Bulk generate up to 100 UUIDs, toggle uppercase and hyphens. Free, no login required.">
   <meta name="keywords" content="uuid generator online, generate uuid v4, random uuid generator, uuid v4 online, bulk uuid generator, universally unique identifier">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://manyutils.com/uuid-generator/">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -52,11 +52,40 @@
 <body class="bg-slate-50 font-sans antialiased text-slate-800">
   <header id="header"></header>
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="text-xs text-slate-500 mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-primary-600" data-i18n="common.home">Home</a></li>
+        <li class="text-slate-300">/</li>
+        <li><a href="/#tools" class="hover:text-primary-600" data-i18n="common.tools">Tools</a></li>
+        <li class="text-slate-300">/</li>
+        <li class="text-slate-700 font-medium" data-i18n="tools.uuid_generator.name">UUID Generator</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="mb-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-3" data-i18n="tools.uuid_generator.name">UUID Generator</h1>
+      <p class="text-lg text-slate-600 max-w-3xl leading-relaxed" data-i18n="tools.uuid_generator.description">Generate random UUID v4 identifiers instantly.</p>
+      <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500">
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          Runs in your browser
+        </span>
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          No upload, no log
+        </span>
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          Free, no signup
+        </span>
+      </div>
+    </section>
+
     <div class="lg:grid lg:grid-cols-12 lg:gap-8">
       <div class="lg:col-span-8">
         <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2" data-i18n="tools.uuid_generator.name">UUID Generator</h1>
-          <p class="text-slate-500 mb-6" data-i18n="tools.uuid_generator.description">Generate random UUID v4 identifiers instantly.</p>
           <div id="tool-container">
             <div class="space-y-6">
 
@@ -109,17 +138,25 @@
           </div>
         </div>
 
+        <!-- AD SLOT: in-content -->
+        <div class="ad-slot ad-slot-incontent my-6 hidden lg:block" data-ad-slot="uuid-generator-incontent" aria-hidden="true"></div>
+
+        <!-- Long-form SEO content (auto-rendered from locales/en.json) -->
         <div class="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-                  <div id="seo-content"></div>
+          <div id="seo-content"></div>
         </div>
       </div>
       <aside class="mt-8 lg:mt-0 lg:col-span-4">
         <div id="sidebar-content"></div>
+
+        <!-- AD SLOT: sticky sidebar -->
+        <div class="ad-slot ad-slot-sidebar mt-6 hidden lg:block" data-ad-slot="sidebar" aria-hidden="true"></div>
       </aside>
     </div>
   </main>
   <footer id="footer"></footer>
   <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/guides-registry.js"></script>
   <script src="/assets/js/utils.js"></script>
   <script src="/assets/js/i18n.js"></script>
   <script src="/assets/js/components.js"></script>

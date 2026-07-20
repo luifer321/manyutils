@@ -1,0 +1,183 @@
+<!--
+  ManyUtils — Learning Center Guide Template (reference only)
+  ───────────────────────────────────────────────────────────────────────────
+  Real guide pages are NOT hand-authored from this file — every language's
+  guide pages are rendered straight from data by renderGuidePage() /
+  renderGuidesIndex() in scripts/_gen-guide-pages.js. This file documents the
+  structure those functions produce, for anyone reviewing the pattern.
+
+  To add a new guide:
+    1. Add a language-agnostic entry to GUIDES in assets/js/guides-registry.js
+       — id, category, readingTimeMinutes, lastUpdated, authorId ('luis-avila'
+       or a new key in the AUTHORS map), status ('draft' until written),
+       relatedTools, relatedGuides.
+    2. Add a `guides.<id>` entry to EVERY locales/<lang>.json file:
+         {
+           "title": "...",
+           "description": "...",
+           "intro": "",                              // optional HTML opener
+           "sections": [ { "heading": "...", "body": "" } ],
+           "faqs":     [ { "q": "...", "a": "" } ]
+         }
+       Fill `intro` / `sections[].body` / `faqs[].a` with real HTML as you
+       write. Empty strings render a draft placeholder; once every FAQ has
+       a non-empty answer the generator also emits FAQPage JSON-LD.
+       Also add a display name for its category in `guide_categories` if
+       the category is new.
+    3. Run: node scripts/_gen-guide-pages.js
+       — regenerates the English pages under guides/ (used by `node server.js`
+       for local dev). `npm run build` regenerates English + all 4 other
+       languages straight into dist/ (dist/guides/ and dist/<lang>/guides/).
+    4. Fill in the "Draft outline" sections + FAQ answers with real content,
+       in every language you want to ship it in.
+    5. Flip status to 'published', re-run the generator/build, and the
+       guide's URL is added to sitemap.xml automatically for every language
+       that has it (scripts/build-static.js).
+
+  Guide page sections, top to bottom:
+    1. Header                    (Components.renderHeader)
+    2. Breadcrumb                Home / Learning Center / <Category> / <Title>
+    3. Category badge + H1 + meta line (reading time, last updated, author, draft badge)
+    4. "What this guide will cover" — mini table of contents
+    5. Suggested H2 sections     (outline placeholders — TODO until written)
+    6. Suggested FAQs            (real questions, TODO answers)
+    7. Related Guides            (pre-rendered server-side from guides-registry.js — no JS needed)
+    8. Sidebar: meta card, author card (Person + optional LinkedIn), Related Tools
+    9. Footer                    (Components.renderFooter)
+   10. JSON-LD: Article (author: Person, inLanguage) + BreadcrumbList
+       (FAQPage added once answers are real)
+
+  Guides are localised the same way tools are: this file's structure is
+  identical across languages — only the text (pulled from locales/<lang>.json)
+  and the URL prefix change. Draft guides are excluded from sitemap.xml and
+  carry <meta name="robots" content="noindex, follow"> as a second safeguard.
+  See the header comment in guides-registry.js for the full rationale.
+-->
+<!DOCTYPE html>
+<html lang="en" data-guide="GUIDE_ID_HERE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="alternate icon" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+  <link rel="mask-icon" href="/assets/favicon.svg" color="#6366f1">
+  <meta name="theme-color" content="#6366f1">
+  <title>GUIDE_TITLE_HERE | ManyUtils Learning Center</title>
+  <meta name="description" content="GUIDE_META_DESCRIPTION_HERE">
+  <!-- Remove once the guide has real, reviewed content: -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://manyutils.com/guides/GUIDE_ID_HERE/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="GUIDE_TITLE_HERE | ManyUtils Learning Center">
+  <meta property="og:description" content="GUIDE_META_DESCRIPTION_HERE">
+  <meta property="og:url" content="https://manyutils.com/guides/GUIDE_ID_HERE/">
+  <meta property="og:site_name" content="ManyUtils">
+  <meta property="og:image" content="https://manyutils.com/assets/images/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GUIDE_TITLE_HERE | ManyUtils Learning Center">
+  <meta name="twitter:description" content="GUIDE_META_DESCRIPTION_HERE">
+  <meta name="twitter:image" content="https://manyutils.com/assets/images/og-default.png">
+  <!-- Structured Data: Article + Breadcrumb (add FAQPage once answers are real) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GUIDE_TITLE_HERE",
+    "description": "GUIDE_META_DESCRIPTION_HERE",
+    "inLanguage": "en",
+    "author": { "@type": "Person", "name": "AUTHOR_NAME_HERE", "sameAs": ["AUTHOR_LINKEDIN_URL_HERE"] },
+    "publisher": { "@type": "Organization", "name": "ManyUtils", "url": "https://manyutils.com/" },
+    "datePublished": "YYYY-MM-DD",
+    "dateModified": "YYYY-MM-DD",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://manyutils.com/guides/GUIDE_ID_HERE/" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta name="google-adsense-account" content="ca-pub-5377170083939417">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5377170083939417"
+       crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800">
+  <header id="header"></header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="text-xs text-slate-500 mb-4">
+      <ol class="flex flex-wrap items-center gap-1.5">
+        <li><a href="/" class="hover:text-primary-600">Home</a></li>
+        <li class="text-slate-300">/</li>
+        <li><a href="/guides/" class="hover:text-primary-600">Learning Center</a></li>
+        <li class="text-slate-300">/</li>
+        <li><a href="/guides/#CATEGORY_ID_HERE" class="hover:text-primary-600">CATEGORY_NAME_HERE</a></li>
+        <li class="text-slate-300">/</li>
+        <li class="text-slate-700 font-medium">GUIDE_TITLE_HERE</li>
+      </ol>
+    </nav>
+
+    <!-- Category badge + H1 + meta line -->
+    <section class="mb-8 max-w-3xl">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-primary-600 bg-primary-50 rounded-full px-2.5 py-1 mb-3">CATEGORY_NAME_HERE</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 mb-3">GUIDE_TITLE_HERE</h1>
+      <p class="text-lg text-slate-600 leading-relaxed">GUIDE_META_DESCRIPTION_HERE</p>
+      <!-- Reading time / last updated / author / draft badge go here — see a generated guide for the exact markup. -->
+    </section>
+
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+      <div class="lg:col-span-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+          <!--
+            BUILD THE GUIDE OUTLINE HERE
+
+            - "What this guide will cover" — bulleted mini-TOC.
+            - One <section><h2>…</h2><!-- TODO --></section> per suggested heading.
+            - "Frequently Asked Questions" — real questions, TODO answers, using
+              the same .faq-item / .faq-question / .faq-answer markup as tool pages
+              (Components.initFaqAccordion() wires up the click behaviour).
+          -->
+        </div>
+
+        <!-- Related Guides — pre-rendered server-side from guides-registry.js + locale content; no container/JS needed. -->
+      </div>
+
+      <!-- Sidebar: meta card + author card + Related Tools -->
+      <aside class="mt-8 lg:mt-0 lg:col-span-4">
+        <div class="space-y-6">
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+            <!-- Reading time / last updated / category -->
+          </div>
+          <!-- Author card: name, title, LinkedIn link (from AUTHORS in guides-registry.js) -->
+          <div id="related-tools-content"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Shared scripts (order matters) -->
+  <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/guides-registry.js"></script>
+  <script src="/assets/js/utils.js"></script>
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await i18n.init();
+      Components.renderHeader();
+      Components.renderFooter();
+      Components.initFaqAccordion();
+
+      const tools = TOOLS.filter(t => ['RELATED_TOOL_ID_HERE'].includes(t.id));
+      Components.renderToolLinkList(document.getElementById('related-tools-content'), tools, { heading: 'Related Tools' });
+      // Related Guides are pre-rendered server-side (see renderGuidePage in
+      // scripts/_gen-guide-pages.js) — no client-side rendering call needed here.
+    });
+  </script>
+</body>
+</html>

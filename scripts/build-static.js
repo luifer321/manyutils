@@ -3,6 +3,8 @@
 
 const fs   = require('fs');
 const path = require('path');
+const { GUIDES, getGuidesForTool, guideUrl: getGuideUrl, readingTimeText } = require('../assets/js/guides-registry.js');
+const { renderGuidePage, renderGuidesIndex } = require('./_gen-guide-pages.js');
 
 const ROOT     = path.join(__dirname, '..');
 const OUT      = path.join(ROOT, 'dist');
@@ -243,6 +245,26 @@ function hreflangBlock(enPath) {
   return lines.join('\n');
 }
 
+/**
+ * Mirrors Components.guideCardHtml() in assets/js/components.js — keep both
+ * in sync. Title/description/category name come from `locale.guides.<id>` /
+ * `locale.guide_categories.<category>` — the guide is fully localised, not
+ * just its URL.
+ */
+function guideCardHtml(guide, lang, locale) {
+  const g       = locale?.guides?.[guide.id];
+  const title   = g?.title || guide.id;
+  const desc    = g?.description || '';
+  const catName = locale?.guide_categories?.[guide.category] || guide.category;
+  return `
+            <a href="${getGuideUrl(guide.id, lang)}" class="guide-card bg-white rounded-2xl border border-slate-200 p-5 hover:border-primary-200 block">
+              <span class="inline-block text-xs font-semibold uppercase tracking-wider text-primary-600 bg-primary-50 rounded-full px-2.5 py-1 mb-3">${escAttr(catName)}</span>
+              <h3 class="font-semibold text-slate-900 mb-1.5 leading-snug">${escAttr(title)}</h3>
+              <p class="text-sm text-slate-500 leading-relaxed mb-3">${escAttr(desc)}</p>
+              <span class="text-xs text-slate-400">${escAttr(readingTimeText(guide, locale))}</span>
+            </a>`;
+}
+
 // ─── Static SEO section renderer ──────────────────────────────────────────────
 
 /** Minimal HTML escaper for content inserted as text inside <pre> blocks. */
@@ -265,7 +287,7 @@ function escText(str) {
  *   mistakes    [string]
  *   faq         [{ q, a }]
  */
-function renderSeoSection(locale, localeKey) {
+function renderSeoSection(locale, localeKey, toolId, lang = 'en') {
   const seo = locale.tools?.[localeKey]?.seo;
   if (!seo) return '';
 
@@ -274,6 +296,9 @@ function renderSeoSection(locale, localeKey) {
   const howTo          = locale.common?.how_to_use      || 'How to use';
   const faqLabel       = locale.common?.faq             || 'Frequently Asked Questions';
   const whyLabel       = locale.common?.why_useful      || 'Why this tool is useful';
+  const useCasesLabel  = locale.common?.use_cases       || 'Common Use Cases';
+  const bestPracLabel  = locale.common?.best_practices  || 'Best Practices';
+  const relatedGuidesLabel = locale.common?.related_guides || 'Related Guides';
   const examplesLabel  = locale.common?.examples        || 'Example input and output';
   const mistakesLabel  = locale.common?.common_mistakes || 'Common mistakes to avoid';
   const ctaTitle       = locale.common?.cta_more_title  || 'Looking for more free tools?';
@@ -287,6 +312,31 @@ function renderSeoSection(locale, localeKey) {
         <section class="mb-10" aria-labelledby="sec-what-is">
           <h2 id="sec-what-is" class="text-xl font-bold text-slate-900 mb-3">${escAttr(whatIs)} ${escAttr(toolName)}?</h2>
           <div class="text-slate-600 leading-relaxed space-y-3">${seo.intro}</div>
+        </section>`);
+  }
+
+  if (Array.isArray(seo.steps) && seo.steps.length) {
+    const items = seo.steps.map(s => `<li class="pl-1 leading-relaxed">${s}</li>`).join('\n          ');
+    out.push(`
+        <section class="mb-10" aria-labelledby="sec-how-to">
+          <h2 id="sec-how-to" class="text-xl font-bold text-slate-900 mb-3">${escAttr(howTo)} ${escAttr(toolName)}</h2>
+          <ol class="list-decimal list-inside text-slate-600 space-y-2">
+          ${items}
+          </ol>
+        </section>`);
+  }
+
+  if (Array.isArray(seo.useCases) && seo.useCases.length) {
+    const cards = seo.useCases.map(it => `
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <h3 class="font-semibold text-slate-900 mb-1.5 text-sm">${escAttr(it.title)}</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">${it.body}</p>
+            </div>`).join('');
+    out.push(`
+        <section class="mb-10" aria-labelledby="sec-use-cases">
+          <h2 id="sec-use-cases" class="text-xl font-bold text-slate-900 mb-4">${escAttr(useCasesLabel)}</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">${cards}
+          </div>
         </section>`);
   }
 
@@ -304,14 +354,17 @@ function renderSeoSection(locale, localeKey) {
         </section>`);
   }
 
-  if (Array.isArray(seo.steps) && seo.steps.length) {
-    const items = seo.steps.map(s => `<li class="pl-1 leading-relaxed">${s}</li>`).join('\n          ');
+  if (Array.isArray(seo.bestPractices) && seo.bestPractices.length) {
+    const items = seo.bestPractices.map(m => `
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold flex items-center justify-center mt-0.5">&#10003;</span>
+              <span class="leading-relaxed">${m}</span>
+            </li>`).join('');
     out.push(`
-        <section class="mb-10" aria-labelledby="sec-how-to">
-          <h2 id="sec-how-to" class="text-xl font-bold text-slate-900 mb-3">${escAttr(howTo)} ${escAttr(toolName)}</h2>
-          <ol class="list-decimal list-inside text-slate-600 space-y-2">
-          ${items}
-          </ol>
+        <section class="mb-10" aria-labelledby="sec-best-practices">
+          <h2 id="sec-best-practices" class="text-xl font-bold text-slate-900 mb-4">${escAttr(bestPracLabel)}</h2>
+          <ul class="text-slate-600 space-y-2.5">${items}
+          </ul>
         </section>`);
   }
 
@@ -370,6 +423,19 @@ function renderSeoSection(locale, localeKey) {
         </section>`);
   }
 
+  // Related Guides — data-driven from guides-registry.js so the relationship
+  // only ever needs to be edited in one place (see that file's header comment).
+  const relatedGuides = toolId ? getGuidesForTool(toolId, 3) : [];
+  if (relatedGuides.length) {
+    const cards = relatedGuides.map(g => guideCardHtml(g, lang, locale)).join('');
+    out.push(`
+        <section class="mb-10" aria-labelledby="sec-related-guides">
+          <h2 id="sec-related-guides" class="text-xl font-bold text-slate-900 mb-4">${escAttr(relatedGuidesLabel)}</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">${cards}
+          </div>
+        </section>`);
+  }
+
   // CTA – always rendered (cheap and helps with internal linking + UX).
   out.push(`
         <section class="mt-10 rounded-2xl bg-gradient-to-br from-primary-50 to-violet-50 border border-primary-100 p-6">
@@ -421,7 +487,7 @@ function renderToolSchemas(toolName, canonicalUrl, faq) {
 function processEnglishToolPage(html, toolId, enLocale) {
   const enPath    = `/${toolId}/`;
   const localeKey = toLocaleKey(toolId);
-  const seoHtml   = renderSeoSection(enLocale, localeKey);
+  const seoHtml   = renderSeoSection(enLocale, localeKey, toolId);
   const toolName  = enLocale.tools?.[localeKey]?.name || '';
   const faq       = enLocale.tools?.[localeKey]?.seo?.faq || [];
   const schemas   = renderToolSchemas(toolName, `${BASE_URL}${enPath}`, faq);
@@ -477,7 +543,7 @@ function transformToolPage(html, lang, locale, toolId) {
   const langPath  = `/${lang}${enPath}`;
   const canonUrl  = `${BASE_URL}${langPath}`;
   const pageTitle = `${toolName} — ${TITLE_FREE[lang]} | ManyUtils`;
-  const seoHtml   = renderSeoSection(locale, localeKey);
+  const seoHtml   = renderSeoSection(locale, localeKey, toolId, lang);
 
   let result = html;
 
@@ -693,6 +759,26 @@ function generateSitemap() {
     addUrl(`${BASE_URL}/${lang}/`, '0.9', 'weekly');
   }
 
+  // Learning Center — hub page is always indexable; individual guides are
+  // only added once their status flips from 'draft' to 'published' in
+  // assets/js/guides-registry.js (drafts carry a noindex tag, see above).
+  // Guides are localised the same as tools, so every language gets its own
+  // hub + guide URLs.
+  addUrl(`${BASE_URL}/guides/`, '0.7', 'weekly');
+  for (const guide of GUIDES) {
+    if (guide.status === 'published') {
+      addUrl(`${BASE_URL}/guides/${guide.id}/`, '0.6', 'monthly');
+    }
+  }
+  for (const lang of EXTRA_LANGS) {
+    addUrl(`${BASE_URL}/${lang}/guides/`, '0.6', 'weekly');
+    for (const guide of GUIDES) {
+      if (guide.status === 'published') {
+        addUrl(`${BASE_URL}/${lang}/guides/${guide.id}/`, '0.5', 'monthly');
+      }
+    }
+  }
+
   // English tool pages
   for (const id of TOOL_IDS) {
     addUrl(
@@ -736,6 +822,23 @@ copyFile(path.join(ROOT, 'ads.txt'), path.join(OUT, 'ads.txt'));
 const locales = {};
 for (const lang of ALL_LANGS) {
   locales[lang] = loadLocale(lang);
+}
+
+// ── Learning Center guides (English + localised variants) ───────────────────
+// Guides are rendered straight from data (assets/js/guides-registry.js +
+// locales/<lang>.json) for every language — see scripts/_gen-guide-pages.js.
+// This mirrors how localised tool pages are produced, just without an
+// intermediate hand-authored HTML source since guide pages are 100% generated.
+for (const lang of ALL_LANGS) {
+  const locale  = locales[lang];
+  const guidesOut = lang === 'en' ? path.join(OUT, 'guides') : path.join(OUT, lang, 'guides');
+  for (const guide of GUIDES) {
+    writeFile(
+      path.join(guidesOut, guide.id, 'index.html'),
+      renderGuidePage({ guide, lang, locale }),
+    );
+  }
+  writeFile(path.join(guidesOut, 'index.html'), renderGuidesIndex({ lang, locale }));
 }
 
 // ── Trust pages (English + localised variants) ───────────────────────────────

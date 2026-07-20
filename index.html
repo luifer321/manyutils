@@ -164,6 +164,18 @@
     <div id="popular-tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
   </section>
 
+  <!-- Featured Guides (Learning Center) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <div class="flex items-end justify-between mb-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-1" data-i18n="home.guides.title">Learn as you build</h2>
+        <p class="text-slate-500 text-sm" data-i18n="home.guides.subtitle">Plain-English guides behind the tools — what a QR code actually is, how JSON works, and more.</p>
+      </div>
+      <a href="/guides/" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700" data-i18n="common.all_guides">All Guides →</a>
+    </div>
+    <div id="featured-guides-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+  </section>
+
   <!-- Tools Section (categories + full grid + search) -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 scroll-mt-20" id="tools">
     <!-- Header row: title on the left, search on the right (collapses on mobile) -->
@@ -275,6 +287,18 @@
     </div>
   </section>
 
+  <!-- Recently Added Tools -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <div class="flex items-end justify-between mb-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-1" data-i18n="home.recent.title">Recently added</h2>
+        <p class="text-slate-500 text-sm" data-i18n="home.recent.subtitle">The newest tools on ManyUtils.</p>
+      </div>
+      <a href="#tools" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 hover:text-primary-700" data-i18n="common.view_all_tools">View all tools →</a>
+    </div>
+    <div id="recent-tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
   <!-- FAQ -->
   <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
     <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 text-center" data-i18n="home.faq.title">Frequently asked questions</h2>
@@ -327,12 +351,39 @@
   <footer id="footer"></footer>
 
   <script src="/assets/js/tools-registry.js"></script>
+  <script src="/assets/js/guides-registry.js"></script>
   <script src="/assets/js/utils.js"></script>
   <script src="/assets/js/i18n.js"></script>
   <script src="/assets/js/components.js"></script>
   <script src="/assets/js/app.js"></script>
   <script>
     let activeCategory = 'all';
+
+    function renderFeaturedGuides() {
+      const container = document.getElementById('featured-guides-grid');
+      if (!container || typeof getFeaturedGuides !== 'function') return;
+      Components.renderGuideCards(container, getFeaturedGuides(4));
+    }
+
+    function renderRecentTools() {
+      const container = document.getElementById('recent-tools-grid');
+      if (!container || typeof getRecentTools !== 'function') return;
+      const recent = getRecentTools(6);
+      container.innerHTML = recent.map(t => {
+        const name = i18n.t('tools.' + t.i18nKey + '.name') || t.id.replace(/-/g, ' ');
+        const desc = i18n.t('tools.' + t.i18nKey + '.description') || '';
+        return `
+          <a href="${toolUrl(t.id)}" class="tool-grid-card bg-white rounded-2xl border border-slate-200 p-5 hover:border-primary-200 block relative">
+            <span class="absolute top-4 right-4 text-xs font-semibold uppercase tracking-wider text-emerald-600 bg-emerald-50 rounded-full px-2 py-0.5">New</span>
+            <div class="w-10 h-10 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-4">
+              ${t.icon}
+            </div>
+            <h3 class="font-semibold text-slate-900 mb-1.5">${name}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">${desc}</p>
+          </a>
+        `;
+      }).join('');
+    }
 
     function renderCategoryFilters() {
       const container = document.getElementById('category-filters');
@@ -433,6 +484,8 @@
           }
         });
       }
+      renderFeaturedGuides();
+      renderRecentTools();
       // Wire up the static homepage FAQ accordion as soon as the DOM is ready.
       Components.initFaqAccordion?.();
     });
@@ -443,6 +496,8 @@
       renderCategoryFilters();
       renderPopularTools();
       renderToolsGrid();
+      renderRecentTools();
+      renderFeaturedGuides();
     });
   </script>
 </body>

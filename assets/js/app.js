@@ -81,6 +81,52 @@ function _sectionSteps(toolName, steps) {
     </section>`;
 }
 
+function _sectionUseCases(items) {
+  if (!Array.isArray(items) || !items.length) return '';
+  const heading = _l('common.use_cases', 'Common Use Cases');
+  const cards = items.map(it => `
+        <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+          <h3 class="font-semibold text-slate-900 mb-1.5 text-sm">${it.title}</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">${it.body}</p>
+        </div>`).join('');
+  return `
+    <section class="mb-10" aria-labelledby="sec-use-cases">
+      <h2 id="sec-use-cases" class="text-xl font-bold text-slate-900 mb-4">${heading}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">${cards}
+      </div>
+    </section>`;
+}
+
+function _sectionBestPractices(items) {
+  if (!Array.isArray(items) || !items.length) return '';
+  const heading = _l('common.best_practices', 'Best Practices');
+  const listItems = items.map(m => `
+        <li class="flex items-start gap-3">
+          <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold flex items-center justify-center mt-0.5">&#10003;</span>
+          <span class="leading-relaxed">${m}</span>
+        </li>`).join('');
+  return `
+    <section class="mb-10" aria-labelledby="sec-best-practices">
+      <h2 id="sec-best-practices" class="text-xl font-bold text-slate-900 mb-4">${heading}</h2>
+      <ul class="text-slate-600 space-y-2.5">${listItems}
+      </ul>
+    </section>`;
+}
+
+function _sectionRelatedGuides(toolId) {
+  if (typeof getGuidesForTool !== 'function') return '';
+  const guides = getGuidesForTool(toolId, 3);
+  if (!guides.length) return '';
+  const heading = _l('common.related_guides', 'Related Guides');
+  const cards = guides.map(g => Components.guideCardHtml(g)).join('');
+  return `
+    <section class="mb-10 mt-10" aria-labelledby="sec-related-guides">
+      <h2 id="sec-related-guides" class="text-xl font-bold text-slate-900 mb-4">${heading}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">${cards}
+      </div>
+    </section>`;
+}
+
 function _sectionExamples(examples) {
   if (!Array.isArray(examples) || !examples.length) return '';
   const heading = _l('common.examples', 'Example input and output');
@@ -169,11 +215,14 @@ function renderSeoSection() {
 
   const html = [
     _sectionWhatIs(toolName, seo.intro),
-    _sectionValueProps(seo.valueProps),
     _sectionSteps(toolName, seo.steps),
+    _sectionUseCases(seo.useCases),
+    _sectionValueProps(seo.valueProps),
+    _sectionBestPractices(seo.bestPractices),
     _sectionExamples(seo.examples),
     _sectionMistakes(seo.mistakes),
     _sectionFaq(seo.faq),
+    _sectionRelatedGuides(toolId),
     _sectionCta(),
   ].filter(Boolean).join('');
 
@@ -193,6 +242,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   Components.renderHeader();
   Components.renderFooter();
   Components.renderSidebar();
+  Components.initFaqAccordion();
   renderSeoSection();
   i18n.applyTranslations();
 });
